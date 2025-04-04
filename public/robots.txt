@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://nehandev.com
+
+# Sitemaps
+Sitemap: https://nehandev.com/sitemap.xml
