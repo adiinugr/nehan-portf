@@ -70,12 +70,12 @@ function Hero() {
           </div>
           <div className="flex flex-col md:flex-row gap-3">
             <Link href="#contact">
-              <Button className="gap-4" variant="outline">
+              <Button className="gap-4 w-full" variant="outline">
                 Schedule a Consultation <PhoneCall className="w-4 h-4" />
               </Button>
             </Link>
             <Link href="#projects">
-              <Button variant="default" className="gap-4">
+              <Button variant="default" className="gap-4 w-full">
                 View Our Work <MoveRight className="w-4 h-4" />
               </Button>
             </Link>
