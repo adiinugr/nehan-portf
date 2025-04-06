@@ -40,6 +40,14 @@ const projects = [
     image: "/images/multigentool.png",
     technologies: ["Next.js", "Framer Motion", "Tailwind CSS"],
     liveUrl: "https://multigentool.com"
+  },
+  {
+    title: "Pintar MTK - Belajar Matematika Online Mudah & Gratis",
+    description:
+      "A math blog using wordpress that provide math problem and solution also download pdf.",
+    image: "/images/pintarmtk.png",
+    technologies: ["Wordpress"],
+    liveUrl: "https://pintarmtk.com"
   }
 ]
 
