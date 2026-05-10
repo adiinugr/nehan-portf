@@ -1,0 +1,143 @@
+---
+title: "Next.js SEO Mastery: From Zero to First Page in 2025"
+date: "2025-03-28"
+category: "Tech"
+lang: "en"
+excerpt: "A practical guide to maximizing SEO in Next.js 15 — metadata API, structured data, sitemaps, Core Web Vitals, and everything Google actually cares about."
+readTime: "7"
+author: "NehanDev"
+---
+
+Getting a Next.js site to rank well on Google is surprisingly achievable if you do the fundamentals correctly. After building and optimizing several production sites, here's the practical playbook we use at NehanDev.
+
+## Why Next.js is SEO-Friendly by Default
+
+Google can index JavaScript-rendered content, but it does so more reliably when HTML is available at request time. Next.js Server Components render HTML on the server, which means:
+
+- Crawlers see fully-formed content immediately
+- Time to first byte (TTFB) is low
+- No blank page flash before JavaScript loads
+
+This gives you a significant baseline advantage over pure client-side React apps.
+
+## The Metadata API
+
+Next.js 15 has a built-in metadata system that generates `<head>` tags correctly. Use it instead of third-party packages.
+
+```typescript
+// app/page.tsx
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Your Page Title",
+  description: "A clear, specific description under 160 characters.",
+  openGraph: {
+    title: "Your Page Title",
+    description: "A clear, specific description.",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  alternates: {
+    canonical: "https://yoursite.com/page",
+  },
+}
+```
+
+For dynamic pages (blog posts, product pages), use `generateMetadata`:
+
+```typescript
+export async function generateMetadata({ params }): Promise<Metadata> {
+  const post = await getPost(params.slug)
+  return {
+    title: post.title,
+    description: post.excerpt,
+  }
+}
+```
+
+## Structured Data (JSON-LD)
+
+Structured data helps Google understand your content and can unlock rich results in search (star ratings, FAQ dropdowns, article dates).
+
+Add it as a `<Script>` tag in your layout:
+
+```tsx
+<Script type="application/ld+json" id="structured-data">
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "datePublished": post.date,
+    "author": { "@type": "Person", "name": "NehanDev" },
+  })}
+</Script>
+```
+
+For a service business like ours, we use `ProfessionalService` schema with `makesOffer` to describe our services explicitly.
+
+## Sitemaps
+
+Next.js 15 has a built-in sitemap API. Create `app/sitemap.ts`:
+
+```typescript
+import { MetadataRoute } from "next"
+import { getAllPosts } from "@/lib/blog"
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const posts = getAllPosts()
+
+  const blogRoutes = posts.map((post) => ({
+    url: `https://yoursite.com/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }))
+
+  return [
+    { url: "https://yoursite.com", priority: 1, changeFrequency: "weekly" },
+    { url: "https://yoursite.com/blog", priority: 0.8, changeFrequency: "weekly" },
+    ...blogRoutes,
+  ]
+}
+```
+
+This generates `/sitemap.xml` automatically.
+
+## Core Web Vitals: What Actually Moves the Needle
+
+Google uses Core Web Vitals as a ranking signal. The three metrics that matter most:
+
+**Largest Contentful Paint (LCP)** — How fast does the main content load?
+- Use `priority` prop on hero images: `<Image priority src="..." />`
+- Avoid render-blocking resources above the fold
+
+**Cumulative Layout Shift (CLS)** — Do elements jump around as the page loads?
+- Always specify `width` and `height` on images
+- Reserve space for dynamically-loaded content with CSS
+
+**Interaction to Next Paint (INP)** — How responsive are interactions?
+- Keep event handlers lean
+- Defer non-critical JavaScript with `strategy="lazyOnload"` in `<Script>`
+
+## Internal Linking Strategy
+
+Google discovers and understands your content through links. A few practical rules:
+
+1. Every blog post should link to at least two other relevant pages on your site
+2. Your homepage should link to your most important pages (not just the footer)
+3. Use descriptive anchor text — "read our guide to Next.js SEO" beats "click here"
+
+## The Honest Truth About SEO
+
+Technical SEO is necessary but not sufficient. What Google actually rewards is **content that answers real questions better than competing pages**.
+
+For a development agency like NehanDev, that means:
+- Writing about the specific problems our clients face
+- Explaining our approach and reasoning, not just listing services
+- Publishing content regularly enough that Google trusts the domain is maintained
+
+The technical foundation makes it possible for good content to rank. The content is what actually earns the ranking.
+
+Start with the fundamentals, publish consistently, and measure with [Google Search Console](https://search.google.com/search-console).

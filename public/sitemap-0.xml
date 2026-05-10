@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://nehandev.com</loc><lastmod>2025-03-27T21:18:28.350Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://nehandev.com/sitemap.xml</loc><lastmod>2026-05-10T14:25:31.372Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://nehandev.com/contact</loc><lastmod>2026-05-10T14:25:31.373Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://nehandev.com/blog</loc><lastmod>2026-05-10T14:25:31.373Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://nehandev.com/projects</loc><lastmod>2026-05-10T14:25:31.373Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://nehandev.com/education</loc><lastmod>2026-05-10T14:25:31.373Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://nehandev.com</loc><lastmod>2026-05-10T14:25:31.373Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://nehandev.com/blog/building-anti-cheat-exam-platform</loc><lastmod>2026-05-10T14:25:31.373Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://nehandev.com/blog/cara-memilih-platform-ujian-online</loc><lastmod>2026-05-10T14:25:31.373Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://nehandev.com/blog/nextjs-15-untuk-pemula</loc><lastmod>2026-05-10T14:25:31.373Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://nehandev.com/blog/nextjs-seo-optimization-2025</loc><lastmod>2026-05-10T14:25:31.373Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://nehandev.com/blog/websocket-realtime-monitoring</loc><lastmod>2026-05-10T14:25:31.373Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>

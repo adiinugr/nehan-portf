@@ -16,6 +16,9 @@ module.exports = {
       }
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-outfit)", "sans-serif"]
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -27,8 +30,8 @@ module.exports = {
           foreground: "#FFFFFF"
         },
         secondary: {
-          DEFAULT: "#1E293B",
-          foreground: "#FFFFFF"
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))"
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -36,7 +39,7 @@ module.exports = {
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
-          foreground: "#334155"
+          foreground: "hsl(var(--muted-foreground))"
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
@@ -49,6 +52,11 @@ module.exports = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))"
+        },
+        violet: {
+          400: "#a78bfa",
+          500: "#8b5cf6",
+          600: "#7c3aed"
         }
       },
       borderRadius: {
@@ -64,11 +72,16 @@ module.exports = {
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 }
+        },
+        "pulse-glow": {
+          "0%, 100%": { opacity: 0.6 },
+          "50%": { opacity: 1 }
         }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out"
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-glow": "pulse-glow 3s ease-in-out infinite"
       }
     }
   },

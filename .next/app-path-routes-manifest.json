@@ -1,5 +1,11 @@
 {
-  "/api/contact/route": "/api/contact",
   "/_not-found/page": "/_not-found",
-  "/page": "/"
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/api/contact/route": "/api/contact",
+  "/blog/page": "/blog",
+  "/contact/page": "/contact",
+  "/education/page": "/education",
+  "/projects/page": "/projects",
+  "/page": "/",
+  "/blog/[slug]/page": "/blog/[slug]"
 }

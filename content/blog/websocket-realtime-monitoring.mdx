@@ -1,0 +1,107 @@
+---
+title: "Real-Time Student Monitoring with WebSockets: A Developer's Guide"
+date: "2025-04-10"
+category: "Tech"
+lang: "en"
+excerpt: "How we implemented WebSocket-based live monitoring for online exams — tracking 30+ concurrent students without killing server performance."
+readTime: "7"
+author: "NehanDev"
+---
+
+When we designed the teacher dashboard for CBT Pro, the first question was: how do teachers know what students are doing during a live exam?
+
+The naive answer is polling — every few seconds, the client asks the server "what's the status of each student?" This works, but it doesn't scale and creates a choppy, laggy experience. With 30 students in a class all polling every 3 seconds, you're looking at 600 requests per minute per classroom.
+
+We went with WebSockets instead. Here's how we architected it.
+
+## Why WebSockets Over HTTP Polling
+
+WebSockets maintain a persistent, bidirectional connection between client and server. Once established, either side can push data at any time without the overhead of a new HTTP request.
+
+For exam monitoring, this means:
+
+- Student clients push status updates when something changes (question answered, idle state, connection drop)
+- The server fans those updates out to the teacher's dashboard in near real-time
+- Connection overhead happens once, not hundreds of times per session
+
+The latency difference is significant: polling typically introduces 1-5 seconds of delay; WebSockets deliver updates in under 200ms.
+
+## Architecture Overview
+
+We used a hub-and-spoke model:
+
+```
+Student Device → WebSocket Server → Teacher Dashboard
+     (spoke)         (hub)              (spoke)
+```
+
+Each exam session gets a dedicated "room" on the WebSocket server. Students join the room when they start the exam; the teacher joins as an observer.
+
+The server maintains in-memory state for each room:
+
+```typescript
+interface ExamRoom {
+  examId: string
+  students: Map<string, StudentState>
+  teacherSocket: WebSocket | null
+}
+
+interface StudentState {
+  studentId: string
+  name: string
+  currentQuestion: number
+  answeredCount: number
+  lastActivity: Date
+  status: 'active' | 'idle' | 'submitted' | 'disconnected'
+}
+```
+
+## Handling Disconnections Gracefully
+
+Network drops are common on mobile devices. We needed to handle them without marking a student as "cheating."
+
+Our approach:
+
+1. Student app detects connection loss
+2. Answers continue to save locally (SQLite on Android)
+3. App attempts reconnection with exponential backoff
+4. On reconnect, the app sends a `RESUME` event with the last-known server state
+5. Server reconciles the state and notifies the teacher
+
+```typescript
+// Client reconnection logic
+const reconnect = (examId: string, studentId: string) => {
+  ws.send(JSON.stringify({
+    type: 'RESUME',
+    examId,
+    studentId,
+    lastSyncTimestamp: getLastSync()
+  }))
+}
+```
+
+## Scaling Considerations
+
+A single WebSocket server works fine for a school deployment. But if you're building for district-wide or national scale, you need to think about horizontal scaling.
+
+The challenge: WebSocket connections are stateful. A teacher's dashboard connected to Server A can't receive updates from students connected to Server B without a shared message bus.
+
+We use **Redis Pub/Sub** as the fan-out mechanism:
+
+- Each WebSocket server subscribes to exam room channels in Redis
+- When any server receives a student update, it publishes to Redis
+- All servers receive the message and forward it to any connected observers in that room
+
+This lets us run multiple WebSocket servers behind a load balancer without sticky sessions.
+
+## Performance in Practice
+
+During a 30-student exam, our WebSocket server handles approximately:
+
+- **30 incoming messages/minute** (student heartbeats)
+- **150 push messages/minute** (status updates to teacher)
+- **~2KB/minute** total payload per student
+
+At this scale, a single Node.js server with `ws` handles thousands of concurrent exam sessions comfortably.
+
+The real lesson: choose your protocol based on the interaction pattern. For request-response, use HTTP. For persistent, low-latency streams like exam monitoring, WebSockets are the right tool.

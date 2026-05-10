@@ -1,0 +1,77 @@
+---
+title: "Building an Anti-Cheat Online Exam Platform: The Technical Challenge"
+date: "2025-04-20"
+category: "EdTech"
+lang: "en"
+excerpt: "The technical challenges of building a tamper-proof online exam system for Indonesian schools — from kiosk mode implementation to WebSocket real-time monitoring."
+readTime: "6"
+author: "NehanDev"
+---
+
+Online exams have a cheating problem. Students can easily switch to messaging apps, search for answers online, or share screens with friends. When we set out to build CBT Pro for Indonesian schools, we knew anti-cheat had to be a first-class feature — not an afterthought.
+
+Here's how we approached the technical challenges.
+
+## The Core Problem: Browser-Based Exams Are Inherently Leaky
+
+Traditional web-based exam platforms run in a standard browser. Even with JavaScript tricks to detect tab switching, students can:
+
+- Use a second device
+- Screenshot questions and share them
+- Open another app while the exam timer runs
+
+The fundamental issue is that the browser doesn't own the entire device experience.
+
+## Our Solution: Android Kiosk Mode
+
+Rather than trying to patch browser-based security, we built a dedicated Android client that locks the device into a single-purpose exam mode.
+
+When a student starts an exam:
+
+1. The app requests **Device Policy Manager** permissions
+2. It pins itself to the foreground using `startLockTask()`
+3. The back button, home button, and recents are all disabled
+4. Screen recording and screenshots are blocked at the OS level
+5. The device cannot connect to other apps until the exam is explicitly ended by the teacher
+
+This is the same technology used by kiosk apps in banks and airports. It's not a workaround — it's the correct tool for the job.
+
+```kotlin
+// Simplified kiosk lock example
+val dpm = getSystemService(DEVICE_POLICY_SERVICE) as DevicePolicyManager
+if (dpm.isDeviceOwnerApp(packageName)) {
+    dpm.setLockTaskPackages(adminComponent, arrayOf(packageName))
+    startLockTask()
+}
+```
+
+## Real-Time Monitoring with WebSockets
+
+Knowing a student is in kiosk mode is good. Knowing *what they're doing in real-time* is better.
+
+We built a WebSocket-based monitoring system that streams student status to the teacher dashboard every 3 seconds. The payload includes:
+
+- Current question number
+- Time spent on each question
+- Whether the device has been idle for too long
+- Submission status
+
+The teacher sees a live grid of all students — green means active and answering, yellow means idle, red means a potential issue.
+
+## AI Question Generation
+
+One of the most time-consuming parts of running exams is creating questions. We integrated an AI question generation system that takes a topic, grade level, and difficulty, then produces a full set of MCSA, MCMA, and True/False questions in seconds.
+
+Teachers can review, edit, and approve questions before publishing. The AI handles the tedious first draft; the teacher adds the pedagogical judgment.
+
+## Lessons Learned
+
+Building for the Indonesian education market taught us a few things:
+
+**Offline resilience matters.** Internet connectivity is inconsistent. We built exam answers to sync locally first, then push to the server when connectivity is restored.
+
+**Teachers are not tech-savvy by default.** Every feature needed a simple, guided UI. Complex configuration was moved behind "advanced" menus.
+
+**Security theater is not security.** Adding dozens of JavaScript hooks to detect cheating creates a false sense of security. Hardware-level lockdown is the only real solution.
+
+CBT Pro is now live at [cbtpro.id](https://cbtpro.id). If you're building for the education sector, the lessons here apply broadly — think about the real threat model, not just the convenient one.
