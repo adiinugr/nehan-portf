@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Link from "next/link"
 import {
   UtensilsCrossed,
   Plane,
@@ -80,25 +79,6 @@ export function ServicesSection() {
           })}
         </div>
 
-        {/* Demo CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl p-6 bg-muted/50"
-        >
-          <div>
-            <p className="font-semibold text-foreground text-base">Ingin lihat contoh hasilnya?</p>
-            <p className="text-base text-muted-foreground mt-0.5">Coba demo website travel yang sudah kami buat.</p>
-          </div>
-          <Link
-            href="/demo/travel"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-base whitespace-nowrap transition-all hover:scale-105 bg-primary text-white shadow-md shadow-primary/20"
-          >
-            Lihat Demo Travel →
-          </Link>
-        </motion.div>
 
       </div>
     </section>
