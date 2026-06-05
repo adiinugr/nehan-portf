@@ -85,19 +85,22 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicons/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicons/favicon.ico" },
-      { url: "/favicons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicons/favicon.ico", type: "image/x-icon" },
       { url: "/favicons/favicon-96x96.png", sizes: "96x96", type: "image/png" }
     ],
     apple: [
-      { url: "/favicons/apple-touch-icon.png" },
-      { url: "/favicons/apple-icon-180x180.png", sizes: "180x180", type: "image/png" }
+      { url: "/favicons/apple-touch-icon.png", sizes: "180x180", type: "image/png" }
     ],
     other: [
       { rel: "mask-icon", url: "/favicons/favicon.svg", color: "#6366F1" }
     ]
   },
   manifest: "/favicons/site.webmanifest",
+  appleWebApp: {
+    title: "NehanDev",
+    statusBarStyle: "default",
+    capable: true,
+  },
   alternates: {
     canonical: siteUrl,
     languages: {
