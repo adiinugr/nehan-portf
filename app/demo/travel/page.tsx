@@ -324,6 +324,9 @@ export default function TravelDemo() {
   const [filterDays, setFilterDays] = useState("Semua")
   const [filterPrice, setFilterPrice] = useState("Semua")
   const [search, setSearch] = useState("")
+  const [heroDate, setHeroDate] = useState("")
+  const [heroBudget, setHeroBudget] = useState("Semua")
+  const [heroPeserta, setHeroPeserta] = useState(2)
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 80)
@@ -504,37 +507,77 @@ export default function TravelDemo() {
           >
             <div className="flex items-center gap-3 flex-1 px-3">
               <Calendar className="w-4 h-4 shrink-0" style={{ color: GREEN }} />
-              <div>
+              <div className="flex-1">
                 <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400">
                   Tanggal
                 </p>
-                <p className="text-sm font-medium text-gray-700">
-                  Pilih tanggal
-                </p>
+                <input
+                  type="date"
+                  value={heroDate}
+                  onChange={(e) => setHeroDate(e.target.value)}
+                  className="text-sm font-medium text-gray-700 bg-transparent outline-none w-full cursor-pointer"
+                  style={{ colorScheme: "light" }}
+                />
               </div>
             </div>
             <div className="hidden md:block w-px bg-gray-200 my-1" />
             <div className="flex items-center gap-3 flex-1 px-3">
               <Wallet className="w-4 h-4 shrink-0" style={{ color: GREEN }} />
-              <div>
+              <div className="flex-1">
                 <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400">
                   Budget
                 </p>
-                <p className="text-sm font-medium text-gray-700">Semua harga</p>
+                <select
+                  value={heroBudget}
+                  onChange={(e) => setHeroBudget(e.target.value)}
+                  className="text-sm font-medium text-gray-700 bg-transparent outline-none w-full cursor-pointer"
+                >
+                  <option value="Semua">Semua harga</option>
+                  <option value="< Rp 1jt">&lt; Rp 1jt</option>
+                  <option value="Rp 1–3jt">Rp 1–3jt</option>
+                  <option value="> Rp 3jt">&gt; Rp 3jt</option>
+                </select>
               </div>
             </div>
             <div className="hidden md:block w-px bg-gray-200 my-1" />
             <div className="flex items-center gap-3 flex-1 px-3">
               <Users className="w-4 h-4 shrink-0" style={{ color: GREEN }} />
-              <div>
+              <div className="flex-1">
                 <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400">
                   Peserta
                 </p>
-                <p className="text-sm font-medium text-gray-700">2 orang</p>
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setHeroPeserta((p) => Math.max(1, p - 1))}
+                    className="w-5 h-5 rounded-full flex items-center justify-center font-bold text-sm leading-none transition-colors hover:opacity-80"
+                    style={{ backgroundColor: GREEN + "22", color: GREEN }}
+                  >
+                    −
+                  </button>
+                  <span className="text-sm font-medium text-gray-700">
+                    {heroPeserta} orang
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => setHeroPeserta((p) => Math.min(20, p + 1))}
+                    className="w-5 h-5 rounded-full flex items-center justify-center font-bold text-sm leading-none transition-colors hover:opacity-80"
+                    style={{ backgroundColor: GREEN + "22", color: GREEN }}
+                  >
+                    +
+                  </button>
+                </div>
               </div>
             </div>
             <button
-              className="flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-white"
+              type="button"
+              onClick={() => {
+                setFilterPrice(heroBudget)
+                document
+                  .getElementById("paket")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }}
+              className="flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-white transition-opacity hover:opacity-90"
               style={{ backgroundColor: GREEN }}
             >
               <Search className="w-4 h-4" />
@@ -956,10 +999,7 @@ export default function TravelDemo() {
                   >
                     <div
                       className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 font-bold text-sm"
-                      style={{
-                        backgroundColor: i === 0 ? GREEN : "#e5e7eb",
-                        color: i === 0 ? "#fff" : "#9ca3af"
-                      }}
+                      style={{ backgroundColor: GREEN, color: "#fff" }}
                     >
                       {s.n}
                     </div>

@@ -27,7 +27,7 @@ const demos = [
     brand: "Villa Sejuk Puncak",
     desc: "Website hotel premium dengan showcase kamar, galeri properti, harga transparan, dan reservasi langsung.",
     href: "/demo/hotel",
-    live: false,
+    live: true,
     gradient: "from-amber-700 via-yellow-800 to-stone-900",
     tags: ["Showcase kamar", "Galeri foto", "Harga & fasilitas", "Direct booking"],
   },
