@@ -3,6 +3,7 @@ import { Syne, Yellowtail, Bebas_Neue } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { LanguageProvider } from "@/lib/i18n/language-context"
+import { WhatsAppButton } from "@/components/ui/whatsapp-button"
 import Script from "next/script"
 
 const syne = Syne({
@@ -121,6 +122,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${syne.variable} ${yellowtail.variable} ${bebasNeue.variable} font-sans`}>
         <ThemeProvider attribute="class" forcedTheme="light" disableTransitionOnChange>
           <LanguageProvider>{children}</LanguageProvider>
+          <WhatsAppButton />
         </ThemeProvider>
 
         <Script id="schema-structured-data" type="application/ld+json" strategy="afterInteractive">
