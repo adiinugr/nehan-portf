@@ -8,7 +8,16 @@ const nextConfig: NextConfig = {
         destination: "/favicons/favicon.ico",
       },
     ]
-  }
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**",
+      },
+    ],
+  },
 }
 
 export default nextConfig
