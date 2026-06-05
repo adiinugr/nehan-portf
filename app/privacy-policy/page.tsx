@@ -87,7 +87,7 @@ export default function PrivacyPolicyPage() {
                 Terakhir diperbarui: 1 Juni 2026
               </p>
               <p className="mt-4 text-base text-muted-foreground leading-relaxed">
-                NehanDev ("kami", "kita") berkomitmen untuk melindungi privasi Anda. Kebijakan ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi Anda saat menggunakan layanan kami di nehandev.com.
+                NehanDev (&ldquo;kami&rdquo;, &ldquo;kita&rdquo;) berkomitmen untuk melindungi privasi Anda. Kebijakan ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi Anda saat menggunakan layanan kami di nehandev.com.
               </p>
             </div>
 
