@@ -29,14 +29,14 @@ export function Footer() {
           {/* Nav links — 2 columns */}
           <div className="flex gap-16">
             <nav className="flex flex-col gap-3">
-              <p className={labelClass} style={{ color: "#94a3b8" }}>Halaman</p>
+              <p className={labelClass} style={{ color: "#94a3b8" }}>{ft.sections.pages}</p>
               <Link href="/layanan" className={linkClass} style={{ color: "#94a3b8" }}>{ft.links.services}</Link>
               <Link href="/projects" className={linkClass} style={{ color: "#94a3b8" }}>{ft.links.portfolio}</Link>
               <Link href="/blog" className={linkClass} style={{ color: "#94a3b8" }}>{ft.links.blog}</Link>
               <Link href="/contact" className={linkClass} style={{ color: "#94a3b8" }}>{ft.links.contact}</Link>
             </nav>
             <nav className="flex flex-col gap-3">
-              <p className={labelClass} style={{ color: "#94a3b8" }}>Legal</p>
+              <p className={labelClass} style={{ color: "#94a3b8" }}>{ft.sections.legal}</p>
               <Link href="/privacy-policy" className={linkClass} style={{ color: "#94a3b8" }}>{ft.links.privacy}</Link>
               <Link href="/terms" className={linkClass} style={{ color: "#94a3b8" }}>{ft.links.terms}</Link>
             </nav>
@@ -44,7 +44,7 @@ export function Footer() {
 
           {/* Social icons */}
           <div className="flex flex-col gap-3">
-            <p className={labelClass} style={{ color: "#94a3b8" }}>Ikuti Kami</p>
+            <p className={labelClass} style={{ color: "#94a3b8" }}>{ft.sections.follow}</p>
             <div className="flex items-center gap-4">
               {[
                 { href: "https://github.com/adiinugr", icon: Github, label: "GitHub" },

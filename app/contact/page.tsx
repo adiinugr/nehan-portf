@@ -4,13 +4,13 @@ import { Footer } from "@/components/ui/footer"
 import { ContactSection } from "@/components/ui/contact-section"
 
 export const metadata: Metadata = {
-  title: "Contact | NehanDev",
+  title: "Kontak | NehanDev",
   description:
-    "Get in touch with NehanDev. We're available for web development projects, consultations, and collaborations. Typically replies within 24 hours.",
+    "Hubungi NehanDev untuk konsultasi gratis pembuatan website bisnis Anda. Chat langsung via WhatsApp — biasanya membalas dalam hitungan menit.",
   alternates: { canonical: "https://www.nehandev.com/contact" },
   openGraph: {
-    title: "Contact | NehanDev",
-    description: "Get in touch with NehanDev — available for new projects.",
+    title: "Kontak | NehanDev",
+    description: "Konsultasi gratis pembuatan website untuk bisnis Anda. Chat via WhatsApp sekarang.",
     url: "https://www.nehandev.com/contact"
   }
 }

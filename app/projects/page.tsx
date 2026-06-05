@@ -4,13 +4,13 @@ import { Footer } from "@/components/ui/footer"
 import { ProjectsSection } from "@/components/ui/projects-section"
 
 export const metadata: Metadata = {
-  title: "Projects | NehanDev",
+  title: "Portofolio | NehanDev",
   description:
-    "Explore NehanDev's portfolio of web development projects — modern web applications, tools, and digital solutions built with Next.js, React, and TypeScript.",
+    "Portofolio NehanDev — proyek nyata yang dibangun untuk bisnis lokal Indonesia: website restoran, travel, penginapan, aplikasi kalender, dan tools digital.",
   alternates: { canonical: "https://www.nehandev.com/projects" },
   openGraph: {
-    title: "Projects | NehanDev",
-    description: "Explore our portfolio of modern web applications and digital solutions.",
+    title: "Portofolio | NehanDev",
+    description: "Proyek nyata yang dibangun untuk bisnis lokal Indonesia oleh NehanDev.",
     url: "https://www.nehandev.com/projects"
   }
 }

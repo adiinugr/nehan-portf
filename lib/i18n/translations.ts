@@ -172,7 +172,8 @@ export const translations = {
     footer: {
       copyright: "All rights reserved.",
       tagline: "Digital Solutions for Local Businesses.",
-      links: { services: "Services", blog: "Blog", portfolio: "Portfolio", contact: "Contact", privacy: "Privacy Policy", terms: "Terms & Conditions" }
+      links: { services: "Services", blog: "Blog", portfolio: "Portfolio", contact: "Contact", privacy: "Privacy Policy", terms: "Terms & Conditions" },
+      sections: { pages: "Pages", legal: "Legal", follow: "Follow Us" }
     }
   },
   id: {
@@ -346,7 +347,8 @@ export const translations = {
     footer: {
       copyright: "Hak cipta dilindungi.",
       tagline: "Solusi Digital untuk Usaha Lokal.",
-      links: { services: "Layanan", blog: "Blog", portfolio: "Portofolio", contact: "Kontak", privacy: "Kebijakan Privasi", terms: "Syarat & Ketentuan" }
+      links: { services: "Layanan", blog: "Blog", portfolio: "Portofolio", contact: "Kontak", privacy: "Kebijakan Privasi", terms: "Syarat & Ketentuan" },
+      sections: { pages: "Halaman", legal: "Legal", follow: "Ikuti Kami" }
     }
   }
 }

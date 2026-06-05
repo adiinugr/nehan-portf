@@ -7,7 +7,7 @@ User-agent: *
 Disallow: /api/
 
 # Host
-Host: https://nehandev.com
+Host: https://www.nehandev.com
 
 # Sitemaps
-Sitemap: https://nehandev.com/sitemap.xml
+Sitemap: https://www.nehandev.com/sitemap.xml
