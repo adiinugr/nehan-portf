@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Header } from "@/components/ui/header"
 import { Hero } from "@/components/ui/animated-hero"
 import { ServicesSection } from "@/components/ui/services-section"
+import { UmkmDemoSection } from "@/components/ui/umkm-demo-section"
 import { HowItWorksSection } from "@/components/ui/how-it-works-section"
 import { ProjectsSection } from "@/components/ui/projects-section"
 import { EducationSection } from "@/components/ui/education-section"
@@ -28,6 +29,7 @@ export default function Home() {
       <Header />
       <Hero />
       <ServicesSection />
+      <UmkmDemoSection />
       <HowItWorksSection />
       <ProjectsSection />
       <EducationSection />
