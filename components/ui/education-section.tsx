@@ -22,9 +22,6 @@ export function EducationSection() {
 
   return (
     <section id="education" className="py-24 relative overflow-hidden">
-      {/* Distinct background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-violet-600/5 pointer-events-none" />
-      <div className="absolute inset-0 border-y border-primary/8 pointer-events-none" />
 
       <div className="relative container mx-auto px-4">
         {/* Label */}
@@ -35,9 +32,9 @@ export function EducationSection() {
           transition={{ duration: 0.4 }}
           className="mb-12"
         >
-          <p className="text-sm font-medium text-primary mb-3 uppercase tracking-widest">
+          <span className="text-sm font-semibold tracking-widest uppercase text-primary">
             {ed.label}
-          </p>
+          </span>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -50,13 +47,16 @@ export function EducationSection() {
             className="flex flex-col gap-6"
           >
             {/* Badge */}
-            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary uppercase tracking-wider">
+            <span className="inline-flex w-fit items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary uppercase tracking-wider">
               {ed.badge}
             </span>
 
             {/* Title */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-2">
+              <h2
+                className="uppercase leading-[0.9] text-foreground mb-2"
+                style={{ fontFamily: "var(--font-bebas)", fontSize: "clamp(48px, 6vw, 80px)" }}
+              >
                 {ed.title}
               </h2>
               <h3 className="text-xl md:text-2xl font-semibold text-primary">
@@ -80,14 +80,14 @@ export function EducationSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: i * 0.08 }}
-                    className="flex items-start gap-3 rounded-xl border border-border/60 bg-card/60 p-4 hover:border-primary/30 transition-colors"
+                    className="flex items-start gap-3 rounded-xl bg-background shadow-sm p-4"
                   >
                     <div className="flex-shrink-0 mt-0.5 w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
                       <Icon className="w-4 h-4 text-primary" />
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-foreground">{feature.title}</p>
-                      <p className="text-xs text-muted-foreground mt-0.5">{feature.desc}</p>
+                      <p className="text-base font-semibold text-foreground">{feature.title}</p>
+                      <p className="text-base text-muted-foreground mt-0.5">{feature.desc}</p>
                     </div>
                   </motion.div>
                 )
@@ -119,7 +119,7 @@ export function EducationSection() {
             {/* Glow behind image */}
             <div className="absolute inset-0 bg-primary/15 rounded-3xl blur-3xl scale-90" />
 
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/20 border border-primary/20">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/20">
               <Image
                 src="/images/cbtpro.png"
                 alt="CBTPro — Platform Ujian Online Anti-Curang"

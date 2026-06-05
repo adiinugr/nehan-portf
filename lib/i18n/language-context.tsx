@@ -10,20 +10,18 @@ type LanguageContextType = {
 }
 
 const LanguageContext = createContext<LanguageContextType>({
-  language: "en",
+  language: "id",
   setLanguage: () => {},
-  t: translations["en"]
+  t: translations["id"]
 })
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<Language>("en")
+  const [language, setLanguageState] = useState<Language>("id")
 
   useEffect(() => {
     const saved = localStorage.getItem("nd-language") as Language | null
     if (saved === "en" || saved === "id") {
       setLanguageState(saved)
-    } else if (navigator.language.toLowerCase().startsWith("id")) {
-      setLanguageState("id")
     }
   }, [])
 

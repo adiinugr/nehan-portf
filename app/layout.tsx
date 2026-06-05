@@ -1,13 +1,27 @@
 import type { Metadata, Viewport } from "next"
-import { Outfit } from "next/font/google"
+import { Syne, Yellowtail, Bebas_Neue } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { LanguageProvider } from "@/lib/i18n/language-context"
 import Script from "next/script"
 
-const outfit = Outfit({
+const syne = Syne({
   subsets: ["latin"],
-  variable: "--font-outfit",
+  variable: "--font-syne",
+  display: "swap"
+})
+
+const yellowtail = Yellowtail({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-yellowtail",
+  display: "swap"
+})
+
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-bebas",
   display: "swap"
 })
 
@@ -104,8 +118,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="msapplication-TileColor" content="#6366F1" />
         <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png" />
       </head>
-      <body className={outfit.variable}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+      <body className={`${syne.variable} ${yellowtail.variable} ${bebasNeue.variable} font-sans`}>
+        <ThemeProvider attribute="class" forcedTheme="light" disableTransitionOnChange>
           <LanguageProvider>{children}</LanguageProvider>
         </ThemeProvider>
 

@@ -1,7 +1,8 @@
 "use client"
 
-import { ProjectCard } from "@/components/ui/project-card"
+import { motion } from "framer-motion"
 import { useLanguage } from "@/lib/i18n/language-context"
+import { ProjectCard } from "@/components/ui/project-card"
 
 const projects = [
   {
@@ -43,30 +44,87 @@ const projects = [
     image: "/images/pintarmtk.png",
     technologies: ["WordPress"],
     liveUrl: "https://pintarmtk.com"
+  },
+  {
+    title: "Weton Jawa",
+    description:
+      "Aplikasi perhitungan weton Jawa lengkap dengan kalender Jawa, tafsir weton, dan informasi hari baik berbasis tradisi Jawa.",
+    image: "/images/wetonjawa.png",
+    technologies: ["Next.js", "Tailwind CSS"],
+    liveUrl: "https://wetonjawa.com"
+  },
+  {
+    title: "ILM Models",
+    description:
+      "Platform talent management agency untuk model profesional, dilengkapi dengan portofolio model, booking, dan manajemen agensi.",
+    image: "/images/ilmmodels.png",
+    technologies: ["Next.js", "Tailwind CSS"],
+    liveUrl: "https://ilmmodels.com"
   }
 ]
+
 
 export function ProjectsSection() {
   const { t } = useLanguage()
 
   return (
-    <section id="projects" className="py-24">
-      <div className="container mx-auto px-4">
-        <div className="mb-12">
-          <p className="text-sm font-medium text-primary mb-3 uppercase tracking-widest">
-            {t.projects.label}
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            {t.projects.title}
-          </h2>
-          <p className="text-muted-foreground max-w-2xl text-base md:text-lg">
+    <section
+      id="portfolio"
+      className="relative py-24 overflow-hidden"
+      style={{ backgroundColor: "#0b0d17" }}
+    >
+      {/* Ambient violet glow at top */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 80% 40% at 50% 0%, rgba(99,102,241,0.12) 0%, transparent 70%)",
+        }}
+      />
+
+      <div className="relative container mx-auto px-4">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-14 flex flex-col md:flex-row md:items-end gap-6 justify-between"
+        >
+          <div>
+            <p
+              className="text-sm font-semibold tracking-widest uppercase mb-3"
+              style={{ color: "#818cf8" }}
+            >
+              {t.projects.label}
+            </p>
+            <h2
+              className="uppercase leading-[0.9]"
+              style={{
+                fontFamily: "var(--font-bebas)",
+                fontSize: "clamp(48px, 7vw, 96px)",
+                color: "#f1f5f9",
+              }}
+            >
+              {t.projects.title}
+            </h2>
+          </div>
+          <p
+            className="max-w-xs text-base leading-relaxed md:text-right"
+            style={{ color: "#64748b" }}
+          >
             {t.projects.subtitle}
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Uniform grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} index={index} />
+            <ProjectCard
+              key={index}
+              {...project}
+              index={index}
+            />
           ))}
         </div>
       </div>

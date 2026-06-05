@@ -3,34 +3,34 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Moon, Sun } from "lucide-react"
-import { useTheme } from "next-themes"
+import { Menu, X } from "lucide-react"
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { LanguageToggle } from "@/components/ui/language-toggle"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 export function Header() {
-  const { theme, setTheme } = useTheme()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { t } = useLanguage()
   const pathname = usePathname()
 
   const navLinks = [
-    { href: "/projects", label: t.nav.projects },
-    { href: "/education", label: t.nav.education },
+    { href: "/layanan", label: t.nav.services },
+    { href: "/projects", label: t.nav.portfolio },
     { href: "/blog", label: t.nav.blog },
     { href: "/contact", label: t.nav.contact }
   ]
 
-  const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href)
+  const isActive = (href: string) => {
+    if (href.startsWith("/#")) return false
+    return href === "/" ? pathname === "/" : pathname.startsWith(href)
+  }
 
   return (
-    <header className="sticky top-0 z-50 h-16 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 h-16 w-full bg-white shadow-sm">
       <div className="container mx-auto px-4 flex h-16 items-center justify-between">
         <div className="flex items-center gap-8">
-          <Link href="/" className="font-bold text-2xl tracking-tight">
+          <Link href="/" className="text-4xl" style={{ fontFamily: "var(--font-yellowtail)" }}>
             <span className="text-primary">Nehan</span>
             <span className="text-foreground">Dev</span>
           </Link>
@@ -39,7 +39,7 @@ export function Header() {
               <Link
                 key={href}
                 href={href}
-                className={`relative px-3 py-1.5 text-sm rounded-md transition-colors ${
+                className={`relative px-3 py-1.5 text-base rounded-md transition-colors ${
                   isActive(href)
                     ? "text-foreground font-medium"
                     : "text-muted-foreground hover:text-foreground"
@@ -61,21 +61,11 @@ export function Header() {
         <div className="flex items-center gap-2">
           <LanguageToggle />
           <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-            className="text-muted-foreground hover:text-foreground"
-          >
-            <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            <span className="sr-only">Toggle theme</span>
-          </Button>
-          <Button
             asChild
             size="sm"
             className="hidden md:inline-flex bg-primary hover:bg-primary/90 text-white"
           >
-            <Link href="/contact">{t.nav.cta}</Link>
+            <Link href="https://wa.me/62895335501192" target="_blank" rel="noopener noreferrer">{t.nav.cta}</Link>
           </Button>
           <Button
             variant="ghost"
@@ -100,7 +90,7 @@ export function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.15 }}
-            className="absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border/40 md:hidden"
+            className="absolute top-16 left-0 right-0 bg-white shadow-sm md:hidden"
           >
             <nav className="container mx-auto px-4 py-6 flex flex-col gap-1">
               {navLinks.map(({ href, label }) => (

@@ -71,7 +71,7 @@ export function BlogPageClient({ posts }: BlogPageClientProps) {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`text-xs px-3.5 py-1.5 rounded-full border font-medium transition-colors ${
+                className={`text-sm px-3.5 py-1.5 rounded-full border font-medium transition-colors ${
                   activeCategory === cat
                     ? "border-primary bg-primary text-white"
                     : "border-border text-muted-foreground hover:border-primary/60 hover:text-foreground"
@@ -102,21 +102,21 @@ export function BlogPageClient({ posts }: BlogPageClientProps) {
                   <Link href={`/blog/${post.slug}`} className="group block h-full">
                     <div className="h-full flex flex-col rounded-xl border border-border/50 bg-card p-6 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5">
                       <div className="flex items-center justify-between mb-4">
-                        <span className={`text-xs font-medium px-2.5 py-1 rounded-full border ${colorClass}`}>
+                        <span className={`text-sm font-medium px-2.5 py-1 rounded-full border ${colorClass}`}>
                           {post.category}
                         </span>
-                        <span className="text-xs font-medium text-muted-foreground uppercase">{post.lang}</span>
+                        <span className="text-sm font-medium text-muted-foreground uppercase">{post.lang}</span>
                       </div>
                       <h2 className="font-semibold text-foreground text-base mb-3 group-hover:text-primary transition-colors line-clamp-2 flex-1">
                         {post.title}
                       </h2>
                       <p className="text-sm text-muted-foreground line-clamp-3 mb-5">{post.excerpt}</p>
                       <div className="flex items-center justify-between mt-auto pt-4 border-t border-border/40">
-                        <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                        <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
                           <Calendar className="w-3.5 h-3.5" />
                           <span>{formatDate(post.date, language)}</span>
                         </div>
-                        <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                        <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
                           <Clock className="w-3.5 h-3.5" />
                           <span>{post.readTime} {bl.minRead}</span>
                         </div>

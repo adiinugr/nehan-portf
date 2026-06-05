@@ -6,6 +6,7 @@ import { Footer } from "@/components/ui/footer"
 import { MDXRemote } from "next-mdx-remote/rsc"
 import remarkGfm from "remark-gfm"
 import Link from "next/link"
+import Script from "next/script"
 import { ArrowLeft, Calendar, Clock } from "lucide-react"
 import { categoryColors } from "@/lib/category-colors"
 
@@ -22,6 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {}
 
   const siteUrl = "https://www.nehandev.com"
+  const ogImage = `${siteUrl}/og-image-nehan.png`
   return {
     title: post.title,
     description: post.excerpt,
@@ -32,13 +34,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `${siteUrl}/blog/${slug}`,
       type: "article",
       publishedTime: post.date,
-      authors: ["NehanDev"],
-      tags: [post.category]
+      modifiedTime: post.date,
+      authors: [`${siteUrl}/about`],
+      tags: [post.category],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: post.title }],
+      siteName: "NehanDev"
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
-      description: post.excerpt
+      description: post.excerpt,
+      images: [ogImage],
+      creator: "@nehandev"
     }
   }
 }
@@ -56,8 +63,39 @@ export default async function BlogPostPage({ params }: Props) {
     { year: "numeric", month: "long", day: "numeric" }
   )
 
+  const siteUrl = "https://www.nehandev.com"
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.excerpt,
+    "author": {
+      "@type": "Organization",
+      "name": "NehanDev",
+      "url": siteUrl
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "NehanDev",
+      "url": siteUrl,
+      "logo": { "@type": "ImageObject", "url": `${siteUrl}/favicons/favicon.svg` }
+    },
+    "datePublished": post.date,
+    "dateModified": post.date,
+    "mainEntityOfPage": { "@type": "WebPage", "@id": `${siteUrl}/blog/${slug}` },
+    "inLanguage": post.lang === "id" ? "id-ID" : "en-US",
+    "keywords": post.category,
+    "image": `${siteUrl}/og-image-nehan.png`
+  }
+
   return (
     <>
+      <Script
+        id={`article-schema-${slug}`}
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <Header />
       <main className="min-h-screen py-16">
         <div className="container mx-auto px-4 max-w-3xl">

@@ -3,27 +3,107 @@ export type Language = "en" | "id"
 export const translations = {
   en: {
     nav: {
-      projects: "Projects",
-      education: "Education",
+      services: "Services",
+      portfolio: "Portfolio",
       blog: "Blog",
       contact: "Contact",
-      cta: "Get in Touch"
+      cta: "Free Consultation"
     },
     hero: {
-      badge: "Available for New Projects",
-      headline1: "We build solutions",
-      headline2: "that are",
-      words: ["innovative", "responsive", "scalable", "modern", "custom"],
+      badge: "Open for New Projects",
+      headline1: "Website that works",
+      headline2: "for your",
+      words: ["restaurant", "travel", "hotel", "UMKM", "business"],
       subtitle:
-        "Transforming your digital vision into reality. At NehanDev, we create beautiful, high-performance websites and applications tailored to your business needs and goals.",
-      cta1: "Schedule Consultation",
-      cta2: "View Our Work"
+        "We help local businesses build a strong digital presence — professional, fast, and built to attract real customers.",
+      cta1: "Free Consultation",
+      cta2: "View Portfolio"
+    },
+    services: {
+      label: "Services",
+      title: "What We Build",
+      subtitle: "Tailored digital solutions for every type of local business.",
+      items: [
+        {
+          icon: "UtensilsCrossed",
+          title: "Restaurant & Café",
+          desc: "Digital menu, reservation system, and business profile that attracts walk-in and online customers."
+        },
+        {
+          icon: "Plane",
+          title: "Travel & Tourism",
+          desc: "Tour packages, booking, destination gallery — everything your travel business needs online."
+        },
+        {
+          icon: "BedDouble",
+          title: "Hotel & Accommodation",
+          desc: "Room showcase, gallery, and reservation contacts to increase direct bookings."
+        },
+        {
+          icon: "Building2",
+          title: "Company Profile",
+          desc: "Professional business presentation that builds trust with potential clients and partners."
+        },
+        {
+          icon: "Megaphone",
+          title: "Landing Page",
+          desc: "High-conversion promotional pages for your products, services, or campaigns."
+        },
+        {
+          icon: "ShoppingBag",
+          title: "Online Store",
+          desc: "Product catalog and ordering system to expand your business reach digitally."
+        }
+      ]
+    },
+    howItWorks: {
+      label: "How It Works",
+      title: "Simple. Fast. Ready.",
+      subtitle: "From first conversation to a live website — in just 3 steps.",
+      steps: [
+        {
+          number: "01",
+          title: "Free Consultation",
+          desc: "Tell us about your business and what you need. No tech jargon, just a simple conversation."
+        },
+        {
+          number: "02",
+          title: "Design & Build",
+          desc: "We design and develop your website in 7–14 days. You review and approve at every stage."
+        },
+        {
+          number: "03",
+          title: "Live & Growing",
+          desc: "Your website goes live, SEO-ready, and built to bring customers to your door."
+        }
+      ]
+    },
+    testimonials: {
+      label: "Testimonials",
+      title: "Trusted by Local Businesses",
+      subtitle: "What our clients say after working with NehanDev.",
+      items: [
+        {
+          name: "Budi Santoso",
+          role: "Owner, Warung Makan Bu Budi",
+          text: "Our restaurant now has a digital menu that customers can scan directly. Orders increased 30% in the first month."
+        },
+        {
+          name: "Rina Lestari",
+          role: "Founder, Rina Tour & Travel",
+          text: "The website looks very professional. Our tour packages are now booked online without WhatsApp chats one by one."
+        },
+        {
+          name: "Ahmad Fauzi",
+          role: "Manager, Villa Sejuk Puncak",
+          text: "Direct bookings increased significantly. Guests say they found us through our website. Worth every penny."
+        }
+      ]
     },
     projects: {
       label: "Portfolio",
-      title: "Featured Projects",
-      subtitle:
-        "Recent work that showcases our expertise in building modern, high-performance web applications.",
+      title: "Our Work",
+      subtitle: "Real projects built for real businesses.",
       liveDemo: "Live Demo"
     },
     education: {
@@ -61,7 +141,7 @@ export const translations = {
       label: "Contact",
       title: "Let's Build Together",
       subtitle:
-        "Have a project in mind? We'd love to hear about it. Send us a message and we'll get back to you within 24 hours.",
+        "Have a project in mind? Send us a message and we'll get back to you within 24 hours.",
       responseTime: "Typically replies within 24 hours",
       info: {
         title: "Contact Information",
@@ -91,33 +171,113 @@ export const translations = {
     },
     footer: {
       copyright: "All rights reserved.",
-      tagline: "Professional Web Development Solutions.",
-      links: { blog: "Blog", projects: "Projects", contact: "Contact" }
+      tagline: "Digital Solutions for Local Businesses.",
+      links: { services: "Services", blog: "Blog", portfolio: "Portfolio", contact: "Contact", privacy: "Privacy Policy", terms: "Terms & Conditions" }
     }
   },
   id: {
     nav: {
-      projects: "Proyek",
-      education: "Pendidikan",
+      services: "Layanan",
+      portfolio: "Portofolio",
       blog: "Blog",
       contact: "Kontak",
-      cta: "Hubungi Kami"
+      cta: "Konsultasi Gratis"
     },
     hero: {
-      badge: "Tersedia untuk Proyek Baru",
-      headline1: "Kami membangun solusi",
-      headline2: "yang",
-      words: ["inovatif", "responsif", "skalabel", "modern", "kustom"],
+      badge: "Buka untuk Proyek Baru",
+      headline1: "Website yang bekerja",
+      headline2: "untuk bisnis",
+      words: ["restoran", "travel", "penginapan", "UMKM", "Anda"],
       subtitle:
-        "Mewujudkan visi digital Anda menjadi kenyataan. Di NehanDev, kami menciptakan website dan aplikasi berkinerja tinggi yang disesuaikan dengan kebutuhan dan tujuan bisnis Anda.",
-      cta1: "Jadwalkan Konsultasi",
+        "Kami bantu UMKM dan bisnis kecil hadir secara digital — website profesional, cepat, dan siap menarik pelanggan.",
+      cta1: "Konsultasi Gratis",
       cta2: "Lihat Portofolio"
+    },
+    services: {
+      label: "Layanan",
+      title: "Yang Kami Bangun",
+      subtitle: "Solusi digital yang disesuaikan untuk setiap jenis usaha lokal.",
+      items: [
+        {
+          icon: "UtensilsCrossed",
+          title: "Restoran & Kafe",
+          desc: "Menu digital, sistem reservasi, dan profil usaha yang menarik pelanggan datang langsung maupun online."
+        },
+        {
+          icon: "Plane",
+          title: "Travel & Wisata",
+          desc: "Paket wisata, booking, galeri destinasi — semua yang dibutuhkan bisnis travel Anda secara online."
+        },
+        {
+          icon: "BedDouble",
+          title: "Hotel & Penginapan",
+          desc: "Showcase kamar, galeri, dan kontak reservasi untuk meningkatkan direct booking."
+        },
+        {
+          icon: "Building2",
+          title: "Company Profile",
+          desc: "Presentasi bisnis yang profesional dan meyakinkan untuk klien dan mitra potensial."
+        },
+        {
+          icon: "Megaphone",
+          title: "Landing Page",
+          desc: "Halaman promosi konversi tinggi untuk produk, layanan, atau kampanye Anda."
+        },
+        {
+          icon: "ShoppingBag",
+          title: "Toko Online",
+          desc: "Katalog produk dan sistem pemesanan untuk memperluas jangkauan bisnis Anda secara digital."
+        }
+      ]
+    },
+    howItWorks: {
+      label: "Cara Kerja",
+      title: "Simpel. Cepat. Siap.",
+      subtitle: "Dari obrolan pertama sampai website tayang — hanya 3 langkah.",
+      steps: [
+        {
+          number: "01",
+          title: "Konsultasi Gratis",
+          desc: "Ceritakan bisnis dan kebutuhan Anda. Tidak perlu paham teknologi, cukup ngobrol santai."
+        },
+        {
+          number: "02",
+          title: "Desain & Bangun",
+          desc: "Kami rancang dan kembangkan website dalam 7–14 hari. Anda review dan setujui setiap tahap."
+        },
+        {
+          number: "03",
+          title: "Tayang & Berkembang",
+          desc: "Website Anda tayang, siap di-SEO, dan dibangun untuk mendatangkan pelanggan."
+        }
+      ]
+    },
+    testimonials: {
+      label: "Testimoni",
+      title: "Dipercaya Usaha Lokal",
+      subtitle: "Apa yang dikatakan klien kami setelah bekerja sama dengan NehanDev.",
+      items: [
+        {
+          name: "Budi Santoso",
+          role: "Pemilik, Warung Makan Bu Budi",
+          text: "Sekarang restoran kami punya menu digital yang bisa discan langsung. Pesanan naik 30% di bulan pertama."
+        },
+        {
+          name: "Rina Lestari",
+          role: "Founder, Rina Tour & Travel",
+          text: "Website-nya terlihat sangat profesional. Paket wisata kami sekarang bisa dipesan online tanpa harus chat WA satu-satu."
+        },
+        {
+          name: "Ahmad Fauzi",
+          role: "Manager, Villa Sejuk Puncak",
+          text: "Direct booking meningkat signifikan. Tamu bilang menemukan kami dari website. Worth it banget."
+        }
+      ]
     },
     projects: {
       label: "Portofolio",
-      title: "Proyek Unggulan",
-      subtitle:
-        "Karya terbaru yang menunjukkan keahlian kami dalam membangun aplikasi web modern dan berkinerja tinggi.",
+      title: "Hasil Kerja Kami",
+      subtitle: "Proyek nyata yang dibangun untuk bisnis nyata.",
       liveDemo: "Demo Langsung"
     },
     education: {
@@ -155,7 +315,7 @@ export const translations = {
       label: "Kontak",
       title: "Mari Berkolaborasi",
       subtitle:
-        "Punya proyek yang ingin dikerjakan? Kami senang mendengarnya. Kirimkan pesan dan kami akan membalas dalam 24 jam.",
+        "Punya proyek yang ingin dikerjakan? Kirimkan pesan dan kami akan membalas dalam 24 jam.",
       responseTime: "Biasanya membalas dalam 24 jam",
       info: {
         title: "Informasi Kontak",
@@ -185,8 +345,8 @@ export const translations = {
     },
     footer: {
       copyright: "Hak cipta dilindungi.",
-      tagline: "Solusi Pengembangan Web Profesional.",
-      links: { blog: "Blog", projects: "Proyek", contact: "Kontak" }
+      tagline: "Solusi Digital untuk Usaha Lokal.",
+      links: { services: "Layanan", blog: "Blog", portfolio: "Portofolio", contact: "Kontak", privacy: "Kebijakan Privasi", terms: "Syarat & Ketentuan" }
     }
   }
 }
