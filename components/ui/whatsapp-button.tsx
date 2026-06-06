@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion"
 import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 
 const WA_NUMBER = "62895335501192"
 const WA_MESSAGE = "Halo NehanDev, saya ingin konsultasi website untuk bisnis saya."
@@ -10,12 +11,18 @@ const WA_URL = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_MESSAGE)
 export function WhatsAppButton() {
   const [visible, setVisible] = useState(false)
   const [showTooltip, setShowTooltip] = useState(false)
+  const pathname = usePathname()
+  const isDemo = pathname.startsWith("/demo")
 
-  // Appear after 2 seconds
+  // Appear after 2 seconds (still run even on demo to satisfy Rules of Hooks)
   useEffect(() => {
+    if (isDemo) return
     const t = setTimeout(() => setVisible(true), 2000)
     return () => clearTimeout(t)
-  }, [])
+  }, [isDemo])
+
+  // Don't render on demo pages — each demo has its own contact button
+  if (isDemo) return null
 
   return (
     <AnimatePresence>

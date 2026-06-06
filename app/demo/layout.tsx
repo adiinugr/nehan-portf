@@ -5,8 +5,8 @@ export default function DemoLayout({ children }: { children: React.ReactNode }) 
     <>
       {/* Demo Banner */}
       <div
-        className="w-full py-2.5 px-4 flex items-center justify-center gap-3 text-sm font-medium sticky top-0 z-[100]"
-        style={{ backgroundColor: "#0f172a", color: "#94a3b8" }}
+        className="w-full px-4 flex items-center justify-center gap-3 text-sm font-medium sticky top-0 z-[100]"
+        style={{ backgroundColor: "#0f172a", color: "#94a3b8", height: "40px" }}
       >
         <span className="hidden sm:inline">🌐 Ini adalah demo website yang dibuat oleh</span>
         <span className="sm:hidden">Demo oleh</span>
