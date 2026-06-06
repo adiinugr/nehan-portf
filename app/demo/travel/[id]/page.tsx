@@ -17,8 +17,6 @@ import {
   AlertCircle,
   Calendar,
   Tag,
-  BedDouble,
-  Mountain,
   Phone,
   User,
   MessageSquare,
@@ -405,7 +403,7 @@ Mohon konfirmasi ketersediaan. Terima kasih! 🙏`
               Detail Pemesanan
             </h2>
             <p className="text-sm text-gray-500 mb-6">
-              Isi detail di bawah ini, lalu klik "Pesan via WhatsApp" untuk
+              Isi detail di bawah ini, lalu klik &ldquo;Pesan via WhatsApp&rdquo; untuk
               konfirmasi.
             </p>
 

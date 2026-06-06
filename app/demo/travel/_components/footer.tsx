@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Phone, Mail } from "lucide-react"
 import { destinations } from "../data"
-import { GREEN, GOLD, SANS, SERIF } from "./tokens"
+import { GOLD, SANS, SERIF } from "./tokens"
 
 function IgIcon({ className }: { className?: string }) {
   return (

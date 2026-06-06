@@ -9,7 +9,7 @@ import { MapPin, Clock, Search, X, ChevronLeft, ChevronRight, ArrowRight } from 
 import { destinations } from "../data"
 import { TravelHeader } from "../_components/header"
 import { TravelFooter } from "../_components/footer"
-import { GREEN, GOLD, BG, SANS, SERIF, fadeUp } from "../_components/tokens"
+import { GREEN, BG, SANS, SERIF, fadeUp } from "../_components/tokens"
 
 const PER_PAGE = 9
 
