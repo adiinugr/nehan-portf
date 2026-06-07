@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import Link from "next/link"
 import { ExternalLink, Clock } from "lucide-react"
 
@@ -11,18 +12,13 @@ const demos = [
     desc: "Website agen travel lengkap — destinasi, paket wisata, testimoni, dan booking WhatsApp.",
     href: "/demo/travel",
     live: true,
-    gradient: "from-cyan-500 via-teal-600 to-blue-800",
+    image: "/images/demo-travel.png",
     accent: "#0ea5e9",
     features: [
       "Katalog destinasi",
       "Paket wisata 3 tier",
       "Galeri foto",
       "WhatsApp booking"
-    ],
-    browser: [
-      { w: "40%", c: "#0ea5e9" },
-      { w: "25%", c: "#0ea5e9aa" },
-      { w: "30%", c: "#0ea5e944" }
     ]
   },
   {
@@ -31,18 +27,13 @@ const demos = [
     desc: "Website hotel premium dengan showcase kamar, galeri, harga, dan sistem reservasi langsung.",
     href: "/demo/hotel",
     live: true,
-    gradient: "from-amber-700 via-yellow-800 to-stone-900",
+    image: "/images/demo-hotel.png",
     accent: "#d97706",
     features: [
       "Showcase kamar",
       "Galeri foto",
       "Sistem reservasi",
       "Direct booking"
-    ],
-    browser: [
-      { w: "35%", c: "#d97706" },
-      { w: "20%", c: "#d97706aa" },
-      { w: "28%", c: "#d9770644" }
     ]
   },
   {
@@ -51,18 +42,13 @@ const demos = [
     desc: "Website barbershop maskulin dan modern — layanan, harga, booking online, dan galeri hasil kerja.",
     href: "/demo/barbershop",
     live: true,
-    gradient: "from-zinc-800 via-neutral-900 to-black",
+    image: "/images/demo-barbershop.png",
     accent: "#ef4444",
     features: [
       "Daftar layanan & harga",
       "Booking online",
       "Galeri potongan",
       "Lokasi & jam buka"
-    ],
-    browser: [
-      { w: "38%", c: "#ef4444" },
-      { w: "22%", c: "#ef4444aa" },
-      { w: "32%", c: "#ef444444" }
     ]
   },
   {
@@ -71,18 +57,13 @@ const demos = [
     desc: "Website rental kendaraan dinamis — armada, harga sewa, cek ketersediaan, dan pemesanan mudah.",
     href: "/demo/rental",
     live: true,
-    gradient: "from-slate-700 via-gray-800 to-zinc-900",
+    image: "/images/demo-rental.png",
     accent: "#f97316",
     features: [
       "Katalog armada",
       "Harga & paket sewa",
       "Cek ketersediaan",
       "Pemesanan online"
-    ],
-    browser: [
-      { w: "42%", c: "#f97316" },
-      { w: "28%", c: "#f97316aa" },
-      { w: "20%", c: "#f9731644" }
     ]
   }
 ]
@@ -167,55 +148,23 @@ export function UmkmDemoSection() {
                   </span>
                 </div>
 
-                {/* Gradient "website" preview */}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${demo.gradient}`}
+                {/* Real screenshot preview */}
+                <Image
+                  src={demo.image}
+                  alt={`Tampilan website demo ${demo.brand}`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.05]"
                 />
-                <div className="absolute inset-0 flex flex-col gap-2 px-4 pt-10 pb-4">
-                  {/* Fake headline bar */}
-                  <div
-                    className="h-4 rounded-sm w-3/4"
-                    style={{ backgroundColor: "rgba(255,255,255,0.9)" }}
-                  />
-                  <div
-                    className="h-2.5 rounded-sm w-1/2"
-                    style={{ backgroundColor: "rgba(255,255,255,0.5)" }}
-                  />
-                  <div className="mt-2 flex gap-2">
-                    {demo.browser.map((b, i) => (
-                      <div
-                        key={i}
-                        className="h-6 rounded-md"
-                        style={{ width: b.w, backgroundColor: b.c }}
-                      />
-                    ))}
-                  </div>
-                  <div className="mt-1 flex gap-1.5">
-                    {[55, 40, 50, 45].map((w, i) => (
-                      <div
-                        key={i}
-                        className="h-1.5 rounded-full"
-                        style={{
-                          width: `${w}%`,
-                          backgroundColor: "rgba(255,255,255,0.25)"
-                        }}
-                      />
-                    ))}
-                  </div>
-                  {/* Fake cards row */}
-                  <div className="mt-auto flex gap-2">
-                    {[1, 2, 3].map((i) => (
-                      <div
-                        key={i}
-                        className="flex-1 rounded-lg"
-                        style={{
-                          height: 40,
-                          backgroundColor: "rgba(255,255,255,0.12)"
-                        }}
-                      />
-                    ))}
-                  </div>
-                </div>
+
+                {/* Brand-tinted depth gradient for cohesion + badge legibility */}
+                <div
+                  className="absolute inset-0 mix-blend-multiply opacity-40"
+                  style={{
+                    background: `linear-gradient(to bottom right, ${demo.accent}55, transparent 55%)`
+                  }}
+                />
+                <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black/55 to-transparent" />
 
                 {/* Live/Coming soon badge */}
                 <div className="absolute top-9 right-3 z-10">
