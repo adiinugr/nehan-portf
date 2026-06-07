@@ -13,7 +13,7 @@ export default function DemoLayout({ children }: { children: React.ReactNode }) 
         <span style={{ color: "#f1f5f9", fontWeight: 700 }}>NehanDev</span>
         <span className="hidden sm:inline">·</span>
         <Link
-          href="https://wa.me/62895335501192?text=Halo%20NehanDev%2C%20saya%20tertarik%20dengan%20demo%20website%20travel.%20Bisa%20dibuatkan%20untuk%20bisnis%20saya%3F"
+          href="https://wa.me/62895335501192?text=Halo%20NehanDev%2C%20saya%20tertarik%20dengan%20demo%20website%20ini.%20Bisa%20dibuatkan%20untuk%20bisnis%20saya%3F"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-semibold transition-colors"

@@ -21,6 +21,14 @@
         "nxtPslug": "nxtPslug"
       },
       "namedRegex": "^/blog/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/demo/travel/[id]",
+      "regex": "^/demo/travel/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/demo/travel/(?<nxtPid>[^/]+?)(?:/)?$"
     }
   ],
   "staticRoutes": [
@@ -49,10 +57,64 @@
       "namedRegex": "^/contact(?:/)?$"
     },
     {
+      "page": "/demo/barbershop",
+      "regex": "^/demo/barbershop(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/demo/barbershop(?:/)?$"
+    },
+    {
+      "page": "/demo/hotel",
+      "regex": "^/demo/hotel(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/demo/hotel(?:/)?$"
+    },
+    {
+      "page": "/demo/rental",
+      "regex": "^/demo/rental(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/demo/rental(?:/)?$"
+    },
+    {
+      "page": "/demo/travel",
+      "regex": "^/demo/travel(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/demo/travel(?:/)?$"
+    },
+    {
+      "page": "/demo/travel/destinasi",
+      "regex": "^/demo/travel/destinasi(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/demo/travel/destinasi(?:/)?$"
+    },
+    {
+      "page": "/demo/travel/kontak",
+      "regex": "^/demo/travel/kontak(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/demo/travel/kontak(?:/)?$"
+    },
+    {
+      "page": "/demo/travel/paket",
+      "regex": "^/demo/travel/paket(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/demo/travel/paket(?:/)?$"
+    },
+    {
       "page": "/education",
       "regex": "^/education(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/education(?:/)?$"
+    },
+    {
+      "page": "/layanan",
+      "regex": "^/layanan(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/layanan(?:/)?$"
+    },
+    {
+      "page": "/privacy-policy",
+      "regex": "^/privacy\\-policy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/privacy\\-policy(?:/)?$"
     },
     {
       "page": "/projects",
@@ -65,6 +127,12 @@
       "regex": "^/sitemap\\.xml(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    },
+    {
+      "page": "/terms",
+      "regex": "^/terms(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/terms(?:/)?$"
     }
   ],
   "dataRoutes": [],
@@ -84,5 +152,11 @@
     "pathHeader": "x-nextjs-rewritten-path",
     "queryHeader": "x-nextjs-rewritten-query"
   },
-  "rewrites": []
+  "rewrites": [
+    {
+      "source": "/favicon.ico",
+      "destination": "/favicons/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$"
+    }
+  ]
 }

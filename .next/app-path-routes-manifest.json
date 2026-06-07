@@ -1,11 +1,22 @@
 {
+  "/api/contact/route": "/api/contact",
   "/_not-found/page": "/_not-found",
   "/sitemap.xml/route": "/sitemap.xml",
-  "/api/contact/route": "/api/contact",
-  "/blog/page": "/blog",
+  "/layanan/page": "/layanan",
   "/contact/page": "/contact",
-  "/education/page": "/education",
+  "/blog/page": "/blog",
+  "/blog/[slug]/page": "/blog/[slug]",
   "/projects/page": "/projects",
+  "/privacy-policy/page": "/privacy-policy",
+  "/education/page": "/education",
+  "/terms/page": "/terms",
   "/page": "/",
-  "/blog/[slug]/page": "/blog/[slug]"
+  "/demo/hotel/page": "/demo/hotel",
+  "/demo/barbershop/page": "/demo/barbershop",
+  "/demo/rental/page": "/demo/rental",
+  "/demo/travel/destinasi/page": "/demo/travel/destinasi",
+  "/demo/travel/page": "/demo/travel",
+  "/demo/travel/[id]/page": "/demo/travel/[id]",
+  "/demo/travel/paket/page": "/demo/travel/paket",
+  "/demo/travel/kontak/page": "/demo/travel/kontak"
 }

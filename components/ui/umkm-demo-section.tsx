@@ -13,9 +13,16 @@ const demos = [
     live: true,
     gradient: "from-cyan-500 via-teal-600 to-blue-800",
     accent: "#0ea5e9",
-    features: ["Katalog destinasi", "Paket wisata 3 tier", "Galeri foto", "WhatsApp booking"],
+    features: [
+      "Katalog destinasi",
+      "Paket wisata 3 tier",
+      "Galeri foto",
+      "WhatsApp booking"
+    ],
     browser: [
-      { w: "40%", c: "#0ea5e9" }, { w: "25%", c: "#0ea5e9aa" }, { w: "30%", c: "#0ea5e944" }
+      { w: "40%", c: "#0ea5e9" },
+      { w: "25%", c: "#0ea5e9aa" },
+      { w: "30%", c: "#0ea5e944" }
     ]
   },
   {
@@ -26,9 +33,16 @@ const demos = [
     live: true,
     gradient: "from-amber-700 via-yellow-800 to-stone-900",
     accent: "#d97706",
-    features: ["Showcase kamar", "Galeri foto", "Sistem reservasi", "Direct booking"],
+    features: [
+      "Showcase kamar",
+      "Galeri foto",
+      "Sistem reservasi",
+      "Direct booking"
+    ],
     browser: [
-      { w: "35%", c: "#d97706" }, { w: "20%", c: "#d97706aa" }, { w: "28%", c: "#d9770644" }
+      { w: "35%", c: "#d97706" },
+      { w: "20%", c: "#d97706aa" },
+      { w: "28%", c: "#d9770644" }
     ]
   },
   {
@@ -36,12 +50,19 @@ const demos = [
     brand: "Kings Barbershop",
     desc: "Website barbershop maskulin dan modern — layanan, harga, booking online, dan galeri hasil kerja.",
     href: "/demo/barbershop",
-    live: false,
+    live: true,
     gradient: "from-zinc-800 via-neutral-900 to-black",
     accent: "#ef4444",
-    features: ["Daftar layanan & harga", "Booking online", "Galeri potongan", "Lokasi & jam buka"],
+    features: [
+      "Daftar layanan & harga",
+      "Booking online",
+      "Galeri potongan",
+      "Lokasi & jam buka"
+    ],
     browser: [
-      { w: "38%", c: "#ef4444" }, { w: "22%", c: "#ef4444aa" }, { w: "32%", c: "#ef444444" }
+      { w: "38%", c: "#ef4444" },
+      { w: "22%", c: "#ef4444aa" },
+      { w: "32%", c: "#ef444444" }
     ]
   },
   {
@@ -49,14 +70,21 @@ const demos = [
     brand: "FastRide Rental",
     desc: "Website rental kendaraan dinamis — armada, harga sewa, cek ketersediaan, dan pemesanan mudah.",
     href: "/demo/rental",
-    live: false,
+    live: true,
     gradient: "from-slate-700 via-gray-800 to-zinc-900",
     accent: "#f97316",
-    features: ["Katalog armada", "Harga & paket sewa", "Cek ketersediaan", "Pemesanan online"],
+    features: [
+      "Katalog armada",
+      "Harga & paket sewa",
+      "Cek ketersediaan",
+      "Pemesanan online"
+    ],
     browser: [
-      { w: "42%", c: "#f97316" }, { w: "28%", c: "#f97316aa" }, { w: "20%", c: "#f9731644" }
+      { w: "42%", c: "#f97316" },
+      { w: "28%", c: "#f97316aa" },
+      { w: "20%", c: "#f9731644" }
     ]
-  },
+  }
 ]
 
 const container = {
@@ -66,14 +94,17 @@ const container = {
 
 const item = {
   hidden: { opacity: 0, y: 28 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } }
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] }
+  }
 }
 
 export function UmkmDemoSection() {
   return (
     <section className="py-24 bg-muted/40">
       <div className="container mx-auto px-4">
-
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -88,7 +119,10 @@ export function UmkmDemoSection() {
             </span>
             <h2
               className="mt-3 uppercase leading-[0.9] text-foreground"
-              style={{ fontFamily: "var(--font-bebas)", fontSize: "clamp(48px, 7vw, 96px)" }}
+              style={{
+                fontFamily: "var(--font-bebas)",
+                fontSize: "clamp(48px, 7vw, 96px)"
+              }}
             >
               Lihat Hasilnya
             </h2>
@@ -115,40 +149,70 @@ export function UmkmDemoSection() {
               {/* Browser mockup preview */}
               <div className="relative overflow-hidden" style={{ height: 180 }}>
                 {/* Browser chrome */}
-                <div className="absolute top-0 left-0 right-0 h-7 z-10 flex items-center px-3 gap-1.5"
-                  style={{ backgroundColor: "rgba(0,0,0,0.6)", backdropFilter: "blur(4px)" }}>
+                <div
+                  className="absolute top-0 left-0 right-0 h-7 z-10 flex items-center px-3 gap-1.5"
+                  style={{
+                    backgroundColor: "rgba(0,0,0,0.6)",
+                    backdropFilter: "blur(4px)"
+                  }}
+                >
                   <span className="w-2 h-2 rounded-full bg-red-400/80" />
                   <span className="w-2 h-2 rounded-full bg-yellow-400/80" />
                   <span className="w-2 h-2 rounded-full bg-green-400/80" />
-                  <span className="ml-2 text-[9px] font-medium truncate flex-1"
-                    style={{ color: "rgba(255,255,255,0.5)" }}>
+                  <span
+                    className="ml-2 text-[9px] font-medium truncate flex-1"
+                    style={{ color: "rgba(255,255,255,0.5)" }}
+                  >
                     nehandev.com{demo.href}
                   </span>
                 </div>
 
                 {/* Gradient "website" preview */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${demo.gradient}`} />
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${demo.gradient}`}
+                />
                 <div className="absolute inset-0 flex flex-col gap-2 px-4 pt-10 pb-4">
                   {/* Fake headline bar */}
-                  <div className="h-4 rounded-sm w-3/4" style={{ backgroundColor: "rgba(255,255,255,0.9)" }} />
-                  <div className="h-2.5 rounded-sm w-1/2" style={{ backgroundColor: "rgba(255,255,255,0.5)" }} />
+                  <div
+                    className="h-4 rounded-sm w-3/4"
+                    style={{ backgroundColor: "rgba(255,255,255,0.9)" }}
+                  />
+                  <div
+                    className="h-2.5 rounded-sm w-1/2"
+                    style={{ backgroundColor: "rgba(255,255,255,0.5)" }}
+                  />
                   <div className="mt-2 flex gap-2">
                     {demo.browser.map((b, i) => (
-                      <div key={i} className="h-6 rounded-md"
-                        style={{ width: b.w, backgroundColor: b.c }} />
+                      <div
+                        key={i}
+                        className="h-6 rounded-md"
+                        style={{ width: b.w, backgroundColor: b.c }}
+                      />
                     ))}
                   </div>
                   <div className="mt-1 flex gap-1.5">
                     {[55, 40, 50, 45].map((w, i) => (
-                      <div key={i} className="h-1.5 rounded-full"
-                        style={{ width: `${w}%`, backgroundColor: "rgba(255,255,255,0.25)" }} />
+                      <div
+                        key={i}
+                        className="h-1.5 rounded-full"
+                        style={{
+                          width: `${w}%`,
+                          backgroundColor: "rgba(255,255,255,0.25)"
+                        }}
+                      />
                     ))}
                   </div>
                   {/* Fake cards row */}
                   <div className="mt-auto flex gap-2">
-                    {[1,2,3].map(i => (
-                      <div key={i} className="flex-1 rounded-lg"
-                        style={{ height: 40, backgroundColor: "rgba(255,255,255,0.12)" }} />
+                    {[1, 2, 3].map((i) => (
+                      <div
+                        key={i}
+                        className="flex-1 rounded-lg"
+                        style={{
+                          height: 40,
+                          backgroundColor: "rgba(255,255,255,0.12)"
+                        }}
+                      />
                     ))}
                   </div>
                 </div>
@@ -156,14 +220,21 @@ export function UmkmDemoSection() {
                 {/* Live/Coming soon badge */}
                 <div className="absolute top-9 right-3 z-10">
                   {demo.live ? (
-                    <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full"
-                      style={{ backgroundColor: "#22c55e", color: "#fff" }}>
+                    <span
+                      className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full"
+                      style={{ backgroundColor: "#22c55e", color: "#fff" }}
+                    >
                       <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                       LIVE
                     </span>
                   ) : (
-                    <span className="inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded-full"
-                      style={{ backgroundColor: "rgba(0,0,0,0.5)", color: "rgba(255,255,255,0.8)" }}>
+                    <span
+                      className="inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded-full"
+                      style={{
+                        backgroundColor: "rgba(0,0,0,0.5)",
+                        color: "rgba(255,255,255,0.8)"
+                      }}
+                    >
                       <Clock className="w-2.5 h-2.5" />
                       Segera
                     </span>
@@ -173,14 +244,23 @@ export function UmkmDemoSection() {
 
               {/* Content */}
               <div className="flex flex-col flex-1 p-5">
-                <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">{demo.name}</p>
-                <h3 className="font-bold text-base text-foreground mb-2">{demo.brand}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">{demo.desc}</p>
+                <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">
+                  {demo.name}
+                </p>
+                <h3 className="font-bold text-base text-foreground mb-2">
+                  {demo.brand}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
+                  {demo.desc}
+                </p>
 
                 {/* Feature tags */}
                 <div className="flex flex-wrap gap-1.5 mb-4">
-                  {demo.features.map(f => (
-                    <span key={f} className="text-xs px-2 py-0.5 rounded-full bg-muted text-muted-foreground">
+                  {demo.features.map((f) => (
+                    <span
+                      key={f}
+                      className="text-xs px-2 py-0.5 rounded-full bg-primary/10 text-muted-foreground"
+                    >
                       {f}
                     </span>
                   ))}
@@ -217,11 +297,13 @@ export function UmkmDemoSection() {
           className="text-center text-base text-muted-foreground mt-10"
         >
           Ingin tipe website lain?{" "}
-          <Link href="/contact" className="text-primary font-semibold hover:underline">
+          <Link
+            href="/contact"
+            className="text-primary font-semibold hover:underline"
+          >
             Konsultasi gratis dengan kami →
           </Link>
         </motion.p>
-
       </div>
     </section>
   )

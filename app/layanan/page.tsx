@@ -1,6 +1,5 @@
 "use client"
 
-import type { Metadata } from "next"
 import { Header } from "@/components/ui/header"
 import { Footer } from "@/components/ui/footer"
 import { motion } from "framer-motion"
@@ -36,7 +35,7 @@ const demos = [
     brand: "Kings Barbershop",
     desc: "Website barbershop modern dan maskulin dengan daftar layanan, harga, booking online, dan galeri hasil kerja.",
     href: "/demo/barbershop",
-    live: false,
+    live: true,
     gradient: "from-zinc-800 via-neutral-900 to-black",
     tags: ["Layanan & harga", "Booking online", "Galeri", "Jam operasional"],
   },
@@ -45,7 +44,7 @@ const demos = [
     brand: "FastRide Rental",
     desc: "Website rental mobil/motor dengan katalog armada, tarif sewa, cek ketersediaan, dan pemesanan mudah.",
     href: "/demo/rental",
-    live: false,
+    live: true,
     gradient: "from-slate-700 via-gray-800 to-zinc-900",
     tags: ["Katalog armada", "Tarif sewa", "Ketersediaan", "Pemesanan online"],
   },

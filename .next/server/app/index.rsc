@@ -1,23 +1,30 @@
 1:"$Sreact.fragment"
-2:I[9304,["177","static/chunks/app/layout-a4600c61098f5667.js"],"ThemeProvider"]
-3:I[939,["177","static/chunks/app/layout-a4600c61098f5667.js"],"LanguageProvider"]
+2:I[9304,["183","static/chunks/183-48c79a5c91ccc064.js","641","static/chunks/641-85cb20bf60a15988.js","177","static/chunks/app/layout-b85218cb8ccf95d2.js"],"ThemeProvider"]
+3:I[939,["183","static/chunks/183-48c79a5c91ccc064.js","641","static/chunks/641-85cb20bf60a15988.js","177","static/chunks/app/layout-b85218cb8ccf95d2.js"],"LanguageProvider"]
 4:I[7555,[],""]
 5:I[1295,[],""]
-6:I[9243,["177","static/chunks/app/layout-a4600c61098f5667.js"],""]
-8:I[8318,["231","static/chunks/231-2733b6d2e2e16246.js","603","static/chunks/603-9a2fadf165ee3cfe.js","602","static/chunks/602-08816dd0c86f6d81.js","539","static/chunks/539-93bbdc4771c375eb.js","653","static/chunks/653-dcf0b54ec8fa445b.js","974","static/chunks/app/page-74e9980fc43d63df.js"],"Header"]
-9:I[1018,["231","static/chunks/231-2733b6d2e2e16246.js","603","static/chunks/603-9a2fadf165ee3cfe.js","602","static/chunks/602-08816dd0c86f6d81.js","539","static/chunks/539-93bbdc4771c375eb.js","653","static/chunks/653-dcf0b54ec8fa445b.js","974","static/chunks/app/page-74e9980fc43d63df.js"],"Hero"]
-a:I[6221,["231","static/chunks/231-2733b6d2e2e16246.js","603","static/chunks/603-9a2fadf165ee3cfe.js","602","static/chunks/602-08816dd0c86f6d81.js","539","static/chunks/539-93bbdc4771c375eb.js","653","static/chunks/653-dcf0b54ec8fa445b.js","974","static/chunks/app/page-74e9980fc43d63df.js"],"ProjectsSection"]
-b:I[9653,["231","static/chunks/231-2733b6d2e2e16246.js","603","static/chunks/603-9a2fadf165ee3cfe.js","602","static/chunks/602-08816dd0c86f6d81.js","539","static/chunks/539-93bbdc4771c375eb.js","653","static/chunks/653-dcf0b54ec8fa445b.js","974","static/chunks/app/page-74e9980fc43d63df.js"],"EducationSection"]
-c:I[4921,["231","static/chunks/231-2733b6d2e2e16246.js","603","static/chunks/603-9a2fadf165ee3cfe.js","602","static/chunks/602-08816dd0c86f6d81.js","539","static/chunks/539-93bbdc4771c375eb.js","653","static/chunks/653-dcf0b54ec8fa445b.js","974","static/chunks/app/page-74e9980fc43d63df.js"],"BlogPreviewSection"]
-10:I[6539,["231","static/chunks/231-2733b6d2e2e16246.js","603","static/chunks/603-9a2fadf165ee3cfe.js","602","static/chunks/602-08816dd0c86f6d81.js","539","static/chunks/539-93bbdc4771c375eb.js","653","static/chunks/653-dcf0b54ec8fa445b.js","974","static/chunks/app/page-74e9980fc43d63df.js"],"ContactSection"]
-11:I[9549,["231","static/chunks/231-2733b6d2e2e16246.js","603","static/chunks/603-9a2fadf165ee3cfe.js","602","static/chunks/602-08816dd0c86f6d81.js","539","static/chunks/539-93bbdc4771c375eb.js","653","static/chunks/653-dcf0b54ec8fa445b.js","974","static/chunks/app/page-74e9980fc43d63df.js"],"Footer"]
-12:I[9665,[],"OutletBoundary"]
-15:I[9665,[],"ViewportBoundary"]
-17:I[9665,[],"MetadataBoundary"]
-19:I[6614,[],""]
-:HL["/_next/static/media/7b0b24f36b1a6d0b-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/_next/static/css/128366848094c226.css","style"]
-7:T6b4,
+6:I[5347,["183","static/chunks/183-48c79a5c91ccc064.js","641","static/chunks/641-85cb20bf60a15988.js","177","static/chunks/app/layout-b85218cb8ccf95d2.js"],"WhatsAppButton"]
+7:I[9243,["183","static/chunks/183-48c79a5c91ccc064.js","641","static/chunks/641-85cb20bf60a15988.js","177","static/chunks/app/layout-b85218cb8ccf95d2.js"],""]
+9:I[8318,["183","static/chunks/183-48c79a5c91ccc064.js","493","static/chunks/493-dbfb20708f016b47.js","32","static/chunks/32-1039378fe337c0d5.js","270","static/chunks/270-b2d76e976670fdb7.js","602","static/chunks/602-b6997c3dac2a4e26.js","111","static/chunks/111-a8c24f20a166186b.js","974","static/chunks/app/page-894384c07d8c4816.js"],"Header"]
+a:I[1018,["183","static/chunks/183-48c79a5c91ccc064.js","493","static/chunks/493-dbfb20708f016b47.js","32","static/chunks/32-1039378fe337c0d5.js","270","static/chunks/270-b2d76e976670fdb7.js","602","static/chunks/602-b6997c3dac2a4e26.js","111","static/chunks/111-a8c24f20a166186b.js","974","static/chunks/app/page-894384c07d8c4816.js"],"Hero"]
+b:I[2551,["183","static/chunks/183-48c79a5c91ccc064.js","493","static/chunks/493-dbfb20708f016b47.js","32","static/chunks/32-1039378fe337c0d5.js","270","static/chunks/270-b2d76e976670fdb7.js","602","static/chunks/602-b6997c3dac2a4e26.js","111","static/chunks/111-a8c24f20a166186b.js","974","static/chunks/app/page-894384c07d8c4816.js"],"ServicesSection"]
+c:I[7624,["183","static/chunks/183-48c79a5c91ccc064.js","493","static/chunks/493-dbfb20708f016b47.js","32","static/chunks/32-1039378fe337c0d5.js","270","static/chunks/270-b2d76e976670fdb7.js","602","static/chunks/602-b6997c3dac2a4e26.js","111","static/chunks/111-a8c24f20a166186b.js","974","static/chunks/app/page-894384c07d8c4816.js"],"UmkmDemoSection"]
+d:I[8755,["183","static/chunks/183-48c79a5c91ccc064.js","493","static/chunks/493-dbfb20708f016b47.js","32","static/chunks/32-1039378fe337c0d5.js","270","static/chunks/270-b2d76e976670fdb7.js","602","static/chunks/602-b6997c3dac2a4e26.js","111","static/chunks/111-a8c24f20a166186b.js","974","static/chunks/app/page-894384c07d8c4816.js"],"HowItWorksSection"]
+e:I[6221,["183","static/chunks/183-48c79a5c91ccc064.js","493","static/chunks/493-dbfb20708f016b47.js","32","static/chunks/32-1039378fe337c0d5.js","270","static/chunks/270-b2d76e976670fdb7.js","602","static/chunks/602-b6997c3dac2a4e26.js","111","static/chunks/111-a8c24f20a166186b.js","974","static/chunks/app/page-894384c07d8c4816.js"],"ProjectsSection"]
+f:I[9653,["183","static/chunks/183-48c79a5c91ccc064.js","493","static/chunks/493-dbfb20708f016b47.js","32","static/chunks/32-1039378fe337c0d5.js","270","static/chunks/270-b2d76e976670fdb7.js","602","static/chunks/602-b6997c3dac2a4e26.js","111","static/chunks/111-a8c24f20a166186b.js","974","static/chunks/app/page-894384c07d8c4816.js"],"EducationSection"]
+10:I[1122,["183","static/chunks/183-48c79a5c91ccc064.js","493","static/chunks/493-dbfb20708f016b47.js","32","static/chunks/32-1039378fe337c0d5.js","270","static/chunks/270-b2d76e976670fdb7.js","602","static/chunks/602-b6997c3dac2a4e26.js","111","static/chunks/111-a8c24f20a166186b.js","974","static/chunks/app/page-894384c07d8c4816.js"],"TestimonialsSection"]
+11:I[4921,["183","static/chunks/183-48c79a5c91ccc064.js","493","static/chunks/493-dbfb20708f016b47.js","32","static/chunks/32-1039378fe337c0d5.js","270","static/chunks/270-b2d76e976670fdb7.js","602","static/chunks/602-b6997c3dac2a4e26.js","111","static/chunks/111-a8c24f20a166186b.js","974","static/chunks/app/page-894384c07d8c4816.js"],"BlogPreviewSection"]
+15:I[4111,["183","static/chunks/183-48c79a5c91ccc064.js","493","static/chunks/493-dbfb20708f016b47.js","32","static/chunks/32-1039378fe337c0d5.js","270","static/chunks/270-b2d76e976670fdb7.js","602","static/chunks/602-b6997c3dac2a4e26.js","111","static/chunks/111-a8c24f20a166186b.js","974","static/chunks/app/page-894384c07d8c4816.js"],"ContactSection"]
+16:I[9549,["183","static/chunks/183-48c79a5c91ccc064.js","493","static/chunks/493-dbfb20708f016b47.js","32","static/chunks/32-1039378fe337c0d5.js","270","static/chunks/270-b2d76e976670fdb7.js","602","static/chunks/602-b6997c3dac2a4e26.js","111","static/chunks/111-a8c24f20a166186b.js","974","static/chunks/app/page-894384c07d8c4816.js"],"Footer"]
+17:I[9665,[],"OutletBoundary"]
+1a:I[9665,[],"ViewportBoundary"]
+1c:I[9665,[],"MetadataBoundary"]
+1e:I[6614,[],""]
+:HL["/_next/static/media/6c25f6e897d845a3-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/8a1d8947e5852e30-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/fded1358013dc048-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/d63ba5145c8328ff.css","style"]
+8:T6b4,
             {
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
@@ -55,237 +62,211 @@ c:I[4921,["231","static/chunks/231-2733b6d2e2e16246.js","603","static/chunks/603
                 }
               ]
             }
-          d:Td43,
-Online exams have a cheating problem. Students can easily switch to messaging apps, search for answers online, or share screens with friends. When we set out to build CBT Pro for Indonesian schools, we knew anti-cheat had to be a first-class feature — not an afterthought.
+          12:Tec5,
+Jika Anda pemilik hotel, villa, homestay, atau penginapan apapun di Indonesia, Anda pasti akrab dengan Booking.com, Traveloka, dan Agoda.
 
-Here's how we approached the technical challenges.
+Platform-platform ini memang efektif mendatangkan tamu. Tapi ada biaya yang perlu diperhitungkan: **komisi 15–25% dari setiap reservasi**.
 
-## The Core Problem: Browser-Based Exams Are Inherently Leaky
+Untuk penginapan dengan pendapatan Rp 30 juta per bulan, itu berarti Rp 4,5–7,5 juta per bulan keluar sebagai komisi OTA (*Online Travel Agency*).
 
-Traditional web-based exam platforms run in a standard browser. Even with JavaScript tricks to detect tab switching, students can:
+Website sendiri tidak menggantikan OTA. Tapi website yang dikelola dengan baik bisa mengalihkan sebagian reservasi ke jalur langsung — tanpa komisi sama sekali.
 
-- Use a second device
-- Screenshot questions and share them
-- Open another app while the exam timer runs
+## Mengapa Direct Booking Lebih Menguntungkan?
 
-The fundamental issue is that the browser doesn't own the entire device experience.
+Selain bebas komisi, direct booking memberi keuntungan lain:
 
-## Our Solution: Android Kiosk Mode
+- **Kontrol penuh atas harga** — Anda bisa menawarkan harga lebih murah dari OTA atau menambah benefit eksklusif
+- **Data tamu yang Anda miliki** — Email dan nomor tamu bisa digunakan untuk pemasaran ulang
+- **Hubungan langsung dengan tamu** — Lebih mudah menangani permintaan khusus dan membangun loyalitas
 
-Rather than trying to patch browser-based security, we built a dedicated Android client that locks the device into a single-purpose exam mode.
+## Elemen Penting Website Penginapan
 
-When a student starts an exam:
+### Galeri Kamar yang Memukau
 
-1. The app requests **Device Policy Manager** permissions
-2. It pins itself to the foreground using `startLockTask()`
-3. The back button, home button, and recents are all disabled
-4. Screen recording and screenshots are blocked at the OS level
-5. The device cannot connect to other apps until the exam is explicitly ended by the teacher
+Tamu membuat keputusan berdasarkan visual. Website memberi Anda ruang tak terbatas untuk menampilkan foto kamar, fasilitas, pemandangan, dan suasana penginapan dari berbagai sudut.
 
-This is the same technology used by kiosk apps in banks and airports. It's not a workaround — it's the correct tool for the job.
+Berbeda dengan OTA yang foto-fotonya bersaing dengan ratusan properti lain, di website Anda **tampil sendiri**.
 
-```kotlin
-// Simplified kiosk lock example
-val dpm = getSystemService(DEVICE_POLICY_SERVICE) as DevicePolicyManager
-if (dpm.isDeviceOwnerApp(packageName)) {
-    dpm.setLockTaskPackages(adminComponent, arrayOf(packageName))
-    startLockTask()
-}
-```
+### Informasi Kamar dan Harga yang Jelas
 
-## Real-Time Monitoring with WebSockets
+Tampilkan setiap tipe kamar dengan foto, fasilitas lengkap, dan harga per malam. Sertakan informasi tentang kapasitas, sarapan, dan kebijakan pembatalan.
 
-Knowing a student is in kiosk mode is good. Knowing *what they're doing in real-time* is better.
+Transparansi membangun kepercayaan dan mengurangi pertanyaan sebelum booking.
 
-We built a WebSocket-based monitoring system that streams student status to the teacher dashboard every 3 seconds. The payload includes:
+### Sistem Reservasi Online
 
-- Current question number
-- Time spent on each question
-- Whether the device has been idle for too long
-- Submission status
+Formulir reservasi sederhana yang memungkinkan tamu memesan langsung — pilih tanggal, tipe kamar, dan konfirmasi via WhatsApp atau email.
 
-The teacher sees a live grid of all students — green means active and answering, yellow means idle, red means a potential issue.
+Tidak perlu sistem yang rumit. Yang penting proses pemesanan mudah dan cepat.
 
-## AI Question Generation
+### Ulasan dan Testimoni Tamu
 
-One of the most time-consuming parts of running exams is creating questions. We integrated an AI question generation system that takes a topic, grade level, and difficulty, then produces a full set of MCSA, MCMA, and True/False questions in seconds.
+Tamu baru sangat dipengaruhi oleh pengalaman tamu sebelumnya. Tampilkan ulasan terbaik Anda dengan nama, asal kota, dan foto jika memungkinkan.
 
-Teachers can review, edit, and approve questions before publishing. The AI handles the tedious first draft; the teacher adds the pedagogical judgment.
+### Informasi Lokasi dan Aksesibilitas
 
-## Lessons Learned
+Seberapa dekat dengan tempat wisata terdekat? Apakah ada shuttle dari bandara? Berapa menit dari pusat kota?
 
-Building for the Indonesian education market taught us a few things:
+Informasi ini menjawab pertanyaan yang sering ditanyakan tamu — dan meyakinkan mereka bahwa lokasi Anda sesuai kebutuhan.
 
-**Offline resilience matters.** Internet connectivity is inconsistent. We built exam answers to sync locally first, then push to the server when connectivity is restored.
+## Bagaimana Website Mendatangkan Tamu Baru?
 
-**Teachers are not tech-savvy by default.** Every feature needed a simple, guided UI. Complex configuration was moved behind "advanced" menus.
+### Pencarian Google (SEO Lokal)
 
-**Security theater is not security.** Adding dozens of JavaScript hooks to detect cheating creates a false sense of security. Hardware-level lockdown is the only real solution.
+Ketika seseorang mencari *"villa murah Lembang"* atau *"homestay tepi pantai Labuan Bajo"*, Google menampilkan website yang relevan.
 
-CBT Pro is now live at [cbtpro.id](https://cbtpro.id). If you're building for the education sector, the lessons here apply broadly — think about the real threat model, not just the convenient one.
-e:Tb98,
-Ujian online semakin populer di sekolah-sekolah Indonesia. Namun, memilih platform yang tepat bukan perkara mudah. Ada begitu banyak pilihan — dari Google Forms yang gratis hingga platform berbayar dengan fitur canggih. Bagaimana cara memilih yang benar-benar sesuai kebutuhan?
+Properti yang muncul di halaman pertama Google untuk kata kunci ini mendapatkan traffic gratis setiap hari — tanpa bayar iklan, tanpa komisi OTA.
 
-Berikut panduan praktis yang bisa langsung Anda terapkan.
+### Google Hotel Search
 
-## 1. Prioritaskan Keamanan Anti-Curang
+Google memiliki fitur khusus untuk pencarian hotel. Dengan setup yang tepat, properti Anda bisa muncul di Google Hotel Search dan langsung terhubung ke halaman reservasi di website Anda.
 
-Ini adalah faktor nomor satu yang sering diabaikan. Ujian online tanpa sistem anti-curang sama seperti ujian di ruangan tanpa pengawas.
+### Strategi Harga yang Kompetitif
 
-Pertanyaan yang perlu Anda tanyakan ke vendor:
+Tampilkan harga di website yang sedikit lebih murah dari OTA, atau tawarkan benefit eksklusif (sarapan gratis, late checkout) untuk tamu yang booking langsung.
 
-- Apakah platform mengunci perangkat saat ujian berlangsung?
-- Bisakah siswa membuka aplikasi lain?
-- Apakah ada deteksi jika siswa meninggalkan halaman ujian?
+Ini memberikan alasan kuat bagi tamu untuk bypass OTA dan memesan langsung.
 
-**Platform yang baik** harus mampu mengunci perangkat siswa sepenuhnya, bukan hanya menampilkan peringatan ketika tab berpindah.
+## Berapa Cepat ROI Website Penginapan?
 
-## 2. Kemudahan Penggunaan untuk Guru
+Perhitungan sederhana:
 
-Seorang guru SD yang tidak terbiasa dengan teknologi harus bisa membuat ujian dalam waktu kurang dari 10 menit. Jika platform membutuhkan pelatihan panjang, artinya desainnya terlalu rumit.
+- Penginapan dengan pendapatan Rp 20 juta/bulan
+- Komisi OTA rata-rata 20% = **Rp 4 juta/bulan**
+- Jika website mengalihkan 30% booking ke direct = **hemat Rp 1,2 juta/bulan**
+- Biaya website profesional one-time
 
-Cek hal-hal berikut:
-- Seberapa cepat proses membuat soal baru?
-- Apakah ada import soal dari Word atau Excel?
-- Bisakah soal digunakan ulang di ujian berikutnya?
+Dengan penghematan komisi saja, biaya website bisa kembali dalam waktu singkat.
 
-## 3. Koreksi Otomatis dan Laporan Nilai
+---
 
-Mengoreksi 30 lembar jawaban secara manual bisa memakan waktu berjam-jam. Platform yang baik harus:
+Siap mulai mendapatkan direct booking untuk penginapan Anda? [Hubungi kami sekarang](/contact) untuk konsultasi gratis — kami akan bantu merancang website yang tepat untuk tipe properti dan budget Anda.
+13:Tc85,
+Bisnis travel di Indonesia sangat kompetitif. Ratusan agen travel bersaing untuk pelanggan yang sama — dan sebagian besar masih mengandalkan WhatsApp, Instagram, dan mulut ke mulut.
 
-- Mengoreksi semua tipe soal pilihan ganda secara otomatis
-- Menghasilkan laporan nilai per siswa dalam format yang bisa diekspor
-- Menampilkan statistik soal mana yang paling banyak salah dijawab
+Masalahnya: **calon pelanggan yang tidak tahu nama bisnis Anda tidak akan bisa menemukan Anda di media sosial**. Mereka akan mencari di Google, dan menemukan kompetitor yang sudah punya website.
 
-Informasi terakhir ini sangat berharga untuk mengevaluasi materi pelajaran.
+## Mengapa Agen Travel Butuh Website?
 
-## 4. Stabilitas Koneksi dan Mode Offline
+### Calon Pelanggan Riset Online Sebelum Booking
 
-Jaringan internet di Indonesia tidak selalu stabil, terutama di daerah terpencil. Platform ujian yang baik harus bisa:
+Sebelum memutuskan paket wisata mana yang akan dibeli, hampir semua orang melakukan riset online. Mereka membandingkan harga, melihat foto destinasi, dan membaca ulasan.
 
-- Menyimpan jawaban siswa secara lokal jika koneksi terputus
-- Sinkronisasi otomatis saat koneksi kembali
-- Tidak kehilangan progress ujian saat listrik padam sejenak
+Jika bisnis Anda tidak muncul dalam proses riset ini, Anda sudah kalah sebelum kompetisi dimulai.
 
-## 5. Dukungan Teknis dalam Bahasa Indonesia
+### WhatsApp Tidak Bisa Di-Google
 
-Saat ada masalah teknis di tengah ujian, Anda butuh bantuan cepat. Pastikan platform yang Anda pilih memiliki:
+Anda mungkin punya ribuan kontak di WhatsApp. Tapi orang yang baru pertama kali mencari paket wisata tidak akan menemukan nomor WA Anda di Google.
 
-- Customer support dalam bahasa Indonesia
-- Dokumentasi yang mudah dipahami
-- Respon time yang cepat (idealnya kurang dari 2 jam di hari kerja)
+Website adalah pintu masuk pertama dari Google ke bisnis Anda.
 
-## Rekomendasi untuk Sekolah Indonesia
+## Apa yang Harus Ada di Website Travel?
 
-Berdasarkan kriteria di atas, **CBT Pro** dirancang khusus untuk menjawab kebutuhan guru Indonesia. Fitur kiosk anti-curang berbasis Android, koreksi otomatis, dan generate soal dengan AI membuatnya menjadi pilihan yang komprehensif.
+### Katalog Paket Wisata yang Lengkap
 
-Coba gratis di [cbtpro.id](https://cbtpro.id) dan rasakan perbedaannya.
+Tampilkan semua paket dengan detail yang lengkap: itinerary hari per hari, termasuk apa saja, harga mulai dari berapa, dan syarat booking. Semakin detail, semakin calon pelanggan merasa yakin.
 
-## Kesimpulan
+### Galeri Foto Destinasi yang Memukau
 
-Memilih platform ujian online bukan soal fitur paling banyak atau harga paling murah. Yang terpenting adalah: apakah platform ini membuat proses ujian lebih jujur, lebih mudah, dan lebih efisien bagi guru dan siswa Anda?
+Foto adalah senjata utama bisnis travel. Website memberi ruang untuk menampilkan foto-foto terbaik dari setiap destinasi — jauh lebih efektif dari posting Instagram yang terbenam dalam feed.
 
-Jawaban dari tiga pertanyaan itu yang seharusnya menjadi dasar keputusan Anda.
-f:Tf09,
-When we designed the teacher dashboard for CBT Pro, the first question was: how do teachers know what students are doing during a live exam?
+### Formulir Permintaan Penawaran
 
-The naive answer is polling — every few seconds, the client asks the server "what's the status of each student?" This works, but it doesn't scale and creates a choppy, laggy experience. With 30 students in a class all polling every 3 seconds, you're looking at 600 requests per minute per classroom.
+Tidak semua paket punya harga tetap. Biarkan calon pelanggan mengisi formulir dengan kebutuhan mereka — jumlah orang, tanggal, budget — dan Anda bisa follow up dengan penawaran yang tepat.
 
-We went with WebSockets instead. Here's how we architected it.
+### Testimoni dan Ulasan Perjalanan
 
-## Why WebSockets Over HTTP Polling
+Kepercayaan adalah kunci bisnis travel. Tampilkan foto dan cerita dari pelanggan yang sudah pernah berwisata bersama Anda. Ini jauh lebih meyakinkan dari sekadar deskripsi produk.
 
-WebSockets maintain a persistent, bidirectional connection between client and server. Once established, either side can push data at any time without the overhead of a new HTTP request.
+### Blog atau Panduan Wisata
 
-For exam monitoring, this means:
+Artikel tentang *"10 Tempat Wisata Terbaik di Lombok"* atau *"Panduan Backpacker ke Raja Ampat"* bisa mendatangkan ribuan pembaca dari Google setiap bulannya — dan mengubah mereka menjadi pelanggan.
 
-- Student clients push status updates when something changes (question answered, idle state, connection drop)
-- The server fans those updates out to the teacher's dashboard in near real-time
-- Connection overhead happens once, not hundreds of times per session
+## Strategi SEO untuk Agen Travel Lokal
 
-The latency difference is significant: polling typically introduces 1-5 seconds of delay; WebSockets deliver updates in under 200ms.
+Kata kunci seperti *"paket wisata Bali murah"* sangat kompetitif. Tapi ada peluang besar di kata kunci yang lebih spesifik:
 
-## Architecture Overview
+- *"paket wisata Bromo dari Surabaya"*
+- *"agen travel terpercaya Malang"*
+- *"open trip Raja Ampat Mei 2025"*
 
-We used a hub-and-spoke model:
+Kata kunci spesifik seperti ini lebih mudah untuk muncul di halaman pertama Google, dan pencariannya dilakukan oleh orang yang sudah hampir siap booking.
 
-```
-Student Device → WebSocket Server → Teacher Dashboard
-     (spoke)         (hub)              (spoke)
-```
+## Berapa Potensi Tambahan Booking dari Website?
 
-Each exam session gets a dedicated "room" on the WebSocket server. Students join the room when they start the exam; the teacher joins as an observer.
+Agen travel yang aktif mengoptimasi website-nya melaporkan:
 
-The server maintains in-memory state for each room:
+- **30–50% booking** mulai datang dari pencarian Google (tanpa bayar iklan)
+- Rata-rata nilai transaksi lebih tinggi karena calon pelanggan sudah riset sebelumnya
+- Lebih sedikit waktu dihabiskan untuk menjawab pertanyaan dasar — karena semuanya sudah ada di website
 
-```typescript
-interface ExamRoom {
-  examId: string
-  students: Map<string, StudentState>
-  teacherSocket: WebSocket | null
-}
+---
 
-interface StudentState {
-  studentId: string
-  name: string
-  currentQuestion: number
-  answeredCount: number
-  lastActivity: Date
-  status: 'active' | 'idle' | 'submitted' | 'disconnected'
-}
-```
+Ingin website travel yang tidak hanya cantik, tapi benar-benar mendatangkan booking? [Konsultasi gratis dengan kami](/contact) — kami akan bantu rancang website yang sesuai dengan model bisnis travel Anda.
+14:Tc7d,
+GoFood dan GrabFood memang membawa pelanggan ke restoran Anda. Tapi ada harga yang harus dibayar: **komisi 20–30% dari setiap transaksi**.
 
-## Handling Disconnections Gracefully
+Untuk restoran dengan omzet Rp 50 juta per bulan, itu berarti Rp 10–15 juta per bulan keluar begitu saja sebagai biaya platform.
 
-Network drops are common on mobile devices. We needed to handle them without marking a student as "cheating."
+Website restoran yang dikelola sendiri tidak menggantikan platform tersebut — tapi bisa menjadi saluran pemesanan tambahan yang biayanya jauh lebih rendah.
 
-Our approach:
+## Apa yang Harus Ada di Website Restoran?
 
-1. Student app detects connection loss
-2. Answers continue to save locally (SQLite on Android)
-3. App attempts reconnection with exponential backoff
-4. On reconnect, the app sends a `RESUME` event with the last-known server state
-5. Server reconciles the state and notifies the teacher
+Website restoran yang efektif berbeda dari company profile biasa. Berikut elemen-elemen yang benar-benar menghasilkan:
 
-```typescript
-// Client reconnection logic
-const reconnect = (examId: string, studentId: string) => {
-  ws.send(JSON.stringify({
-    type: 'RESUME',
-    examId,
-    studentId,
-    lastSyncTimestamp: getLastSync()
-  }))
-}
-```
+### Menu Digital yang Mudah Diakses
 
-## Scaling Considerations
+Menu yang bisa diakses dari smartphone tanpa harus download aplikasi. Pelanggan bisa melihat foto makanan, harga, dan deskripsi lengkap — bahkan sebelum mereka datang ke restoran.
 
-A single WebSocket server works fine for a school deployment. But if you're building for district-wide or national scale, you need to think about horizontal scaling.
+Menu digital juga mudah diperbarui. Tidak perlu cetak ulang brosur setiap ada perubahan harga.
 
-The challenge: WebSocket connections are stateful. A teacher's dashboard connected to Server A can't receive updates from students connected to Server B without a shared message bus.
+### Sistem Reservasi Online
 
-We use **Redis Pub/Sub** as the fan-out mechanism:
+Biarkan pelanggan memesan meja langsung dari website — tanpa telepon, tanpa WhatsApp. Ini sangat berguna untuk restoran yang sering penuh di akhir pekan.
 
-- Each WebSocket server subscribes to exam room channels in Redis
-- When any server receives a student update, it publishes to Redis
-- All servers receive the message and forward it to any connected observers in that room
+### Foto Makanan Berkualitas
 
-This lets us run multiple WebSocket servers behind a load balancer without sticky sessions.
+Ini bukan detail kecil. Foto makanan yang bagus bisa meningkatkan kemungkinan orang datang ke restoran Anda hingga **70%**. Website adalah tempat terbaik untuk menampilkan foto-foto terbaik Anda.
 
-## Performance in Practice
+### Lokasi dan Petunjuk Arah
 
-During a 30-student exam, our WebSocket server handles approximately:
+Integrasi Google Maps yang mudah diakses. Pelanggan baru tidak perlu repot mencari lokasi Anda.
 
-- **30 incoming messages/minute** (student heartbeats)
-- **150 push messages/minute** (status updates to teacher)
-- **~2KB/minute** total payload per student
+## Bagaimana Website Mendatangkan Pelanggan Baru?
 
-At this scale, a single Node.js server with `ws` handles thousands of concurrent exam sessions comfortably.
+### Pencarian Google (SEO Lokal)
 
-The real lesson: choose your protocol based on the interaction pattern. For request-response, use HTTP. For persistent, low-latency streams like exam monitoring, WebSockets are the right tool.
-0:{"P":null,"b":"74z8YhJHVTcXbI3J2m8Pq","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/128366848094c226.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"alternate","hrefLang":"en","href":"https://www.nehandev.com"}],["$","link",null,{"rel":"alternate","hrefLang":"id","href":"https://www.nehandev.com"}],["$","link",null,{"rel":"alternate","hrefLang":"x-default","href":"https://www.nehandev.com"}],["$","meta",null,{"name":"msapplication-config","content":"/favicons/browserconfig.xml"}],["$","meta",null,{"name":"msapplication-TileColor","content":"#6366F1"}],["$","meta",null,{"name":"msapplication-TileImage","content":"/favicons/ms-icon-144x144.png"}]]}],["$","body",null,{"className":"__variable_ed3508","children":[["$","$L2",null,{"attribute":"class","defaultTheme":"dark","enableSystem":true,"disableTransitionOnChange":true,"children":["$","$L3",null,{"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}],["$","$L6",null,{"id":"schema-structured-data","type":"application/ld+json","strategy":"afterInteractive","children":"$7"}]]}]]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","main",null,{"className":"min-h-screen","children":[["$","$L8",null,{}],["$","$L9",null,{}],["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{"posts":[{"slug":"building-anti-cheat-exam-platform","title":"Building an Anti-Cheat Online Exam Platform: The Technical Challenge","date":"2025-04-20","category":"EdTech","lang":"en","excerpt":"The technical challenges of building a tamper-proof online exam system for Indonesian schools — from kiosk mode implementation to WebSocket real-time monitoring.","readTime":"6","author":"NehanDev","content":"$d"},{"slug":"cara-memilih-platform-ujian-online","title":"Cara Memilih Platform Ujian Online yang Tepat untuk Sekolah Anda","date":"2025-04-15","category":"Pendidikan","lang":"id","excerpt":"Panduan lengkap untuk guru dan kepala sekolah dalam memilih platform ujian online yang aman, mudah digunakan, dan sesuai kebutuhan siswa di Indonesia.","readTime":"5","author":"NehanDev","content":"$e"},{"slug":"websocket-realtime-monitoring","title":"Real-Time Student Monitoring with WebSockets: A Developer's Guide","date":"2025-04-10","category":"Tech","lang":"en","excerpt":"How we implemented WebSocket-based live monitoring for online exams — tracking 30+ concurrent students without killing server performance.","readTime":"7","author":"NehanDev","content":"$f"}]}],["$","$L10",null,{}],["$","$L11",null,{}]]}],"$undefined",null,["$","$L12",null,{"children":["$L13","$L14",null]}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","9IPC2-LEtLZ9InYhROdvR",{"children":[["$","$L15",null,{"children":"$L16"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],["$","$L17",null,{"children":"$L18"}]]}],false]],"m":"$undefined","G":["$19","$undefined"],"s":false,"S":true}
-16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}],["$","meta","2",{"name":"theme-color","content":"#6366F1"}]]
-13:null
-14:null
-18:[["$","title","0",{"children":"NehanDev | Professional Web Development Solutions"}],["$","meta","1",{"name":"description","content":"Transform your digital vision into reality with NehanDev. We create beautiful, high-performance websites and applications tailored to your business needs."}],["$","link","2",{"rel":"author","href":"https://www.nehandev.com"}],["$","meta","3",{"name":"author","content":"NehanDev"}],["$","link","4",{"rel":"manifest","href":"/favicons/site.webmanifest","crossOrigin":"$undefined"}],["$","meta","5",{"name":"keywords","content":"web development,web design,frontend development,React,Next.js,portfolio,professional websites,jasa pembuatan website,web developer Indonesia,pengembangan web"}],["$","meta","6",{"name":"creator","content":"NehanDev"}],["$","meta","7",{"name":"publisher","content":"NehanDev"}],["$","meta","8",{"name":"category","content":"Technology"}],["$","link","9",{"rel":"canonical","href":"https://nehandev.com"}],["$","meta","10",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","11",{"property":"og:title","content":"NehanDev | Professional Web Development Solutions"}],["$","meta","12",{"property":"og:description","content":"Transform your digital vision into reality with NehanDev. We create beautiful, high-performance websites and applications tailored to your business needs."}],["$","meta","13",{"property":"og:url","content":"https://www.nehandev.com"}],["$","meta","14",{"property":"og:site_name","content":"NehanDev"}],["$","meta","15",{"property":"og:locale","content":"en_US"}],["$","meta","16",{"property":"og:image","content":"https://www.nehandev.com/og-image-nehan.png"}],["$","meta","17",{"property":"og:image:width","content":"1200"}],["$","meta","18",{"property":"og:image:height","content":"630"}],["$","meta","19",{"property":"og:image:alt","content":"NehanDev - Professional Web Development"}],["$","meta","20",{"property":"og:locale:alternate","content":"id_ID"}],["$","meta","21",{"property":"og:type","content":"website"}],["$","meta","22",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","23",{"name":"twitter:site","content":"@nehandev"}],["$","meta","24",{"name":"twitter:creator","content":"@nehandev"}],["$","meta","25",{"name":"twitter:title","content":"NehanDev | Professional Web Development Solutions"}],["$","meta","26",{"name":"twitter:description","content":"Transform your digital vision into reality with NehanDev. We create beautiful, high-performance websites and applications tailored to your business needs."}],["$","meta","27",{"name":"twitter:image","content":"https://www.nehandev.com/og-image-nehan.png"}],["$","link","28",{"rel":"icon","href":"/favicons/favicon.svg","type":"image/svg+xml"}],["$","link","29",{"rel":"icon","href":"/favicons/favicon.ico"}],["$","link","30",{"rel":"icon","href":"/favicons/favicon-32x32.png","sizes":"32x32","type":"image/png"}],["$","link","31",{"rel":"icon","href":"/favicons/favicon-96x96.png","sizes":"96x96","type":"image/png"}],["$","link","32",{"rel":"apple-touch-icon","href":"/favicons/apple-touch-icon.png"}],["$","link","33",{"rel":"apple-touch-icon","href":"/favicons/apple-icon-180x180.png","sizes":"180x180","type":"image/png"}],["$","link","34",{"rel":"mask-icon","href":"/favicons/favicon.svg","color":"#6366F1"}]]
+Ketika seseorang mencari *"restoran padang Jakarta Selatan"* atau *"tempat makan romantis Bandung"*, Google menampilkan hasil dari website yang relevan.
+
+Dengan website yang dioptimasi untuk pencarian lokal, restoran Anda bisa muncul di halaman pertama Google untuk kata kunci yang tepat — secara gratis, tanpa bayar iklan.
+
+### Bagikan di Semua Platform
+
+Link website bisa dibagikan di Instagram, WhatsApp, status, bahkan kartu nama. Lebih profesional dari sekadar nomor WhatsApp.
+
+### Bangun Kepercayaan Sebelum Pelanggan Datang
+
+Orang yang belum pernah ke restoran Anda akan mencarinya di Google sebelum memutuskan datang. Website dengan foto yang menarik, review pelanggan, dan informasi lengkap bisa mengubah orang yang ragu menjadi pelanggan yang datang.
+
+## Studi Kasus Singkat
+
+Warung Makan Bu Sri di Yogyakarta mulai punya website sederhana pada awal 2024. Dalam 3 bulan:
+
+- Muncul di halaman 1 Google untuk *"warung makan enak Yogyakarta"*
+- Reservasi meningkat 40% — banyak dari pelanggan yang belum pernah datang sebelumnya
+- Tidak lagi bergantung sepenuhnya pada platform delivery untuk pendapatan online
+
+Website bukan pengganti GoFood. Tapi dengan biaya operasional yang lebih rendah, website menjadi investasi yang cepat balik modal.
+
+## Berapa Biaya Website Restoran?
+
+Website restoran profesional — dengan menu digital, formulir reservasi, dan optimasi SEO lokal — biasanya selesai dalam 7–14 hari kerja.
+
+Biayanya? Jauh lebih hemat dari komisi platform selama satu bulan saja.
+
+Ingin tahu lebih lanjut? [Hubungi kami](/contact) untuk konsultasi gratis — kami akan bantu tentukan fitur apa yang paling dibutuhkan restoran Anda.
+0:{"P":null,"b":"WDGH16Yq4R6rWtvRsOrYI","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d63ba5145c8328ff.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"alternate","hrefLang":"en","href":"https://www.nehandev.com"}],["$","link",null,{"rel":"alternate","hrefLang":"id","href":"https://www.nehandev.com"}],["$","link",null,{"rel":"alternate","hrefLang":"x-default","href":"https://www.nehandev.com"}],["$","meta",null,{"name":"msapplication-config","content":"/favicons/browserconfig.xml"}],["$","meta",null,{"name":"msapplication-TileColor","content":"#6366F1"}],["$","meta",null,{"name":"msapplication-TileImage","content":"/favicons/ms-icon-144x144.png"}]]}],["$","body",null,{"className":"__variable_744198 __variable_f98467 __variable_d758cf font-sans","children":[["$","$L2",null,{"attribute":"class","forcedTheme":"light","disableTransitionOnChange":true,"children":[["$","$L3",null,{"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$L6",null,{}]]}],["$","$L7",null,{"id":"schema-structured-data","type":"application/ld+json","strategy":"afterInteractive","children":"$8"}]]}]]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","main",null,{"className":"min-h-screen","children":[["$","$L9",null,{}],["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{}],["$","$Le",null,{}],["$","$Lf",null,{}],["$","$L10",null,{}],["$","$L11",null,{"posts":[{"slug":"website-hotel-penginapan-tingkatkan-booking","title":"Website Hotel & Penginapan: Cara Meningkatkan Direct Booking dan Kurangi Ketergantungan OTA","date":"2025-06-05","category":"Business","lang":"id","excerpt":"Booking.com, Traveloka, dan Agoda memotong 15–25% komisi dari setiap reservasi. Pemilik hotel dan penginapan yang punya website sendiri bisa mendapatkan tamu langsung — tanpa bayar komisi sepeser pun.","readTime":"7","author":"NehanDev","content":"$12"},{"slug":"website-travel-wisata-panduan","title":"Website untuk Bisnis Travel: Cara Mendapatkan Booking Lebih Banyak Secara Online","date":"2025-06-03","category":"Business","lang":"id","excerpt":"Agen travel yang mengandalkan WA dan media sosial saja kehilangan calon pelanggan setiap hari. Website travel yang tepat bisa menjadi mesin booking otomatis yang bekerja 24 jam untuk bisnis Anda.","readTime":"6","author":"NehanDev","content":"$13"},{"slug":"website-restoran-menarik-pelanggan","title":"Website Restoran: Cara Menarik Pelanggan Baru Tanpa Bergantung pada GoFood","date":"2025-06-01","category":"Business","lang":"id","excerpt":"GoFood dan GrabFood memotong komisi 20–30% dari setiap pesanan. Website restoran sendiri memungkinkan Anda menerima pemesanan langsung, kendalikan branding, dan hemat jutaan rupiah per bulan.","readTime":"6","author":"NehanDev","content":"$14"}]}],["$","$L15",null,{}],["$","$L16",null,{}]]}],"$undefined",null,["$","$L17",null,{"children":["$L18","$L19",null]}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","r5Hjg9FVwkhCo2LqQDwID",{"children":[["$","$L1a",null,{"children":"$L1b"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],["$","$L1c",null,{"children":"$L1d"}]]}],false]],"m":"$undefined","G":["$1e","$undefined"],"s":false,"S":true}
+1b:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}],["$","meta","2",{"name":"theme-color","content":"#6366F1"}]]
+18:null
+19:null
+1d:[["$","title","0",{"children":"NehanDev | Solusi Digital untuk Usaha Lokal"}],["$","meta","1",{"name":"description","content":"Kami bantu UMKM dan bisnis kecil hadir secara digital — website profesional untuk restoran, travel, penginapan, dan lebih banyak lagi."}],["$","link","2",{"rel":"author","href":"https://www.nehandev.com"}],["$","meta","3",{"name":"author","content":"NehanDev"}],["$","link","4",{"rel":"manifest","href":"/favicons/site.webmanifest","crossOrigin":"$undefined"}],["$","meta","5",{"name":"keywords","content":"web development,web design,frontend development,React,Next.js,portfolio,professional websites,jasa pembuatan website,web developer Indonesia,pengembangan web"}],["$","meta","6",{"name":"creator","content":"NehanDev"}],["$","meta","7",{"name":"publisher","content":"NehanDev"}],["$","meta","8",{"name":"category","content":"Technology"}],["$","link","9",{"rel":"canonical","href":"http://localhost:3000"}],["$","meta","10",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","11",{"name":"mobile-web-app-capable","content":"yes"}],["$","meta","12",{"name":"apple-mobile-web-app-title","content":"NehanDev"}],["$","meta","13",{"name":"apple-mobile-web-app-status-bar-style","content":"default"}],["$","meta","14",{"property":"og:title","content":"NehanDev | Professional Web Development Solutions"}],["$","meta","15",{"property":"og:description","content":"Transform your digital vision into reality with NehanDev. We create beautiful, high-performance websites and applications tailored to your business needs."}],["$","meta","16",{"property":"og:url","content":"https://www.nehandev.com"}],["$","meta","17",{"property":"og:site_name","content":"NehanDev"}],["$","meta","18",{"property":"og:locale","content":"en_US"}],["$","meta","19",{"property":"og:image","content":"https://www.nehandev.com/og-image-nehan.png"}],["$","meta","20",{"property":"og:image:width","content":"1200"}],["$","meta","21",{"property":"og:image:height","content":"630"}],["$","meta","22",{"property":"og:image:alt","content":"NehanDev - Professional Web Development"}],["$","meta","23",{"property":"og:locale:alternate","content":"id_ID"}],["$","meta","24",{"property":"og:type","content":"website"}],["$","meta","25",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","26",{"name":"twitter:site","content":"@nehandev"}],["$","meta","27",{"name":"twitter:creator","content":"@nehandev"}],["$","meta","28",{"name":"twitter:title","content":"NehanDev | Professional Web Development Solutions"}],["$","meta","29",{"name":"twitter:description","content":"Transform your digital vision into reality with NehanDev. We create beautiful, high-performance websites and applications tailored to your business needs."}],["$","meta","30",{"name":"twitter:image","content":"https://www.nehandev.com/og-image-nehan.png"}],["$","link","31",{"rel":"icon","href":"/favicons/favicon.svg","type":"image/svg+xml"}],["$","link","32",{"rel":"icon","href":"/favicons/favicon.ico","type":"image/x-icon"}],["$","link","33",{"rel":"icon","href":"/favicons/favicon-96x96.png","sizes":"96x96","type":"image/png"}],["$","link","34",{"rel":"apple-touch-icon","href":"/favicons/apple-touch-icon.png","sizes":"180x180","type":"image/png"}],["$","link","35",{"rel":"mask-icon","href":"/favicons/favicon.svg","color":"#6366F1"}]]

@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://nehandev.com/sitemap.xml</loc><lastmod>2026-05-10T14:25:31.372Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nehandev.com/contact</loc><lastmod>2026-05-10T14:25:31.373Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nehandev.com/blog</loc><lastmod>2026-05-10T14:25:31.373Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nehandev.com/projects</loc><lastmod>2026-05-10T14:25:31.373Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nehandev.com/education</loc><lastmod>2026-05-10T14:25:31.373Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nehandev.com</loc><lastmod>2026-05-10T14:25:31.373Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nehandev.com/blog/building-anti-cheat-exam-platform</loc><lastmod>2026-05-10T14:25:31.373Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nehandev.com/blog/cara-memilih-platform-ujian-online</loc><lastmod>2026-05-10T14:25:31.373Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nehandev.com/blog/nextjs-15-untuk-pemula</loc><lastmod>2026-05-10T14:25:31.373Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nehandev.com/blog/nextjs-seo-optimization-2025</loc><lastmod>2026-05-10T14:25:31.373Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nehandev.com/blog/websocket-realtime-monitoring</loc><lastmod>2026-05-10T14:25:31.373Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/layanan</loc><lastmod>2026-06-07T07:58:36.224Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/contact</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/sitemap.xml</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/projects</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/education</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/privacy-policy</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/demo/rental</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/demo/barbershop</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/demo/travel/kontak</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/blog</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/demo/travel/paket</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/demo/travel</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/demo/hotel</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/terms</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/demo/travel/destinasi</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/blog/alasan-bisnis-lokal-butuh-website</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/blog/building-anti-cheat-exam-platform</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/blog/nextjs-seo-optimization-2025</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/blog/website-hotel-penginapan-tingkatkan-booking</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/blog/website-restoran-menarik-pelanggan</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/blog/website-travel-wisata-panduan</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/blog/websocket-realtime-monitoring</loc><lastmod>2026-06-07T07:58:36.225Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>

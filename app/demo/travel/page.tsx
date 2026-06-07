@@ -6,7 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import {
-  MapPin, Star, Clock, ChevronRight, Search,
+  MapPin, Star, Clock, ChevronRight, Search, MessageCircle,
   Calendar, Wallet, Users, ChevronDown, ArrowRight,
 } from "lucide-react"
 import { packages, destinations } from "./data"
@@ -69,21 +69,21 @@ export default function TravelHomePage() {
         <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom,rgba(0,0,0,0.45) 0%,rgba(0,0,0,0.35) 35%,rgba(0,0,0,0.72) 100%)" }} />
         <div className="relative max-w-7xl mx-auto px-6 pb-28 w-full">
           <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}>
-            <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "rgba(255,255,255,0.75)" }}>
+            <p className="text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-2 sm:mb-4" style={{ color: "rgba(255,255,255,0.75)" }}>
               Agen Perjalanan Terpercaya Sejak 2015
             </p>
-            <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.05] max-w-3xl mb-6" style={{ fontFamily: SERIF }}>
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-white leading-[1.1] sm:leading-[1.05] max-w-3xl mb-3 sm:mb-6" style={{ fontFamily: SERIF }}>
               Keajaiban alam dan pesona budaya{" "}
               <em style={{ color: GOLD }}>Indonesia.</em>
             </h1>
-            <p className="text-lg mb-10" style={{ color: "rgba(255,255,255,0.8)", maxWidth: "500px" }}>
+            <p className="text-sm sm:text-lg mb-4 sm:mb-10" style={{ color: "rgba(255,255,255,0.8)", maxWidth: "500px" }}>
               {packages.length} paket wisata tersedia — dari Sabang sampai Merauke.
             </p>
           </motion.div>
 
           {/* Hero search bar */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
-            className="bg-white rounded-2xl shadow-2xl p-4 flex flex-col md:flex-row gap-3 max-w-2xl">
+            className="bg-white rounded-2xl shadow-2xl p-3 sm:p-4 flex flex-col md:flex-row gap-2 sm:gap-3 max-w-3xl">
             <div className="flex items-center gap-3 flex-1 px-3">
               <Calendar className="w-4 h-4 shrink-0" style={{ color: GREEN }} />
               <div className="flex-1">
@@ -98,14 +98,17 @@ export default function TravelHomePage() {
               <Wallet className="w-4 h-4 shrink-0" style={{ color: GREEN }} />
               <div className="flex-1">
                 <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400">Budget</p>
-                <select value={heroBudget} onChange={(e) => setHeroBudget(e.target.value)}
-                  className="text-sm font-medium text-gray-700 bg-transparent outline-none w-full cursor-pointer">
-                  <option value="Semua">Semua harga</option>
-                  <option value="< Rp 1jt">&lt; Rp 1jt</option>
-                  <option value="Rp 1–3jt">Rp 1–3jt</option>
-                  <option value="Rp 3–5jt">Rp 3–5jt</option>
-                  <option value="> Rp 5jt">&gt; Rp 5jt</option>
-                </select>
+                <div className="relative">
+                  <select value={heroBudget} onChange={(e) => setHeroBudget(e.target.value)}
+                    className="text-sm font-medium text-gray-700 bg-transparent outline-none w-full cursor-pointer appearance-none pr-5">
+                    <option value="Semua">Semua harga</option>
+                    <option value="< Rp 1jt">&lt; Rp 1jt</option>
+                    <option value="Rp 1–3jt">Rp 1–3jt</option>
+                    <option value="Rp 3–5jt">Rp 3–5jt</option>
+                    <option value="> Rp 5jt">&gt; Rp 5jt</option>
+                  </select>
+                  <ChevronDown className="w-3.5 h-3.5 absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none" style={{ color: GREEN }} />
+                </div>
               </div>
             </div>
             <div className="hidden md:block w-px bg-gray-200 my-1" />
@@ -113,13 +116,13 @@ export default function TravelHomePage() {
               <Users className="w-4 h-4 shrink-0" style={{ color: GREEN }} />
               <div className="flex-1">
                 <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400">Peserta</p>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1.5">
                   <button type="button" onClick={() => setHeroPeserta((p) => Math.max(1, p - 1))}
-                    className="w-5 h-5 rounded-full flex items-center justify-center font-bold text-sm leading-none"
+                    className="w-5 h-5 rounded-full flex items-center justify-center font-bold text-sm leading-none shrink-0"
                     style={{ backgroundColor: GREEN + "22", color: GREEN }}>−</button>
-                  <span className="text-sm font-medium text-gray-700">{heroPeserta} orang</span>
+                  <span className="text-sm font-medium text-gray-700 whitespace-nowrap">{heroPeserta} orang</span>
                   <button type="button" onClick={() => setHeroPeserta((p) => Math.min(20, p + 1))}
-                    className="w-5 h-5 rounded-full flex items-center justify-center font-bold text-sm leading-none"
+                    className="w-5 h-5 rounded-full flex items-center justify-center font-bold text-sm leading-none shrink-0"
                     style={{ backgroundColor: GREEN + "22", color: GREEN }}>+</button>
                 </div>
               </div>
@@ -367,6 +370,15 @@ export default function TravelHomePage() {
           </motion.div>
         </div>
       </section>
+
+      {/* ── WA FLOAT ────────────────────────────────────────────── */}
+      <motion.a href={WA_GENERAL} target="_blank" rel="noopener noreferrer"
+        initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1.5, duration: 0.4 }}
+        className="hidden lg:flex fixed bottom-6 right-5 z-[150] items-center gap-2 px-4 py-3 rounded-full font-bold text-sm text-white transition-all hover:scale-105"
+        style={{ backgroundColor: "#25D366", boxShadow: "0 4px 20px rgba(37,211,102,0.4)" }}>
+        <MessageCircle className="w-4 h-4" /> Chat WA
+      </motion.a>
 
       <TravelFooter />
     </div>
