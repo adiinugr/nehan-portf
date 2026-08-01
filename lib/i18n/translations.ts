@@ -11,6 +11,7 @@ export const translations = {
     },
     hero: {
       badge: "Open for New Projects",
+      legalName: "Nehan Dev Indonesia — Web Development Studio",
       headline1: "Website that works",
       headline2: "for your",
       words: ["restaurant", "travel", "hotel", "UMKM", "business"],
@@ -187,6 +188,7 @@ export const translations = {
     },
     hero: {
       badge: "Buka untuk Proyek Baru",
+      legalName: "Nehan Dev Indonesia — Studio Pengembangan Web",
       headline1: "Website yang bekerja",
       headline2: "untuk bisnis",
       words: ["restoran", "travel", "penginapan", "UMKM", "Anda"],

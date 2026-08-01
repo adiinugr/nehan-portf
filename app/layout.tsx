@@ -151,6 +151,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               "name": "NehanDev",
+              "legalName": "Nehan Dev Indonesia",
               "url": "${siteUrl}",
               "logo": "${siteUrl}/favicons/web-app-manifest-512x512.png",
               "image": "${ogImageUrl}",

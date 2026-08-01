@@ -43,6 +43,9 @@ function Hero() {
             </span>
             {t.hero.badge}
           </span>
+          <p className="mt-3 text-xs tracking-wide text-muted-foreground/70">
+            {t.hero.legalName}
+          </p>
         </motion.div>
 
         {/* Headline — Bebas Neue, left-aligned, massive */}
