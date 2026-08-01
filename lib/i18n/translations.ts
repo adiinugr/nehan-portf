@@ -145,6 +145,7 @@ export const translations = {
       responseTime: "Typically replies within 24 hours",
       info: {
         title: "Contact Information",
+        legalName: "Legal Business Name",
         email: "Email",
         instagram: "Instagram",
         youtube: "YouTube"
@@ -320,6 +321,7 @@ export const translations = {
       responseTime: "Biasanya membalas dalam 24 jam",
       info: {
         title: "Informasi Kontak",
+        legalName: "Nama Legal Usaha",
         email: "Email",
         instagram: "Instagram",
         youtube: "YouTube"

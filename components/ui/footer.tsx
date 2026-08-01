@@ -74,7 +74,7 @@ export function Footer() {
           style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
         >
           <p className="text-base" style={{ color: "#64748b" }}>
-            © {new Date().getFullYear()} NehanDev. {ft.copyright}
+            © {new Date().getFullYear()} Nehan Dev Indonesia. {ft.copyright}
           </p>
           <div className="flex items-center gap-6">
             <Link href="/privacy-policy" className={linkClass} style={{ color: "#64748b" }}>{ft.links.privacy}</Link>

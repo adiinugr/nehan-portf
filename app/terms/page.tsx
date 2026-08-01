@@ -108,7 +108,7 @@ export default function TermsPage() {
                 Terakhir diperbarui: 1 Juni 2026
               </p>
               <p className="mt-4 text-base text-muted-foreground leading-relaxed">
-                Syarat dan ketentuan berikut mengatur penggunaan layanan NehanDev. Harap baca dengan seksama sebelum menggunakan layanan kami.
+                Syarat dan ketentuan berikut mengatur penggunaan layanan NehanDev, yang dioperasikan oleh Nehan Dev Indonesia. Harap baca dengan seksama sebelum menggunakan layanan kami.
               </p>
             </div>
 

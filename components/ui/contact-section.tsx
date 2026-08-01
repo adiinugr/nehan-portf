@@ -12,7 +12,8 @@ import {
   CheckCircle,
   AlertCircle,
   Clock,
-  MessageCircle
+  MessageCircle,
+  Building2
 } from "lucide-react"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/lib/i18n/language-context"
@@ -113,6 +114,19 @@ export function ContactSection() {
                 {ct.info.title}
               </h3>
               <div className="space-y-5">
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Building2 className="w-4 h-4 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-base text-muted-foreground mb-0.5">
+                      {ct.info.legalName}
+                    </p>
+                    <p className="text-base font-medium text-foreground">
+                      Nehan Dev Indonesia
+                    </p>
+                  </div>
+                </div>
                 <div className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0">
                     <MessageCircle className="w-4 h-4 text-green-600" />
