@@ -80,7 +80,7 @@ Garansi tidak mencakup masalah yang disebabkan oleh modifikasi pihak ketiga atau
     title: "Hubungi Kami",
     content: `Untuk pertanyaan tentang syarat dan ketentuan ini:
 
-Email: contact@nehandev.com
+Email: service@nehandev.com
 Instagram: @nehandev`
   }
 ]

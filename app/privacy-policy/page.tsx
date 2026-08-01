@@ -49,7 +49,7 @@ Kami tidak menjual, menyewakan, atau membagikan informasi pribadi Anda kepada pi
 • Meminta penghapusan data pribadi Anda
 • Mencabut persetujuan pemrosesan data kapan saja
 
-Untuk menggunakan hak-hak tersebut, hubungi kami di contact@nehandev.com.`
+Untuk menggunakan hak-hak tersebut, hubungi kami di service@nehandev.com.`
   },
   {
     title: "Perubahan Kebijakan",
@@ -59,7 +59,7 @@ Untuk menggunakan hak-hak tersebut, hubungi kami di contact@nehandev.com.`
     title: "Hubungi Kami",
     content: `Jika Anda memiliki pertanyaan tentang kebijakan privasi ini, silakan hubungi kami:
 
-Email: contact@nehandev.com
+Email: service@nehandev.com
 Instagram: @nehandev`
   }
 ]

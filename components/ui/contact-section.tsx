@@ -154,7 +154,7 @@ export function ContactSection() {
                       {ct.info.email}
                     </p>
                     <p className="text-base font-medium text-foreground">
-                      contact@nehandev.com
+                      service@nehandev.com
                     </p>
                   </div>
                 </div>

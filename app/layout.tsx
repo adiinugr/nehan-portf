@@ -157,7 +157,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "image": "${ogImageUrl}",
               "description": "Transform your digital vision into reality with NehanDev. We create beautiful, high-performance websites and applications tailored to your business needs.",
               "address": { "@type": "PostalAddress", "addressCountry": "ID" },
-              "email": "contact@nehandev.com",
+              "email": "service@nehandev.com",
               "sameAs": [
                 "https://instagram.com/nehandev",
                 "https://youtube.com/@nehandev",
