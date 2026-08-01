@@ -5,6 +5,12 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { LanguageProvider } from "@/lib/i18n/language-context"
 import { WhatsAppButton } from "@/components/ui/whatsapp-button"
 import Script from "next/script"
+import {
+  BUSINESS_NAME,
+  BUSINESS_ADDRESS,
+  BUSINESS_EMAIL,
+  BUSINESS_PHONE_DIGITS
+} from "@/lib/business-info"
 
 const syne = Syne({
   subsets: ["latin"],
@@ -151,13 +157,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               "name": "NehanDev",
-              "legalName": "Nehan Dev Indonesia",
+              "legalName": "${BUSINESS_NAME}",
               "url": "${siteUrl}",
               "logo": "${siteUrl}/favicons/web-app-manifest-512x512.png",
               "image": "${ogImageUrl}",
               "description": "Transform your digital vision into reality with NehanDev. We create beautiful, high-performance websites and applications tailored to your business needs.",
-              "address": { "@type": "PostalAddress", "addressCountry": "ID" },
-              "email": "service@nehandev.com",
+              "address": { "@type": "PostalAddress", "streetAddress": "${BUSINESS_ADDRESS}", "addressCountry": "ID" },
+              "email": "${BUSINESS_EMAIL}",
+              "telephone": "+${BUSINESS_PHONE_DIGITS}",
               "sameAs": [
                 "https://instagram.com/nehandev",
                 "https://youtube.com/@nehandev",

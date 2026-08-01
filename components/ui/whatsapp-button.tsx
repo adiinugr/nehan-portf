@@ -3,10 +3,10 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
+import { BUSINESS_WHATSAPP_URL } from "@/lib/business-info"
 
-const WA_NUMBER = "62895335501192"
 const WA_MESSAGE = "Halo NehanDev, saya ingin konsultasi website untuk bisnis saya."
-const WA_URL = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(WA_MESSAGE)}`
+const WA_URL = `${BUSINESS_WHATSAPP_URL}?text=${encodeURIComponent(WA_MESSAGE)}`
 
 export function WhatsAppButton() {
   const [visible, setVisible] = useState(false)

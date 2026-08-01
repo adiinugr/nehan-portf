@@ -8,6 +8,7 @@ import {
   ExternalLink, Clock, CheckCircle2, MessageCircle,
   Palette, Code2, Rocket, ChevronRight
 } from "lucide-react"
+import { BUSINESS_WHATSAPP_URL } from "@/lib/business-info"
 
 // ─── Data ──────────────────────────────────────────────────────
 
@@ -356,7 +357,7 @@ export default function LayananPage() {
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-3">
                 <Link
-                  href="https://wa.me/62895335501192?text=Halo%20NehanDev%2C%20saya%20ingin%20konsultasi%20website%20untuk%20bisnis%20saya"
+                  href={`${BUSINESS_WHATSAPP_URL}?text=Halo%20NehanDev%2C%20saya%20ingin%20konsultasi%20website%20untuk%20bisnis%20saya`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold text-base bg-primary text-white transition-all hover:scale-105 shadow-md shadow-primary/20"

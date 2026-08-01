@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Header } from "@/components/ui/header"
 import { Footer } from "@/components/ui/footer"
+import { BUSINESS_NAME, BUSINESS_ADDRESS, BUSINESS_EMAIL } from "@/lib/business-info"
 
 export const metadata: Metadata = {
   title: "Kebijakan Privasi | NehanDev",
@@ -49,7 +50,7 @@ Kami tidak menjual, menyewakan, atau membagikan informasi pribadi Anda kepada pi
 • Meminta penghapusan data pribadi Anda
 • Mencabut persetujuan pemrosesan data kapan saja
 
-Untuk menggunakan hak-hak tersebut, hubungi kami di service@nehandev.com.`
+Untuk menggunakan hak-hak tersebut, hubungi kami di ${BUSINESS_EMAIL}.`
   },
   {
     title: "Perubahan Kebijakan",
@@ -59,7 +60,9 @@ Untuk menggunakan hak-hak tersebut, hubungi kami di service@nehandev.com.`
     title: "Hubungi Kami",
     content: `Jika Anda memiliki pertanyaan tentang kebijakan privasi ini, silakan hubungi kami:
 
-Email: service@nehandev.com
+${BUSINESS_NAME}
+${BUSINESS_ADDRESS}
+Email: ${BUSINESS_EMAIL}
 Instagram: @nehandev`
   }
 ]
@@ -87,7 +90,7 @@ export default function PrivacyPolicyPage() {
                 Terakhir diperbarui: 1 Juni 2026
               </p>
               <p className="mt-4 text-base text-muted-foreground leading-relaxed">
-                NehanDev, dioperasikan oleh Nehan Dev Indonesia (&ldquo;kami&rdquo;, &ldquo;kita&rdquo;), berkomitmen untuk melindungi privasi Anda. Kebijakan ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi Anda saat menggunakan layanan kami di nehandev.com.
+                NehanDev, dioperasikan oleh {BUSINESS_NAME} (&ldquo;kami&rdquo;, &ldquo;kita&rdquo;), berkomitmen untuk melindungi privasi Anda. Kebijakan ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi Anda saat menggunakan layanan kami di nehandev.com.
               </p>
             </div>
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Header } from "@/components/ui/header"
 import { Footer } from "@/components/ui/footer"
+import { BUSINESS_NAME, BUSINESS_ADDRESS, BUSINESS_EMAIL } from "@/lib/business-info"
 
 export const metadata: Metadata = {
   title: "Syarat & Ketentuan | NehanDev",
@@ -80,7 +81,9 @@ Garansi tidak mencakup masalah yang disebabkan oleh modifikasi pihak ketiga atau
     title: "Hubungi Kami",
     content: `Untuk pertanyaan tentang syarat dan ketentuan ini:
 
-Email: service@nehandev.com
+${BUSINESS_NAME}
+${BUSINESS_ADDRESS}
+Email: ${BUSINESS_EMAIL}
 Instagram: @nehandev`
   }
 ]
@@ -108,7 +111,7 @@ export default function TermsPage() {
                 Terakhir diperbarui: 1 Juni 2026
               </p>
               <p className="mt-4 text-base text-muted-foreground leading-relaxed">
-                Syarat dan ketentuan berikut mengatur penggunaan layanan NehanDev, yang dioperasikan oleh Nehan Dev Indonesia. Harap baca dengan seksama sebelum menggunakan layanan kami.
+                Syarat dan ketentuan berikut mengatur penggunaan layanan NehanDev, yang dioperasikan oleh {BUSINESS_NAME}. Harap baca dengan seksama sebelum menggunakan layanan kami.
               </p>
             </div>
 

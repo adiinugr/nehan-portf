@@ -6,6 +6,7 @@ import { CalendarDays, MoveRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { useLanguage } from "@/lib/i18n/language-context"
+import { BUSINESS_WHATSAPP_URL } from "@/lib/business-info"
 
 
 function Hero() {
@@ -93,7 +94,7 @@ function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <Button asChild size="lg" variant="outline" className="gap-2 hover:bg-primary/5">
-              <Link href="https://wa.me/62895335501192" target="_blank" rel="noopener noreferrer">
+              <Link href={BUSINESS_WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 <CalendarDays className="w-4 h-4" />
                 {t.hero.cta1}
               </Link>

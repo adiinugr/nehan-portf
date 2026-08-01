@@ -3,6 +3,13 @@
 import Link from "next/link"
 import { Github, Linkedin, Instagram, Youtube } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
+import {
+  BUSINESS_NAME,
+  BUSINESS_ADDRESS,
+  BUSINESS_EMAIL,
+  BUSINESS_PHONE,
+  BUSINESS_WHATSAPP_URL
+} from "@/lib/business-info"
 
 export function Footer() {
   const { t } = useLanguage()
@@ -24,6 +31,21 @@ export function Footer() {
             <p className="text-base leading-relaxed" style={{ color: "#94a3b8" }}>
               {ft.tagline}
             </p>
+            <div className="mt-3 flex flex-col gap-1 text-sm" style={{ color: "#64748b" }}>
+              <p className="font-medium" style={{ color: "#94a3b8" }}>{BUSINESS_NAME}</p>
+              <p>{BUSINESS_ADDRESS}</p>
+              <a href={`mailto:${BUSINESS_EMAIL}`} className="w-fit transition-colors hover:text-[#818cf8]">
+                {BUSINESS_EMAIL}
+              </a>
+              <a
+                href={BUSINESS_WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-fit transition-colors hover:text-[#818cf8]"
+              >
+                {BUSINESS_PHONE}
+              </a>
+            </div>
           </div>
 
           {/* Nav links — 2 columns */}
@@ -74,7 +96,7 @@ export function Footer() {
           style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
         >
           <p className="text-base" style={{ color: "#64748b" }}>
-            © {new Date().getFullYear()} Nehan Dev Indonesia. {ft.copyright}
+            © {new Date().getFullYear()} {BUSINESS_NAME}. {ft.copyright}
           </p>
           <div className="flex items-center gap-6">
             <Link href="/privacy-policy" className={linkClass} style={{ color: "#64748b" }}>{ft.links.privacy}</Link>

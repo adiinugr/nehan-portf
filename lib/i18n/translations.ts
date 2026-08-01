@@ -147,6 +147,8 @@ export const translations = {
       info: {
         title: "Contact Information",
         legalName: "Legal Business Name",
+        address: "Address",
+        phone: "Phone",
         email: "Email",
         instagram: "Instagram",
         youtube: "YouTube"
@@ -324,6 +326,8 @@ export const translations = {
       info: {
         title: "Informasi Kontak",
         legalName: "Nama Legal Usaha",
+        address: "Alamat",
+        phone: "Telepon",
         email: "Email",
         instagram: "Instagram",
         youtube: "YouTube"

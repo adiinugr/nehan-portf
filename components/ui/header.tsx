@@ -8,6 +8,7 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { LanguageToggle } from "@/components/ui/language-toggle"
 import { useLanguage } from "@/lib/i18n/language-context"
+import { BUSINESS_WHATSAPP_URL } from "@/lib/business-info"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -65,7 +66,7 @@ export function Header() {
             size="sm"
             className="hidden md:inline-flex bg-primary hover:bg-primary/90 text-white"
           >
-            <Link href="https://wa.me/62895335501192" target="_blank" rel="noopener noreferrer">{t.nav.cta}</Link>
+            <Link href={BUSINESS_WHATSAPP_URL} target="_blank" rel="noopener noreferrer">{t.nav.cta}</Link>
           </Button>
           <Button
             variant="ghost"

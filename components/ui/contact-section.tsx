@@ -13,10 +13,18 @@ import {
   AlertCircle,
   Clock,
   MessageCircle,
-  Building2
+  Building2,
+  MapPin
 } from "lucide-react"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/lib/i18n/language-context"
+import {
+  BUSINESS_NAME,
+  BUSINESS_ADDRESS,
+  BUSINESS_EMAIL,
+  BUSINESS_PHONE,
+  BUSINESS_WHATSAPP_URL
+} from "@/lib/business-info"
 
 export function ContactSection() {
   const { t } = useLanguage()
@@ -123,7 +131,20 @@ export function ContactSection() {
                       {ct.info.legalName}
                     </p>
                     <p className="text-base font-medium text-foreground">
-                      Nehan Dev Indonesia
+                      {BUSINESS_NAME}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-4 h-4 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-base text-muted-foreground mb-0.5">
+                      {ct.info.address}
+                    </p>
+                    <p className="text-base font-medium text-foreground">
+                      {BUSINESS_ADDRESS}
                     </p>
                   </div>
                 </div>
@@ -136,12 +157,12 @@ export function ContactSection() {
                       WhatsApp
                     </p>
                     <a
-                      href="https://wa.me/62895335501192"
+                      href={BUSINESS_WHATSAPP_URL}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-base font-medium text-foreground hover:text-primary transition-colors"
                     >
-                      +62 895-335-501192
+                      {BUSINESS_PHONE}
                     </a>
                   </div>
                 </div>
@@ -154,7 +175,7 @@ export function ContactSection() {
                       {ct.info.email}
                     </p>
                     <p className="text-base font-medium text-foreground">
-                      service@nehandev.com
+                      {BUSINESS_EMAIL}
                     </p>
                   </div>
                 </div>
