@@ -19,9 +19,14 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>("id")
 
   useEffect(() => {
-    const saved = localStorage.getItem("nd-language") as Language | null
-    if (saved === "en" || saved === "id") {
-      setLanguageState(saved)
+    try {
+      const saved = localStorage.getItem("nd-language") as Language | null
+      if (saved === "en" || saved === "id") {
+        setLanguageState(saved)
+      }
+    } catch {
+      // localStorage can throw (e.g. blocked storage, some crawler/sandboxed
+      // renderers) — fall back to the default language silently.
     }
   }, [])
 
@@ -31,7 +36,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang)
-    localStorage.setItem("nd-language", lang)
+    try {
+      localStorage.setItem("nd-language", lang)
+    } catch {
+      // Ignore — language still works for this session via state.
+    }
   }
 
   return (
