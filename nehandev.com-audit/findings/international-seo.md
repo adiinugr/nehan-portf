@@ -30,4 +30,12 @@ Implemented real, crawlable `/en/...` URLs for the 5 pages with translatable con
 
 ## Info: found (not fixed) — same double-title-suffix bug exists on `/privacy-policy` and `/terms`
 
-While regression-testing the pages above, both `/privacy-policy` and `/terms` were found to render `<title>X | NehanDev | NehanDev</title>` — the identical bug fixed on `/projects`/`/education`/`/contact`/`/blog` earlier the same day (2026-08-29, commit `3bd6042`), just never applied to these two pages. Left unfixed since it's outside this task's scope, but the fix is the same one-line pattern (drop the trailing `"| NehanDev"` from the page's `metadata.title`).
+While regression-testing the pages above, both `/privacy-policy` and `/terms` were found to render `<title>X | NehanDev | NehanDev</title>` — the identical bug fixed on `/projects`/`/education`/`/contact`/`/blog` earlier the same day (2026-08-29, commit `3bd6042`), just never applied to these two pages. **This one was later fixed too**, in the Phase 3 pass (commit `5f35605`).
+
+## RESOLVED (2026-08-29, commit `b555ee1`): Unprefixed URLs were auto-redirecting to `/en/...` based on the visitor's browser language
+
+Found while explaining to the user how language detection works, then verified directly: `next-intl`'s middleware negotiates locale from the `Accept-Language` HTTP header by default (not geolocation), and issues a 307 redirect from an unprefixed URL to `/en/...` whenever a visitor's browser reports an English preference and no `NEXT_LOCALE` cookie exists yet. Confirmed with `curl -H "Accept-Language: en-US" http://.../layanan` → `307` → `Location: /en/layanan`.
+
+This directly undermined the earlier design decision that unprefixed URLs (`/`, `/layanan`, `/projects`, `/education`, `/contact`) stay stable and always Indonesian — the entire point of `localePrefix: "as-needed"` was so existing links/backlinks to these URLs wouldn't change behavior. It's also a pattern Google's own international SEO guidance explicitly advises against: redirecting based on perceived user language can make Googlebot see inconsistent content at the same URL depending on what it happens to send as `Accept-Language`.
+
+**Fix applied:** `localeDetection: false` in `i18n/routing.ts`'s `defineRouting` config (this option belongs on the routing config, not as a second argument to `createMiddleware` — a first attempt there hit a TypeScript error). Verified: `/layanan` and `/` now return `200` with Indonesian content regardless of `Accept-Language`; `/en/layanan` and other explicit English navigation still work correctly; out-of-scope pages unaffected.
