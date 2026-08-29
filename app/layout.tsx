@@ -108,12 +108,7 @@ export const metadata: Metadata = {
     capable: true,
   },
   alternates: {
-    canonical: siteUrl,
-    languages: {
-      "en": siteUrl,
-      "id": siteUrl,
-      "x-default": siteUrl
-    }
+    canonical: siteUrl
   }
 }
 
@@ -160,11 +155,8 @@ const businessSchema = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="id" suppressHydrationWarning>
       <head>
-        <link rel="alternate" hrefLang="en" href={siteUrl} />
-        <link rel="alternate" hrefLang="id" href={siteUrl} />
-        <link rel="alternate" hrefLang="x-default" href={siteUrl} />
         <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
         <meta name="msapplication-TileColor" content="#6366F1" />
         <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png" />
