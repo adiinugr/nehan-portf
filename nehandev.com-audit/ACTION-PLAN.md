@@ -15,13 +15,14 @@
 - [ ] **Not done — infrastructure-level, outside this repo:** the apex redirect (`https://nehandev.com` → `http://www.nehandev.com` → `https://www.nehandev.com`) is configured wherever DNS/nginx routing lives for this domain, not in the Next.js app. Needs a change on the host/reverse-proxy, not a code change.
 - [ ] **Partially done:** the hero fix removes one concrete render-blocking-on-visibility issue, but no deep JS bundle audit (tree-shaking, code-splitting opportunities) was performed. Worth a follow-up pass once the hero fix's impact on the 71/100 Lighthouse score is measured live.
 
-## Phase 3: Content & Authority (Month 2) — Not started
+## Phase 3: Content & Authority (Month 2) — Done, commits `d0c1348`, `5f35605`, `ee2dcba`
 
-- [ ] Update `app/layout.tsx`'s default `openGraph`/`twitter` title+description and the JSON-LD `description` to match the site's current Indonesian-first "Solusi Digital untuk Usaha Lokal" positioning (currently stale English copy).
-- [ ] Expand `/education` page content (currently ~130 words) — more product depth on CBT Pro, screenshots with descriptive copy, a mini case study.
-- [ ] Split the JSON-LD `PostalAddress` into `addressLocality`/`addressRegion`/`postalCode` instead of one `streetAddress` string.
-- [ ] Swap Article schema's `publisher.logo.url` from `favicon.svg` to `favicons/web-app-manifest-512x512.png`.
-- [ ] Fix the one flagged color-contrast accessibility issue (Lighthouse Accessibility audit).
+- [x] Updated `app/layout.tsx`'s default `openGraph`/`twitter` title+description and the JSON-LD `description` to match the site's current Indonesian-first "Solusi Digital untuk Usaha Lokal" positioning.
+- [x] Expanded `/education` from ~130 to ~380 words per locale — added `components/ui/education-detail-section.tsx`: a real 4-step exam workflow, a live-exam-dashboard mockup (built around message keys that existed but were never wired into any component), an Indonesian-school-specific trust section, and a closing CTA. Both `messages/id.json` and `messages/en.json` updated.
+- [x] Split the JSON-LD `PostalAddress` into `streetAddress`/`addressLocality`/`addressRegion`/`postalCode` (new granular env vars in `lib/business-info.ts`, with fallback defaults).
+- [x] Swapped Article schema's `publisher.logo.url` from `favicon.svg` to `favicons/web-app-manifest-512x512.png`.
+- [x] Fixed the flagged color-contrast failures (verified with actual WCAG contrast-ratio math, not guessed): the sitewide "eyebrow label" pattern (10 files, was 4.46:1 against white, now 6.29:1 via a scoped darker shade — brand `--primary` itself untouched), and the footer's muted-text tier (was 4.07:1 against the dark footer background, now 5.53:1).
+- [x] **Bonus, found during this pass:** `/privacy-policy` and `/terms` had the same title double-suffix bug fixed elsewhere in Phase 2 but missed on these two — fixed.
 
 ## Phase 4: Monitoring & Iteration (Ongoing)
 

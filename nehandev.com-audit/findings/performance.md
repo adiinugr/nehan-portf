@@ -26,5 +26,6 @@ No CrUX (real-user) field data is available yet — insufficient Chrome traffic 
 
 **Still open:** no deep JS bundle audit was done (unused JS / legacy polyfills / render-blocking requests remain as Lighthouse flagged them). Worth revisiting once the hero fix's real-world impact is measured.
 
-## Low: Insufficient color contrast
-One accessibility audit failed: background/foreground contrast ratio below WCAG threshold somewhere on the homepage. Worth a quick pass with Lighthouse's element callouts since it affects both accessibility and (indirectly) engagement/SEO signals.
+## RESOLVED (2026-08-29, commit `5f35605`): Insufficient color contrast
+
+Pulled the exact failing elements from PageSpeed's audit details rather than guessing: the sitewide "eyebrow label" pattern (`text-primary` #6366f1 on white, 4.46:1 — just under the 4.5:1 AA threshold, reused across 10 files) and the footer's more-muted text tier (#64748b on the dark footer background, 4.07:1). Fixed both with scoped color adjustments verified against actual WCAG contrast-ratio math (not the brand `--primary` color itself, which stays unchanged for buttons/other uses where contrast was already fine) — see `on-page.md`/`ACTION-PLAN.md` for specifics.

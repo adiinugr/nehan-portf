@@ -5,11 +5,11 @@
 **What works:**
 - Legal business name, address, phone, and email are all present and consistent (`lib/business-info.ts` centralizes these — good practice, recently added per commit history).
 - 7 blog posts covering relevant local-business topics (hotel, travel, restaurant, tech tutorials) in a healthy Indonesian/English mix, with reasonable read-time metadata.
-- Sitewide bilingual (EN/ID) support via `useLanguage()`.
+- Sitewide bilingual (EN/ID) support, now via real per-locale URLs (next-intl) rather than a client-side toggle — see `international-seo.md`.
 
-**Medium: Thin content on a couple of standalone pages.** `/education` and `/contact` render roughly 130 words of visible body copy each (excluding shared nav/footer) — on the lighter side for standalone indexed pages. `/education` in particular showcases a real product (CBT Pro) and could support more depth (feature detail, screenshots with descriptive copy, a case-study angle) rather than reusing the compact homepage teaser section as the entire page.
+**RESOLVED (2026-08-29, commit `ee2dcba`): Thin content on `/education`.** Was ~130 words; added a new detail section (4-step exam workflow, a live-dashboard mockup, an Indonesia-specific trust section, closing CTA) taking it to ~380 words per locale. `/contact` was left as-is — a contact page doesn't need the same depth.
 
-**Medium: Inconsistent brand voice/positioning across surfaces** (also flagged under On-Page): homepage copy has pivoted to Indonesian, UMKM-focused messaging, but default OG/Twitter/JSON-LD copy sitewide still reads the older English "Professional Web Development Solutions" pitch. This is a content-consistency issue as much as a technical one — anyone encountering the brand via a shared link, schema-driven snippet, or social card gets a different pitch than the one on the page itself.
+**RESOLVED (2026-08-29, commit `d0c1348`): Inconsistent brand voice/positioning across surfaces** (also flagged under On-Page) — default OG/Twitter/JSON-LD copy updated to match the site's actual Indonesian-first positioning.
 
 ## Images
 

@@ -10,17 +10,13 @@ This mattered because many crawlers relevant to "AI search readiness" (GPTBot, C
 
 **Actual fix applied:** replaced `next/script`'s `<Script>` with a plain native `<script type="application/ld+json" dangerouslySetInnerHTML={...} />` in both `app/layout.tsx` and `app/blog/[slug]/page.tsx`. Verified: both now render as literal, parseable JSON-LD in the raw (no-JS) server response.
 
-## Medium: `PostalAddress` is not fully structured
+## RESOLVED (2026-08-29, commit `d0c1348`): `PostalAddress` was not fully structured
 
-The `address` object (`app/layout.tsx:165`) puts the entire address — including city, region, and postal code — into a single `streetAddress` string, with only `addressCountry` broken out:
-```json
-"address": { "@type": "PostalAddress", "streetAddress": "Alexandria Hills, Blok AH5-08, Damarsi, Buduran, Sidoarjo 61252, Jawa Timur", "addressCountry": "ID" }
-```
-Google's structured data guidelines expect `addressLocality`, `addressRegion`, and `postalCode` as separate properties for full Local Business eligibility.
+The `address` object previously put the entire address — including city, region, and postal code — into a single `streetAddress` string, with only `addressCountry` broken out. Split into `streetAddress`/`addressLocality`/`addressRegion`/`postalCode` (new `BUSINESS_STREET_ADDRESS`/`BUSINESS_CITY`/`BUSINESS_REGION`/`BUSINESS_POSTAL_CODE` in `lib/business-info.ts`), matching Google's structured data guidance for Local Business eligibility.
 
-## Low: Article schema `publisher.logo` uses an SVG
+## RESOLVED (2026-08-29, commit `d0c1348`): Article schema `publisher.logo` used an SVG
 
-`app/blog/[slug]/page.tsx:81` sets `publisher.logo.url` to `favicon.svg`. Google's Article rich-result guidelines call for a raster image (PNG/JPG, ideally ≥112×112px) for `logo` — SVG is not guaranteed to validate. A PNG favicon already exists in the project (`favicons/web-app-manifest-512x512.png`, used elsewhere) and should be reused here.
+Swapped `publisher.logo.url` from `favicon.svg` to the existing `web-app-manifest-512x512.png` — same asset already used for the homepage ProfessionalService schema's logo.
 
 ## Info: Blog posts share one generic `image`
 Every blog post's Article schema uses the same sitewide `og-image-nehan.png` rather than a post-specific image, reducing distinctiveness for rich results/Discover.

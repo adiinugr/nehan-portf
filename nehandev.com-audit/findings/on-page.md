@@ -38,7 +38,7 @@ Live H1 count: `/projects` → 0, `/education` → 0, `/contact` → 0 (vs. 1 on
 
 **Fix:** add a page-level `<h1>` to `/projects`, `/education`, and `/contact` (or promote the existing section heading to `<h1>` when rendered standalone).
 
-## Medium: Stale English copy vs. the site's actual Indonesian-first positioning
+## RESOLVED (2026-08-29, commit `d0c1348`): Stale English copy vs. the site's actual Indonesian-first positioning
 
 The homepage `<title>` and meta description are Indonesian and UMKM-focused (`"NehanDev | Solusi Digital untuk Usaha Lokal"` / `"Kami bantu UMKM dan bisnis kecil..."`), but the root layout's `openGraph.title`, `twitter.title`, and the JSON-LD `description` all still read the old English positioning: `"NehanDev | Professional Web Development Solutions"` / `"Transform your digital vision into reality..."` (`app/layout.tsx:76,84,164`). Anyone sharing the homepage link on WhatsApp/Facebook/X/LinkedIn sees the old English pitch, not the current Indonesian one.
 
