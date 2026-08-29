@@ -77,7 +77,7 @@ export default async function BlogPostPage({ params }: Props) {
       "@type": "Organization",
       "name": "NehanDev",
       "url": siteUrl,
-      "logo": { "@type": "ImageObject", "url": `${siteUrl}/favicons/favicon.svg` }
+      "logo": { "@type": "ImageObject", "url": `${siteUrl}/favicons/web-app-manifest-512x512.png` }
     },
     "datePublished": post.date,
     "dateModified": post.date,

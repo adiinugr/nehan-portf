@@ -6,7 +6,10 @@ import { WhatsAppButton } from "@/components/ui/whatsapp-button"
 import Script from "next/script"
 import {
   BUSINESS_NAME,
-  BUSINESS_ADDRESS,
+  BUSINESS_STREET_ADDRESS,
+  BUSINESS_CITY,
+  BUSINESS_REGION,
+  BUSINESS_POSTAL_CODE,
   BUSINESS_EMAIL,
   BUSINESS_PHONE_DIGITS
 } from "@/lib/business-info"
@@ -44,11 +47,11 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "NehanDev | Professional Web Development Solutions",
+    default: "NehanDev | Solusi Digital untuk Usaha Lokal",
     template: "%s | NehanDev"
   },
   description:
-    "Transform your digital vision into reality with NehanDev. We create beautiful, high-performance websites and applications tailored to your business needs.",
+    "Kami bantu UMKM dan bisnis kecil hadir secara digital — website profesional untuk restoran, travel, penginapan, dan lebih banyak lagi.",
   metadataBase: new URL(siteUrl),
   keywords: [
     "web development",
@@ -69,20 +72,20 @@ export const metadata: Metadata = {
   category: "Technology",
   openGraph: {
     type: "website",
-    locale: "en_US",
-    alternateLocale: ["id_ID"],
+    locale: "id_ID",
+    alternateLocale: ["en_US"],
     url: siteUrl,
-    title: "NehanDev | Professional Web Development Solutions",
+    title: "NehanDev | Solusi Digital untuk Usaha Lokal",
     description:
-      "Transform your digital vision into reality with NehanDev. We create beautiful, high-performance websites and applications tailored to your business needs.",
+      "Kami bantu UMKM dan bisnis kecil hadir secara digital — website profesional untuk restoran, travel, penginapan, dan lebih banyak lagi.",
     siteName: "NehanDev",
-    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: "NehanDev - Professional Web Development" }]
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: "NehanDev - Solusi Digital untuk Usaha Lokal" }]
   },
   twitter: {
     card: "summary_large_image",
-    title: "NehanDev | Professional Web Development Solutions",
+    title: "NehanDev | Solusi Digital untuk Usaha Lokal",
     description:
-      "Transform your digital vision into reality with NehanDev. We create beautiful, high-performance websites and applications tailored to your business needs.",
+      "Kami bantu UMKM dan bisnis kecil hadir secara digital — website profesional untuk restoran, travel, penginapan, dan lebih banyak lagi.",
     images: [ogImageUrl],
     creator: "@nehandev",
     site: "@nehandev"
@@ -120,8 +123,15 @@ const businessSchema = {
   logo: `${siteUrl}/favicons/web-app-manifest-512x512.png`,
   image: ogImageUrl,
   description:
-    "Transform your digital vision into reality with NehanDev. We create beautiful, high-performance websites and applications tailored to your business needs.",
-  address: { "@type": "PostalAddress", streetAddress: BUSINESS_ADDRESS, addressCountry: "ID" },
+    "Kami bantu UMKM dan bisnis kecil hadir secara digital — website profesional untuk restoran, travel, penginapan, dan lebih banyak lagi.",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: BUSINESS_STREET_ADDRESS,
+    addressLocality: BUSINESS_CITY,
+    addressRegion: BUSINESS_REGION,
+    postalCode: BUSINESS_POSTAL_CODE,
+    addressCountry: "ID"
+  },
   email: BUSINESS_EMAIL,
   telephone: `+${BUSINESS_PHONE_DIGITS}`,
   sameAs: [
