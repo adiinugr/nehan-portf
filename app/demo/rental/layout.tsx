@@ -1,4 +1,17 @@
+import type { Metadata } from "next"
 import { Oswald, Manrope } from "next/font/google"
+
+export const metadata: Metadata = {
+  title: "Demo Website Rental Kendaraan — FastRide Rental",
+  description:
+    "Contoh website rental mobil/motor dari NehanDev: katalog armada, tarif sewa, cek ketersediaan, dan pemesanan mudah.",
+  alternates: { canonical: "https://www.nehandev.com/demo/rental" },
+  openGraph: {
+    title: "Demo Website Rental Kendaraan — FastRide Rental | NehanDev",
+    description: "Contoh website rental mobil/motor: katalog armada, tarif sewa, cek ketersediaan, dan pemesanan mudah.",
+    url: "https://www.nehandev.com/demo/rental"
+  }
+}
 
 const oswald = Oswald({
   subsets: ["latin"],
