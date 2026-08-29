@@ -10,7 +10,7 @@ import {
   ShoppingBag,
   LucideIcon
 } from "lucide-react"
-import { useLanguage } from "@/lib/i18n/language-context"
+import { useTranslations } from "next-intl"
 
 const iconMap: Record<string, LucideIcon> = {
   UtensilsCrossed,
@@ -21,10 +21,11 @@ const iconMap: Record<string, LucideIcon> = {
   ShoppingBag
 }
 
+type ServiceItem = { icon: string; title: string; desc: string }
 
 export function ServicesSection() {
-  const { t } = useLanguage()
-  const sv = t.services
+  const t = useTranslations("services")
+  const items = t.raw("items") as ServiceItem[]
 
   return (
     <section id="layanan" className="py-24 relative overflow-hidden">
@@ -39,7 +40,7 @@ export function ServicesSection() {
         >
           <div>
             <span className="text-sm font-semibold tracking-widest uppercase text-primary">
-              {sv.label}
+              {t("label")}
             </span>
             <h2
               className="mt-3 uppercase leading-[0.9] text-foreground"
@@ -48,17 +49,17 @@ export function ServicesSection() {
                 fontSize: "clamp(48px, 7vw, 96px)",
               }}
             >
-              {sv.title}
+              {t("title")}
             </h2>
           </div>
           <p className="text-muted-foreground max-w-xs text-base leading-relaxed md:text-right">
-            {sv.subtitle}
+            {t("subtitle")}
           </p>
         </motion.div>
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {sv.items.map((service, index) => {
+          {items.map((service, index) => {
             const Icon = iconMap[service.icon]
             return (
               <motion.div

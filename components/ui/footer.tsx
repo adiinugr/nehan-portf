@@ -1,8 +1,9 @@
 "use client"
 
 import Link from "next/link"
+import { Link as LocaleLink } from "@/i18n/navigation"
 import { Github, Linkedin, Instagram, Youtube } from "lucide-react"
-import { useLanguage } from "@/lib/i18n/language-context"
+import { useTranslations } from "next-intl"
 import {
   BUSINESS_NAME,
   BUSINESS_ADDRESS,
@@ -12,8 +13,7 @@ import {
 } from "@/lib/business-info"
 
 export function Footer() {
-  const { t } = useLanguage()
-  const ft = t.footer
+  const t = useTranslations("footer")
 
   const linkClass = "text-base transition-colors hover:text-[#818cf8]"
   const labelClass = "text-sm font-semibold uppercase tracking-wider mb-1"
@@ -24,12 +24,12 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between gap-10 mb-10">
           {/* Brand */}
           <div className="flex flex-col gap-2 max-w-xs">
-            <Link href="/" className="text-2xl" style={{ fontFamily: "var(--font-yellowtail)" }}>
+            <LocaleLink href="/" className="text-2xl" style={{ fontFamily: "var(--font-yellowtail)" }}>
               <span style={{ color: "#818cf8" }}>Nehan</span>
               <span style={{ color: "#f1f5f9" }}>Dev</span>
-            </Link>
+            </LocaleLink>
             <p className="text-base leading-relaxed" style={{ color: "#94a3b8" }}>
-              {ft.tagline}
+              {t("tagline")}
             </p>
             <div className="mt-3 flex flex-col gap-1 text-sm" style={{ color: "#64748b" }}>
               <p className="font-medium" style={{ color: "#94a3b8" }}>{BUSINESS_NAME}</p>
@@ -51,22 +51,22 @@ export function Footer() {
           {/* Nav links — 2 columns */}
           <div className="flex gap-16">
             <nav className="flex flex-col gap-3">
-              <p className={labelClass} style={{ color: "#94a3b8" }}>{ft.sections.pages}</p>
-              <Link href="/layanan" className={linkClass} style={{ color: "#94a3b8" }}>{ft.links.services}</Link>
-              <Link href="/projects" className={linkClass} style={{ color: "#94a3b8" }}>{ft.links.portfolio}</Link>
-              <Link href="/blog" className={linkClass} style={{ color: "#94a3b8" }}>{ft.links.blog}</Link>
-              <Link href="/contact" className={linkClass} style={{ color: "#94a3b8" }}>{ft.links.contact}</Link>
+              <p className={labelClass} style={{ color: "#94a3b8" }}>{t("sections.pages")}</p>
+              <LocaleLink href="/layanan" className={linkClass} style={{ color: "#94a3b8" }}>{t("links.services")}</LocaleLink>
+              <LocaleLink href="/projects" className={linkClass} style={{ color: "#94a3b8" }}>{t("links.portfolio")}</LocaleLink>
+              <Link href="/blog" className={linkClass} style={{ color: "#94a3b8" }}>{t("links.blog")}</Link>
+              <LocaleLink href="/contact" className={linkClass} style={{ color: "#94a3b8" }}>{t("links.contact")}</LocaleLink>
             </nav>
             <nav className="flex flex-col gap-3">
-              <p className={labelClass} style={{ color: "#94a3b8" }}>{ft.sections.legal}</p>
-              <Link href="/privacy-policy" className={linkClass} style={{ color: "#94a3b8" }}>{ft.links.privacy}</Link>
-              <Link href="/terms" className={linkClass} style={{ color: "#94a3b8" }}>{ft.links.terms}</Link>
+              <p className={labelClass} style={{ color: "#94a3b8" }}>{t("sections.legal")}</p>
+              <Link href="/privacy-policy" className={linkClass} style={{ color: "#94a3b8" }}>{t("links.privacy")}</Link>
+              <Link href="/terms" className={linkClass} style={{ color: "#94a3b8" }}>{t("links.terms")}</Link>
             </nav>
           </div>
 
           {/* Social icons */}
           <div className="flex flex-col gap-3">
-            <p className={labelClass} style={{ color: "#94a3b8" }}>{ft.sections.follow}</p>
+            <p className={labelClass} style={{ color: "#94a3b8" }}>{t("sections.follow")}</p>
             <div className="flex items-center gap-4">
               {[
                 { href: "https://github.com/adiinugr", icon: Github, label: "GitHub" },
@@ -96,11 +96,11 @@ export function Footer() {
           style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
         >
           <p className="text-base" style={{ color: "#64748b" }}>
-            © {new Date().getFullYear()} {BUSINESS_NAME}. {ft.copyright}
+            © {new Date().getFullYear()} {BUSINESS_NAME}. {t("copyright")}
           </p>
           <div className="flex items-center gap-6">
-            <Link href="/privacy-policy" className={linkClass} style={{ color: "#64748b" }}>{ft.links.privacy}</Link>
-            <Link href="/terms" className={linkClass} style={{ color: "#64748b" }}>{ft.links.terms}</Link>
+            <Link href="/privacy-policy" className={linkClass} style={{ color: "#64748b" }}>{t("links.privacy")}</Link>
+            <Link href="/terms" className={linkClass} style={{ color: "#64748b" }}>{t("links.terms")}</Link>
           </div>
         </div>
       </div>

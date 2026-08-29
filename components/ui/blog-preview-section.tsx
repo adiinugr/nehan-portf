@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { ArrowRight, Clock, Calendar } from "lucide-react"
-import { useLanguage } from "@/lib/i18n/language-context"
+import { useTranslations, useLocale } from "next-intl"
 import type { BlogPost } from "@/lib/blog"
 import { categoryColors } from "@/lib/category-colors"
 
@@ -25,8 +25,8 @@ function formatDate(dateString: string, locale: string) {
 
 
 export function BlogPreviewSection({ posts }: BlogPreviewSectionProps) {
-  const { t, language } = useLanguage()
-  const bl = t.blog
+  const t = useTranslations("blog")
+  const locale = useLocale()
 
   if (posts.length === 0) return null
 
@@ -36,23 +36,23 @@ export function BlogPreviewSection({ posts }: BlogPreviewSectionProps) {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div>
             <span className="text-sm font-semibold tracking-widest uppercase text-primary">
-              {bl.label}
+              {t("label")}
             </span>
             <h2
               className="mt-3 uppercase leading-[0.9] text-foreground"
               style={{ fontFamily: "var(--font-bebas)", fontSize: "clamp(48px, 7vw, 96px)" }}
             >
-              {bl.title}
+              {t("title")}
             </h2>
             <p className="mt-3 text-muted-foreground max-w-md text-base leading-relaxed">
-              {bl.subtitle}
+              {t("subtitle")}
             </p>
           </div>
           <Link
             href="/blog"
             className="hidden md:flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors group shrink-0"
           >
-            {bl.viewAll}
+            {t("viewAll")}
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
@@ -94,11 +94,11 @@ export function BlogPreviewSection({ posts }: BlogPreviewSectionProps) {
                     <div className="flex items-center justify-between mt-auto pt-4" style={{ borderTop: "1px solid hsl(240 8% 88%)" }}>
                       <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
                         <Calendar className="w-3.5 h-3.5" />
-                        <span>{formatDate(post.date, language)}</span>
+                        <span>{formatDate(post.date, locale)}</span>
                       </div>
                       <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
                         <Clock className="w-3.5 h-3.5" />
-                        <span>{post.readTime} {bl.minRead}</span>
+                        <span>{post.readTime} {t("minRead")}</span>
                       </div>
                     </div>
                   </div>
@@ -114,7 +114,7 @@ export function BlogPreviewSection({ posts }: BlogPreviewSectionProps) {
             href="/blog"
             className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
           >
-            {bl.viewAll}
+            {t("viewAll")}
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

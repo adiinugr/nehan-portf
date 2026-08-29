@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { ExternalLink } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { useLanguage } from "@/lib/i18n/language-context"
+import { useTranslations } from "next-intl"
 
 interface ProjectCardProps {
   title: string
@@ -23,7 +23,7 @@ export function ProjectCard({
   liveUrl,
   index = 0,
 }: ProjectCardProps) {
-  const { t } = useLanguage()
+  const t = useTranslations("projects")
 
   return (
     <motion.div
@@ -67,7 +67,7 @@ export function ProjectCard({
               onClick={(e) => e.stopPropagation()}
             >
               <ExternalLink className="w-3.5 h-3.5" />
-              {t.projects.liveDemo}
+              {t("liveDemo")}
             </Link>
           </div>
         )}

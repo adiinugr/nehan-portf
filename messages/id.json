@@ -1,0 +1,186 @@
+{
+  "nav": {
+    "services": "Layanan",
+    "portfolio": "Portofolio",
+    "blog": "Blog",
+    "contact": "Kontak",
+    "cta": "Konsultasi Gratis"
+  },
+  "hero": {
+    "badge": "Buka untuk Proyek Baru",
+    "legalName": "Nehan Dev Indonesia — Studio Pengembangan Web",
+    "headline1": "Website yang bekerja",
+    "headline2": "untuk bisnis",
+    "words": ["restoran", "travel", "penginapan", "UMKM", "Anda"],
+    "subtitle": "Kami bantu UMKM dan bisnis kecil hadir secara digital — website profesional, cepat, dan siap menarik pelanggan.",
+    "cta1": "Konsultasi Gratis",
+    "cta2": "Lihat Portofolio"
+  },
+  "services": {
+    "label": "Layanan",
+    "title": "Yang Kami Bangun",
+    "subtitle": "Solusi digital yang disesuaikan untuk setiap jenis usaha lokal.",
+    "items": [
+      { "icon": "UtensilsCrossed", "title": "Restoran & Kafe", "desc": "Menu digital, sistem reservasi, dan profil usaha yang menarik pelanggan datang langsung maupun online." },
+      { "icon": "Plane", "title": "Travel & Wisata", "desc": "Paket wisata, booking, galeri destinasi — semua yang dibutuhkan bisnis travel Anda secara online." },
+      { "icon": "BedDouble", "title": "Hotel & Penginapan", "desc": "Showcase kamar, galeri, dan kontak reservasi untuk meningkatkan direct booking." },
+      { "icon": "Building2", "title": "Company Profile", "desc": "Presentasi bisnis yang profesional dan meyakinkan untuk klien dan mitra potensial." },
+      { "icon": "Megaphone", "title": "Landing Page", "desc": "Halaman promosi konversi tinggi untuk produk, layanan, atau kampanye Anda." },
+      { "icon": "ShoppingBag", "title": "Toko Online", "desc": "Katalog produk dan sistem pemesanan untuk memperluas jangkauan bisnis Anda secara digital." }
+    ]
+  },
+  "howItWorks": {
+    "label": "Cara Kerja",
+    "title": "Simpel. Cepat. Siap.",
+    "subtitle": "Dari obrolan pertama sampai website tayang — hanya 3 langkah.",
+    "steps": [
+      { "number": "01", "title": "Konsultasi Gratis", "desc": "Ceritakan bisnis dan kebutuhan Anda. Tidak perlu paham teknologi, cukup ngobrol santai." },
+      { "number": "02", "title": "Desain & Bangun", "desc": "Kami rancang dan kembangkan website dalam 7–14 hari. Anda review dan setujui setiap tahap." },
+      { "number": "03", "title": "Tayang & Berkembang", "desc": "Website Anda tayang, siap di-SEO, dan dibangun untuk mendatangkan pelanggan." }
+    ]
+  },
+  "testimonials": {
+    "label": "Testimoni",
+    "title": "Dipercaya Usaha Lokal",
+    "subtitle": "Apa yang dikatakan klien kami setelah bekerja sama dengan NehanDev.",
+    "items": [
+      { "name": "Budi Santoso", "role": "Pemilik, Warung Makan Bu Budi", "text": "Sekarang restoran kami punya menu digital yang bisa discan langsung. Pesanan naik 30% di bulan pertama." },
+      { "name": "Rina Lestari", "role": "Founder, Rina Tour & Travel", "text": "Website-nya terlihat sangat profesional. Paket wisata kami sekarang bisa dipesan online tanpa harus chat WA satu-satu." },
+      { "name": "Ahmad Fauzi", "role": "Manager, Villa Sejuk Puncak", "text": "Direct booking meningkat signifikan. Tamu bilang menemukan kami dari website. Worth it banget." }
+    ]
+  },
+  "projects": {
+    "label": "Portofolio",
+    "title": "Hasil Kerja Kami",
+    "subtitle": "Proyek nyata yang dibangun untuk bisnis nyata.",
+    "liveDemo": "Demo Langsung"
+  },
+  "education": {
+    "label": "Teknologi Pendidikan",
+    "badge": "Platform Baru",
+    "title": "CBT Pro",
+    "titleHighlight": "Platform Ujian Online Anti-Curang",
+    "subtitle": "Dirancang khusus untuk guru Indonesia. Buat soal dengan AI, jadwalkan ujian, dan pantau siswa secara real-time — semua dalam satu platform.",
+    "features": {
+      "questionTypes": { "title": "3 Tipe Soal", "desc": "MCSA, MCMA & Benar/Salah" },
+      "antiCheat": { "title": "Kiosk Anti-Curang", "desc": "Mode Android terkunci penuh" },
+      "realtime": { "title": "Monitoring Real-Time", "desc": "Status siswa live via WebSocket" },
+      "ai": { "title": "Generate Soal AI", "desc": "Buat puluhan soal dalam detik" }
+    },
+    "cta": "Kunjungi cbtpro.id",
+    "mockup": {
+      "label": "Dashboard Ujian Live",
+      "studentsOnline": "Siswa Online",
+      "examProgress": "Progress Ujian",
+      "autoGraded": "Dikoreksi Otomatis",
+      "activeExam": "Ujian Aktif"
+    }
+  },
+  "blog": {
+    "label": "Wawasan",
+    "title": "Artikel Terbaru",
+    "subtitle": "Pembahasan teknis mendalam, tutorial, dan pemikiran seputar pengembangan web dan teknologi pendidikan.",
+    "readMore": "Baca Artikel",
+    "viewAll": "Lihat Semua Artikel",
+    "minRead": "menit baca"
+  },
+  "contact": {
+    "label": "Kontak",
+    "title": "Mari Berkolaborasi",
+    "subtitle": "Punya proyek yang ingin dikerjakan? Kirimkan pesan dan kami akan membalas dalam 24 jam.",
+    "responseTime": "Biasanya membalas dalam 24 jam",
+    "info": {
+      "title": "Informasi Kontak",
+      "legalName": "Nama Legal Usaha",
+      "address": "Alamat",
+      "phone": "Telepon",
+      "email": "Email",
+      "instagram": "Instagram",
+      "youtube": "YouTube"
+    },
+    "form": {
+      "name": "Nama",
+      "namePlaceholder": "Nama Anda",
+      "email": "Email",
+      "emailPlaceholder": "email.anda@contoh.com",
+      "subject": "Subjek",
+      "subjectPlaceholder": "Perihal apa?",
+      "message": "Pesan",
+      "messagePlaceholder": "Ceritakan tentang proyek Anda...",
+      "submit": "Kirim Pesan",
+      "sending": "Mengirim...",
+      "required": "Wajib diisi"
+    },
+    "success": {
+      "title": "Pesan Terkirim!",
+      "desc": "Terima kasih telah menghubungi kami. Kami akan membalas dalam 24 jam.",
+      "again": "Kirim Pesan Lain"
+    },
+    "error": "Mohon lengkapi semua field yang wajib diisi"
+  },
+  "footer": {
+    "copyright": "Hak cipta dilindungi.",
+    "tagline": "Solusi Digital untuk Usaha Lokal.",
+    "links": { "services": "Layanan", "blog": "Blog", "portfolio": "Portofolio", "contact": "Kontak", "privacy": "Kebijakan Privasi", "terms": "Syarat & Ketentuan" },
+    "sections": { "pages": "Halaman", "legal": "Legal", "follow": "Ikuti Kami" }
+  },
+  "layanan": {
+    "hero": {
+      "label": "Layanan Kami",
+      "titleLine1": "Website yang",
+      "titleHighlight": "Bekerja",
+      "titleLine1Suffix": "untuk Bisnis Anda",
+      "subtitle": "Kami spesialis website untuk UMKM dan bisnis lokal Indonesia — dari restoran, travel, hotel, hingga rental kendaraan. Lihat sendiri hasilnya di bawah."
+    },
+    "demosSection": {
+      "label": "Demo Website",
+      "title": "Lihat Contoh Nyatanya",
+      "subtitle": "Demo website lengkap yang sudah kami bangun — bisa langsung dicoba."
+    },
+    "demos": [
+      { "name": "Travel & Wisata", "brand": "Jelajah Nusantara", "desc": "Website agen travel lengkap dengan katalog destinasi, paket wisata, testimoni pelanggan, dan booking via WhatsApp.", "tags": ["Katalog destinasi", "Paket wisata", "Galeri", "WhatsApp booking"] },
+      { "name": "Hotel & Penginapan", "brand": "Villa Sejuk Puncak", "desc": "Website hotel premium dengan showcase kamar, galeri properti, harga transparan, dan reservasi langsung.", "tags": ["Showcase kamar", "Galeri foto", "Harga & fasilitas", "Direct booking"] },
+      { "name": "Barbershop", "brand": "Kings Barbershop", "desc": "Website barbershop modern dan maskulin dengan daftar layanan, harga, booking online, dan galeri hasil kerja.", "tags": ["Layanan & harga", "Booking online", "Galeri", "Jam operasional"] },
+      { "name": "Rental Kendaraan", "brand": "FastRide Rental", "desc": "Website rental mobil/motor dengan katalog armada, tarif sewa, cek ketersediaan, dan pemesanan mudah.", "tags": ["Katalog armada", "Tarif sewa", "Ketersediaan", "Pemesanan online"] }
+    ],
+    "demoCard": {
+      "viewDemo": "Lihat Demo Langsung",
+      "comingSoon": "Demo Segera Hadir",
+      "soon": "Segera"
+    },
+    "deliverablesSection": {
+      "label": "Termasuk",
+      "title": "Yang Anda Dapatkan",
+      "subtitle": "Semua yang dibutuhkan untuk hadir secara profesional di internet."
+    },
+    "deliverables": [
+      { "title": "Desain Custom", "desc": "Desain unik sesuai identitas dan industri bisnis Anda — bukan template generik." },
+      { "title": "Mobile Responsive", "desc": "Tampil sempurna di semua perangkat: HP, tablet, dan desktop." },
+      { "title": "SEO Dasar", "desc": "Optimasi agar website Anda mudah ditemukan di Google oleh calon pelanggan." },
+      { "title": "WhatsApp Integration", "desc": "Tombol WhatsApp langsung di website untuk memudahkan calon pelanggan menghubungi Anda." },
+      { "title": "Formulir Kontak", "desc": "Form pemesanan atau pertanyaan yang langsung masuk ke email Anda." },
+      { "title": "Google Maps", "desc": "Integrasi peta lokasi bisnis agar pelanggan mudah menemukan Anda." },
+      { "title": "2x Revisi", "desc": "Dua putaran revisi desain gratis hingga Anda puas dengan hasilnya." },
+      { "title": "Panduan Pengelolaan", "desc": "Dokumentasi cara update konten website secara mandiri setelah selesai." }
+    ],
+    "processSection": {
+      "label": "Alur Pemesanan",
+      "titleLine1": "Dari Nol ke Website",
+      "titleLine2": "Hanya 14 Hari",
+      "subtitle": "Proses yang simpel, transparan, dan cepat — tanpa jargon teknis."
+    },
+    "steps": [
+      { "title": "Konsultasi Gratis", "desc": "Chat via WhatsApp, ceritakan bisnis dan kebutuhan Anda. Kami akan rekomendasikan solusi yang paling tepat.", "duration": "Hari 1" },
+      { "title": "Desain & Review", "desc": "Kami buat mockup desain website. Anda review dan berikan masukan. Revisi hingga Anda puas.", "duration": "Hari 2–5" },
+      { "title": "Pengembangan", "desc": "Website dikembangkan sesuai desain yang sudah disetujui. Semua fitur dites dengan teliti.", "duration": "Hari 6–12" },
+      { "title": "Tayang!", "desc": "Website live dan siap diakses. Kami bantu setup domain dan hosting, plus panduan pengelolaan.", "duration": "Hari 13–14" }
+    ],
+    "finalCta": {
+      "title": "Siap Mulai?",
+      "subtitle": "Konsultasi gratis, tidak ada kewajiban. Ceritakan bisnis Anda dan kami bantu tentukan website yang paling tepat.",
+      "whatsappCta": "Chat WhatsApp Sekarang",
+      "whatsappPrefill": "Halo NehanDev, saya ingin konsultasi website untuk bisnis saya",
+      "messageCta": "Kirim Pesan"
+    }
+  }
+}

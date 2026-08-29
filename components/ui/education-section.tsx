@@ -5,7 +5,7 @@ import { ExternalLink, Shield, Zap, MonitorCheck, BrainCircuit } from "lucide-re
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
-import { useLanguage } from "@/lib/i18n/language-context"
+import { useTranslations } from "next-intl"
 
 const featureIcons = {
   questionTypes: Zap,
@@ -14,9 +14,11 @@ const featureIcons = {
   ai: BrainCircuit
 }
 
+type Feature = { title: string; desc: string }
+
 export function EducationSection() {
-  const { t } = useLanguage()
-  const ed = t.education
+  const t = useTranslations("education")
+  const features = t.raw("features") as Record<keyof typeof featureIcons, Feature>
 
   const featureKeys = ["questionTypes", "antiCheat", "realtime", "ai"] as const
 
@@ -33,7 +35,7 @@ export function EducationSection() {
           className="mb-12"
         >
           <span className="text-sm font-semibold tracking-widest uppercase text-primary">
-            {ed.label}
+            {t("label")}
           </span>
         </motion.div>
 
@@ -48,7 +50,7 @@ export function EducationSection() {
           >
             {/* Badge */}
             <span className="inline-flex w-fit items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary uppercase tracking-wider">
-              {ed.badge}
+              {t("badge")}
             </span>
 
             {/* Title */}
@@ -57,22 +59,22 @@ export function EducationSection() {
                 className="uppercase leading-[0.9] text-foreground mb-2"
                 style={{ fontFamily: "var(--font-bebas)", fontSize: "clamp(48px, 6vw, 80px)" }}
               >
-                {ed.title}
+                {t("title")}
               </h2>
               <h3 className="text-xl md:text-2xl font-semibold text-primary">
-                {ed.titleHighlight}
+                {t("titleHighlight")}
               </h3>
             </div>
 
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-              {ed.subtitle}
+              {t("subtitle")}
             </p>
 
             {/* Feature grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {featureKeys.map((key, i) => {
                 const Icon = featureIcons[key]
-                const feature = ed.features[key]
+                const feature = features[key]
                 return (
                   <motion.div
                     key={key}
@@ -101,7 +103,7 @@ export function EducationSection() {
                 className="gap-2 bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25"
               >
                 <Link href="https://cbtpro.id" target="_blank" rel="noopener noreferrer">
-                  {ed.cta}
+                  {t("cta")}
                   <ExternalLink className="w-4 h-4" />
                 </Link>
               </Button>

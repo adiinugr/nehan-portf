@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { useState, useMemo, useEffect } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import {
   Star, Users, BedDouble, MapPin, Check, Wifi, Car, Coffee,
   Utensils, Waves, Flame, Bike, Clock, Plus, Minus,
@@ -171,14 +172,14 @@ export default function HotelDemo() {
         }}>
         {/* Nav row — fixed 60px, inline styles to avoid Tailwind conflicts */}
         <div style={{ height: "60px", display: "flex", alignItems: "center", justifyContent: "space-between", maxWidth: "1280px", width: "100%", margin: "0 auto", padding: "0 24px" }}>
-          <a href="/demo/hotel" className="flex items-center gap-2">
+          <Link href="/demo/hotel" className="flex items-center gap-2">
             <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: GREEN }}>
               <Waves className="w-4 h-4 text-white" />
             </div>
             <span className="text-xl font-bold" style={{ fontFamily: SERIF, color: scrolled ? DARK : WHITE }}>
               Tepi<em style={{ color: scrolled ? GREEN : "#a8d4b4" }}>Kali</em>
             </span>
-          </a>
+          </Link>
 
           <nav className="hidden md:flex items-center gap-8">
             {[["Unit", "#unit"], ["Fasilitas", "#fasilitas"], ["Galeri", "#galeri"], ["Testimoni", "#testimoni"]].map(([l, h]) => (

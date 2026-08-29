@@ -1,11 +1,13 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { useLanguage } from "@/lib/i18n/language-context"
+import { useTranslations } from "next-intl"
+
+type Testimonial = { name: string; role: string; text: string }
 
 export function TestimonialsSection() {
-  const { t } = useLanguage()
-  const tm = t.testimonials
+  const t = useTranslations("testimonials")
+  const items = t.raw("items") as Testimonial[]
 
   return (
     <section className="py-24 bg-muted/40">
@@ -20,7 +22,7 @@ export function TestimonialsSection() {
         >
           <div>
             <span className="text-sm font-semibold tracking-widest uppercase text-primary">
-              {tm.label}
+              {t("label")}
             </span>
             <h2
               className="mt-3 uppercase leading-[0.9] text-foreground"
@@ -29,17 +31,17 @@ export function TestimonialsSection() {
                 fontSize: "clamp(48px, 7vw, 96px)",
               }}
             >
-              {tm.title}
+              {t("title")}
             </h2>
           </div>
           <p className="text-base text-muted-foreground max-w-xs leading-relaxed md:text-right">
-            {tm.subtitle}
+            {t("subtitle")}
           </p>
         </motion.div>
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {tm.items.map((item, i) => (
+          {items.map((item, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 24 }}

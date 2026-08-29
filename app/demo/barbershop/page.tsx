@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { useState, useMemo, useEffect } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import {
   Star, MapPin, Check, Clock, Scissors, Award, Instagram,
   MessageCircle, Phone, Mail, Menu, X, ChevronDown, ChevronUp,
@@ -158,14 +159,14 @@ export default function BarbershopDemo() {
           boxShadow:       scrolled ? "0 1px 24px rgba(0,0,0,0.5)" : "none",
         }}>
         <div style={{ height: "64px", display: "flex", alignItems: "center", justifyContent: "space-between", maxWidth: "1280px", width: "100%", margin: "0 auto", padding: "0 24px" }}>
-          <a href="/demo/barbershop" className="flex items-center gap-2.5">
+          <Link href="/demo/barbershop" className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-md flex items-center justify-center" style={{ backgroundColor: RED }}>
               <Scissors className="w-4 h-4 text-white" />
             </div>
             <span style={{ fontFamily: DISPLAY, fontSize: "23px", letterSpacing: "0.06em", color: WHITE }}>
               KINGS<span style={{ color: RED }}>.</span>
             </span>
-          </a>
+          </Link>
 
           <nav className="hidden md:flex items-center gap-8">
             {[["Layanan", "#layanan"], ["Barber", "#barber"], ["Galeri", "#galeri"], ["Lokasi", "#lokasi"]].map(([l, h]) => (

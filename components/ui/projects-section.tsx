@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { useLanguage } from "@/lib/i18n/language-context"
+import { useTranslations } from "next-intl"
 import { ProjectCard } from "@/components/ui/project-card"
 
 const projects = [
@@ -65,7 +65,7 @@ const projects = [
 
 
 export function ProjectsSection() {
-  const { t } = useLanguage()
+  const t = useTranslations("projects")
 
   return (
     <section
@@ -96,7 +96,7 @@ export function ProjectsSection() {
               className="text-sm font-semibold tracking-widest uppercase mb-3"
               style={{ color: "#818cf8" }}
             >
-              {t.projects.label}
+              {t("label")}
             </p>
             <h2
               className="uppercase leading-[0.9]"
@@ -106,14 +106,14 @@ export function ProjectsSection() {
                 color: "#f1f5f9",
               }}
             >
-              {t.projects.title}
+              {t("title")}
             </h2>
           </div>
           <p
             className="max-w-xs text-base leading-relaxed md:text-right"
             style={{ color: "#64748b" }}
           >
-            {t.projects.subtitle}
+            {t("subtitle")}
           </p>
         </motion.div>
 

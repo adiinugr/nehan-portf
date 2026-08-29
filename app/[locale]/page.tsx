@@ -11,14 +11,38 @@ import { BlogPreviewSection } from "@/components/ui/blog-preview-section"
 import { ContactSection } from "@/components/ui/contact-section"
 import { Footer } from "@/components/ui/footer"
 import { getRecentPosts } from "@/lib/blog"
+import { getPathname } from "@/i18n/navigation"
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.nehandev.com"
 
-export const metadata: Metadata = {
-  title: "NehanDev | Solusi Digital untuk Usaha Lokal",
-  description:
-    "Kami bantu UMKM dan bisnis kecil hadir secara digital — website profesional untuk restoran, travel, penginapan, dan lebih banyak lagi.",
-  alternates: { canonical: siteUrl }
+type Props = { params: Promise<{ locale: string }> }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const url = `${siteUrl}${getPathname({ locale, href: "/" })}`
+
+  const title =
+    locale === "en"
+      ? "Digital Solutions for Local Businesses"
+      : "Solusi Digital untuk Usaha Lokal"
+  const description =
+    locale === "en"
+      ? "We help local businesses and small companies go digital — professional websites for restaurants, travel agencies, hotels, and more."
+      : "Kami bantu UMKM dan bisnis kecil hadir secara digital — website profesional untuk restoran, travel, penginapan, dan lebih banyak lagi."
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: url,
+      languages: {
+        id: `${siteUrl}${getPathname({ locale: "id", href: "/" })}`,
+        en: `${siteUrl}${getPathname({ locale: "en", href: "/" })}`,
+        "x-default": `${siteUrl}${getPathname({ locale: "id", href: "/" })}`
+      }
+    },
+    openGraph: { title: `NehanDev | ${title}`, description, url }
+  }
 }
 
 export default function Home() {

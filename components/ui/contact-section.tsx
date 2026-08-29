@@ -17,7 +17,7 @@ import {
   MapPin
 } from "lucide-react"
 import { motion } from "framer-motion"
-import { useLanguage } from "@/lib/i18n/language-context"
+import { useTranslations } from "next-intl"
 import {
   BUSINESS_NAME,
   BUSINESS_ADDRESS,
@@ -27,8 +27,7 @@ import {
 } from "@/lib/business-info"
 
 export function ContactSection() {
-  const { t } = useLanguage()
-  const ct = t.contact
+  const t = useTranslations("contact")
 
   const [formData, setFormData] = useState({
     name: "",
@@ -53,7 +52,7 @@ export function ContactSection() {
     e.preventDefault()
     if (!formData.name || !formData.email || !formData.message) {
       setSubmitStatus("error")
-      setErrorMessage(ct.error)
+      setErrorMessage(t("error"))
       return
     }
     setIsSubmitting(true)
@@ -69,11 +68,11 @@ export function ContactSection() {
         setFormData({ name: "", email: "", subject: "", message: "" })
       } else {
         setSubmitStatus("error")
-        setErrorMessage(data.message || ct.error)
+        setErrorMessage(data.message || t("error"))
       }
     } catch {
       setSubmitStatus("error")
-      setErrorMessage(ct.error)
+      setErrorMessage(t("error"))
     } finally {
       setIsSubmitting(false)
     }
@@ -84,7 +83,7 @@ export function ContactSection() {
       <div className="container mx-auto px-4">
         <div className="mb-14">
           <span className="text-sm font-semibold tracking-widest uppercase text-primary">
-            {ct.label}
+            {t("label")}
           </span>
           <h2
             className="mt-3 uppercase leading-[0.9] text-foreground"
@@ -93,10 +92,10 @@ export function ContactSection() {
               fontSize: "clamp(48px, 7vw, 96px)"
             }}
           >
-            {ct.title}
+            {t("title")}
           </h2>
           <p className="mt-3 text-muted-foreground max-w-md text-base leading-relaxed">
-            {ct.subtitle}
+            {t("subtitle")}
           </p>
         </div>
 
@@ -113,13 +112,13 @@ export function ContactSection() {
             <div className="inline-flex w-fit items-center gap-2 rounded-full bg-green-500/10 px-4 py-2">
               <Clock className="w-3.5 h-3.5 text-green-600 dark:text-green-400" />
               <span className="text-sm font-medium text-green-600 dark:text-green-400">
-                {ct.responseTime}
+                {t("responseTime")}
               </span>
             </div>
 
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-5">
-                {ct.info.title}
+                {t("info.title")}
               </h3>
               <div className="space-y-5">
                 <div className="flex items-center gap-3">
@@ -128,7 +127,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="text-base text-muted-foreground mb-0.5">
-                      {ct.info.legalName}
+                      {t("info.legalName")}
                     </p>
                     <p className="text-base font-medium text-foreground">
                       {BUSINESS_NAME}
@@ -141,7 +140,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="text-base text-muted-foreground mb-0.5">
-                      {ct.info.address}
+                      {t("info.address")}
                     </p>
                     <p className="text-base font-medium text-foreground">
                       {BUSINESS_ADDRESS}
@@ -172,7 +171,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="text-base text-muted-foreground mb-0.5">
-                      {ct.info.email}
+                      {t("info.email")}
                     </p>
                     <p className="text-base font-medium text-foreground">
                       {BUSINESS_EMAIL}
@@ -185,7 +184,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="text-base text-muted-foreground mb-0.5">
-                      {ct.info.instagram}
+                      {t("info.instagram")}
                     </p>
                     <a
                       href="https://instagram.com/nehandev"
@@ -203,7 +202,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="text-base text-muted-foreground mb-0.5">
-                      {ct.info.youtube}
+                      {t("info.youtube")}
                     </p>
                     <a
                       href="https://youtube.com/@ngodingnekat"
@@ -233,11 +232,11 @@ export function ContactSection() {
                   <CheckCircle className="w-8 h-8 text-green-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">
-                  {ct.success.title}
+                  {t("success.title")}
                 </h3>
-                <p className="text-muted-foreground mb-6">{ct.success.desc}</p>
+                <p className="text-muted-foreground mb-6">{t("success.desc")}</p>
                 <Button onClick={() => setSubmitStatus(null)} variant="outline">
-                  {ct.success.again}
+                  {t("success.again")}
                 </Button>
               </div>
             ) : (
@@ -248,11 +247,11 @@ export function ContactSection() {
                       htmlFor="name"
                       className="text-sm font-medium text-foreground"
                     >
-                      {ct.form.name} <span className="text-red-400">*</span>
+                      {t("form.name")} <span className="text-red-400">*</span>
                     </label>
                     <Input
                       id="name"
-                      placeholder={ct.form.namePlaceholder}
+                      placeholder={t("form.namePlaceholder")}
                       value={formData.name}
                       onChange={handleChange}
                       className="bg-muted/50 border-0 shadow-sm focus-visible:ring-1 focus-visible:ring-primary/40 text-base placeholder:text-muted-foreground/50"
@@ -263,12 +262,12 @@ export function ContactSection() {
                       htmlFor="email"
                       className="text-sm font-medium text-foreground"
                     >
-                      {ct.form.email} <span className="text-red-400">*</span>
+                      {t("form.email")} <span className="text-red-400">*</span>
                     </label>
                     <Input
                       id="email"
                       type="email"
-                      placeholder={ct.form.emailPlaceholder}
+                      placeholder={t("form.emailPlaceholder")}
                       value={formData.email}
                       onChange={handleChange}
                       className="bg-muted/50 border-0 shadow-sm focus-visible:ring-1 focus-visible:ring-primary/40 text-base placeholder:text-muted-foreground/50"
@@ -280,11 +279,11 @@ export function ContactSection() {
                     htmlFor="subject"
                     className="text-sm font-medium text-foreground"
                   >
-                    {ct.form.subject}
+                    {t("form.subject")}
                   </label>
                   <Input
                     id="subject"
-                    placeholder={ct.form.subjectPlaceholder}
+                    placeholder={t("form.subjectPlaceholder")}
                     value={formData.subject}
                     onChange={handleChange}
                     className="bg-muted/50 border-0 shadow-sm focus-visible:ring-1 focus-visible:ring-primary/40 text-base placeholder:text-muted-foreground/50"
@@ -295,11 +294,11 @@ export function ContactSection() {
                     htmlFor="message"
                     className="text-sm font-medium text-foreground"
                   >
-                    {ct.form.message} <span className="text-red-400">*</span>
+                    {t("form.message")} <span className="text-red-400">*</span>
                   </label>
                   <Textarea
                     id="message"
-                    placeholder={ct.form.messagePlaceholder}
+                    placeholder={t("form.messagePlaceholder")}
                     className="min-h-[140px] bg-muted/50 border-0 shadow-sm focus-visible:ring-1 focus-visible:ring-primary/40 resize-none text-base placeholder:text-muted-foreground/50"
                     value={formData.message}
                     onChange={handleChange}
@@ -340,12 +339,12 @@ export function ContactSection() {
                           d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                         />
                       </svg>
-                      {ct.form.sending}
+                      {t("form.sending")}
                     </>
                   ) : (
                     <>
                       <Send className="w-4 h-4" />
-                      {ct.form.submit}
+                      {t("form.submit")}
                     </>
                   )}
                 </Button>

@@ -1,11 +1,13 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { useLanguage } from "@/lib/i18n/language-context"
+import { useTranslations } from "next-intl"
+
+type Step = { number: string; title: string; desc: string }
 
 export function HowItWorksSection() {
-  const { t } = useLanguage()
-  const hw = t.howItWorks
+  const t = useTranslations("howItWorks")
+  const steps = t.raw("steps") as Step[]
 
   return (
     <section className="py-24 relative overflow-hidden bg-muted/40">
@@ -19,7 +21,7 @@ export function HowItWorksSection() {
           className="mb-16"
         >
           <span className="text-sm font-semibold tracking-widest uppercase text-primary">
-            {hw.label}
+            {t("label")}
           </span>
           <h2
             className="mt-3 uppercase leading-[0.9] text-foreground"
@@ -28,16 +30,16 @@ export function HowItWorksSection() {
               fontSize: "clamp(48px, 7vw, 96px)",
             }}
           >
-            {hw.title}
+            {t("title")}
           </h2>
           <p className="mt-4 text-muted-foreground max-w-md text-base leading-relaxed">
-            {hw.subtitle}
+            {t("subtitle")}
           </p>
         </motion.div>
 
         {/* Steps */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4">
-          {hw.steps.map((step, index) => (
+          {steps.map((step, index) => (
             <motion.div
               key={step.number}
               initial={{ opacity: 0, y: 24 }}

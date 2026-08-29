@@ -4,7 +4,7 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { ArrowRight, Clock, Calendar, Search } from "lucide-react"
-import { useLanguage } from "@/lib/i18n/language-context"
+import { useTranslations, useLocale } from "next-intl"
 import type { BlogPost } from "@/lib/blog"
 import { categoryColors } from "@/lib/category-colors"
 
@@ -28,8 +28,8 @@ function formatDate(dateString: string, locale: string) {
 const ALL = "All"
 
 export function BlogPageClient({ posts }: BlogPageClientProps) {
-  const { t, language } = useLanguage()
-  const bl = t.blog
+  const t = useTranslations("blog")
+  const locale = useLocale()
 
   const [search, setSearch] = useState("")
   const [activeCategory, setActiveCategory] = useState(ALL)
@@ -49,9 +49,9 @@ export function BlogPageClient({ posts }: BlogPageClientProps) {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="mb-12">
-          <p className="text-sm font-medium text-primary mb-3 uppercase tracking-widest">{bl.label}</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">{bl.title}</h1>
-          <p className="text-muted-foreground max-w-xl text-lg">{bl.subtitle}</p>
+          <p className="text-sm font-medium text-primary mb-3 uppercase tracking-widest">{t("label")}</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">{t("title")}</h1>
+          <p className="text-muted-foreground max-w-xl text-lg">{t("subtitle")}</p>
         </div>
 
         {/* Search + filter */}
@@ -60,7 +60,7 @@ export function BlogPageClient({ posts }: BlogPageClientProps) {
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
             <input
               type="text"
-              placeholder={language === "id" ? "Cari artikel..." : "Search articles..."}
+              placeholder={locale === "id" ? "Cari artikel..." : "Search articles..."}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="w-full pl-9 pr-4 py-2.5 text-sm rounded-lg border border-border bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/60 transition-colors"
@@ -86,7 +86,7 @@ export function BlogPageClient({ posts }: BlogPageClientProps) {
         {/* Post grid */}
         {filtered.length === 0 ? (
           <div className="text-center py-20 text-muted-foreground">
-            {language === "id" ? "Tidak ada artikel yang sesuai." : "No articles found."}
+            {locale === "id" ? "Tidak ada artikel yang sesuai." : "No articles found."}
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -114,11 +114,11 @@ export function BlogPageClient({ posts }: BlogPageClientProps) {
                       <div className="flex items-center justify-between mt-auto pt-4 border-t border-border/40">
                         <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
                           <Calendar className="w-3.5 h-3.5" />
-                          <span>{formatDate(post.date, language)}</span>
+                          <span>{formatDate(post.date, locale)}</span>
                         </div>
                         <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
                           <Clock className="w-3.5 h-3.5" />
-                          <span>{post.readTime} {bl.minRead}</span>
+                          <span>{post.readTime} {t("minRead")}</span>
                         </div>
                       </div>
                     </div>
@@ -132,7 +132,7 @@ export function BlogPageClient({ posts }: BlogPageClientProps) {
         <div className="mt-12 text-center">
           <Link href="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
             <ArrowRight className="w-4 h-4 rotate-180" />
-            {language === "id" ? "Kembali ke Beranda" : "Back to Home"}
+            {locale === "id" ? "Kembali ke Beranda" : "Back to Home"}
           </Link>
         </div>
       </div>

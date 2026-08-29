@@ -5,14 +5,14 @@ import { motion, AnimatePresence } from "framer-motion"
 import { CalendarDays, MoveRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { useLanguage } from "@/lib/i18n/language-context"
+import { useTranslations } from "next-intl"
 import { BUSINESS_WHATSAPP_URL } from "@/lib/business-info"
 
 
 function Hero() {
-  const { t } = useLanguage()
+  const t = useTranslations("hero")
   const [wordIndex, setWordIndex] = useState(0)
-  const words = [...t.hero.words] as string[]
+  const words = t.raw("words") as string[]
 
   useEffect(() => {
     const id = setTimeout(() => {
@@ -42,10 +42,10 @@ function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
             </span>
-            {t.hero.badge}
+            {t("badge")}
           </span>
           <p className="mt-3 text-xs tracking-wide text-muted-foreground/70">
-            {t.hero.legalName}
+            {t("legalName")}
           </p>
         </motion.div>
 
@@ -63,9 +63,9 @@ function Hero() {
               fontSize: "clamp(64px, 11vw, 160px)",
             }}
           >
-            <span className="block">{t.hero.headline1}</span>
+            <span className="block">{t("headline1")}</span>
             <span className="block">
-              <span>{t.hero.headline2} </span>
+              <span>{t("headline2")} </span>
               <AnimatePresence mode="wait">
                 <motion.span
                   key={wordIndex}
@@ -90,13 +90,13 @@ function Hero() {
           className="flex flex-col md:flex-row items-start md:items-center gap-8 mb-8 max-w-4xl"
         >
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-md">
-            {t.hero.subtitle}
+            {t("subtitle")}
           </p>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <Button asChild size="lg" variant="outline" className="gap-2 hover:bg-primary/5">
               <Link href={BUSINESS_WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 <CalendarDays className="w-4 h-4" />
-                {t.hero.cta1}
+                {t("cta1")}
               </Link>
             </Button>
             <Button
@@ -105,7 +105,7 @@ function Hero() {
               className="gap-2 bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25"
             >
               <Link href="#portfolio">
-                {t.hero.cta2}
+                {t("cta2")}
                 <MoveRight className="w-4 h-4" />
               </Link>
             </Button>
