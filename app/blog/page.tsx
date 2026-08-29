@@ -5,7 +5,7 @@ import { Header } from "@/components/ui/header"
 import { Footer } from "@/components/ui/footer"
 
 export const metadata: Metadata = {
-  title: "Blog | NehanDev",
+  title: "Blog",
   description:
     "Technical insights, tutorials, and thoughts on web development and education technology from the NehanDev team.",
   alternates: { canonical: "https://www.nehandev.com/blog" },

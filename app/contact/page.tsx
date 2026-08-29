@@ -4,7 +4,7 @@ import { Footer } from "@/components/ui/footer"
 import { ContactSection } from "@/components/ui/contact-section"
 
 export const metadata: Metadata = {
-  title: "Kontak | NehanDev",
+  title: "Kontak",
   description:
     "Hubungi NehanDev untuk konsultasi gratis pembuatan website bisnis Anda. Chat langsung via WhatsApp — biasanya membalas dalam hitungan menit.",
   alternates: { canonical: "https://www.nehandev.com/contact" },
@@ -20,6 +20,7 @@ export default function ContactPage() {
     <>
       <Header />
       <main className="min-h-screen pt-8">
+        <h1 className="sr-only">Kontak NehanDev</h1>
         <ContactSection />
       </main>
       <Footer />

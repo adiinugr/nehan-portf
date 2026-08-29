@@ -6,7 +6,6 @@ import { Footer } from "@/components/ui/footer"
 import { MDXRemote } from "next-mdx-remote/rsc"
 import remarkGfm from "remark-gfm"
 import Link from "next/link"
-import Script from "next/script"
 import { ArrowLeft, Calendar, Clock } from "lucide-react"
 import { categoryColors } from "@/lib/category-colors"
 
@@ -90,10 +89,9 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <>
-      <Script
+      <script
         id={`article-schema-${slug}`}
         type="application/ld+json"
-        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <Header />

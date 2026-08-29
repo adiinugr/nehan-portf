@@ -4,7 +4,7 @@ import { Footer } from "@/components/ui/footer"
 import { ProjectsSection } from "@/components/ui/projects-section"
 
 export const metadata: Metadata = {
-  title: "Portofolio | NehanDev",
+  title: "Portofolio",
   description:
     "Portofolio NehanDev — proyek nyata yang dibangun untuk bisnis lokal Indonesia: website restoran, travel, penginapan, aplikasi kalender, dan tools digital.",
   alternates: { canonical: "https://www.nehandev.com/projects" },
@@ -20,6 +20,7 @@ export default function ProjectsPage() {
     <>
       <Header />
       <main className="min-h-screen pt-8">
+        <h1 className="sr-only">Portofolio NehanDev</h1>
         <ProjectsSection />
       </main>
       <Footer />

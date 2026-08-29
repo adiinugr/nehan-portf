@@ -117,6 +117,47 @@ export const metadata: Metadata = {
   }
 }
 
+const businessSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "NehanDev",
+  legalName: BUSINESS_NAME,
+  url: siteUrl,
+  logo: `${siteUrl}/favicons/web-app-manifest-512x512.png`,
+  image: ogImageUrl,
+  description:
+    "Transform your digital vision into reality with NehanDev. We create beautiful, high-performance websites and applications tailored to your business needs.",
+  address: { "@type": "PostalAddress", streetAddress: BUSINESS_ADDRESS, addressCountry: "ID" },
+  email: BUSINESS_EMAIL,
+  telephone: `+${BUSINESS_PHONE_DIGITS}`,
+  sameAs: [
+    "https://instagram.com/nehandev",
+    "https://youtube.com/@nehandev",
+    "https://github.com/nehandev",
+    "https://linkedin.com/in/nehandev"
+  ],
+  priceRange: "$$",
+  openingHours: "Mo-Fr 09:00-17:00",
+  makesOffer: [
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Web Development",
+        description: "Custom website and web application development using Next.js, React, TypeScript"
+      }
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Education Technology",
+        description: "Online exam platforms and educational software for Indonesian schools"
+      }
+    }
+  ]
+}
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -151,49 +192,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </>
         )}
 
-        <Script id="schema-structured-data" type="application/ld+json" strategy="afterInteractive">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "ProfessionalService",
-              "name": "NehanDev",
-              "legalName": "${BUSINESS_NAME}",
-              "url": "${siteUrl}",
-              "logo": "${siteUrl}/favicons/web-app-manifest-512x512.png",
-              "image": "${ogImageUrl}",
-              "description": "Transform your digital vision into reality with NehanDev. We create beautiful, high-performance websites and applications tailored to your business needs.",
-              "address": { "@type": "PostalAddress", "streetAddress": "${BUSINESS_ADDRESS}", "addressCountry": "ID" },
-              "email": "${BUSINESS_EMAIL}",
-              "telephone": "+${BUSINESS_PHONE_DIGITS}",
-              "sameAs": [
-                "https://instagram.com/nehandev",
-                "https://youtube.com/@nehandev",
-                "https://github.com/nehandev",
-                "https://linkedin.com/in/nehandev"
-              ],
-              "priceRange": "$$",
-              "openingHours": "Mo-Fr 09:00-17:00",
-              "makesOffer": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Web Development",
-                    "description": "Custom website and web application development using Next.js, React, TypeScript"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Education Technology",
-                    "description": "Online exam platforms and educational software for Indonesian schools"
-                  }
-                }
-              ]
-            }
-          `}
-        </Script>
+        <script
+          id="schema-structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+        />
       </body>
     </html>
   )

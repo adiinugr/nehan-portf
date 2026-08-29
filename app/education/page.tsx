@@ -4,7 +4,7 @@ import { Footer } from "@/components/ui/footer"
 import { EducationSection } from "@/components/ui/education-section"
 
 export const metadata: Metadata = {
-  title: "Education Technology | NehanDev",
+  title: "Education Technology",
   description:
     "CBT Pro — Anti-cheat online exam platform built for Indonesian teachers. Create questions with AI, schedule exams, and monitor students in real-time.",
   alternates: { canonical: "https://www.nehandev.com/education" },
@@ -21,6 +21,7 @@ export default function EducationPage() {
     <>
       <Header />
       <main className="min-h-screen pt-8">
+        <h1 className="sr-only">Education Technology — CBT Pro by NehanDev</h1>
         <EducationSection />
       </main>
       <Footer />

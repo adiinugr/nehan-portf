@@ -32,7 +32,7 @@ function Hero() {
       <div className="relative container mx-auto px-4 pt-28 pb-0">
         {/* Badge */}
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 1, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="mb-6"
@@ -51,7 +51,7 @@ function Hero() {
 
         {/* Headline — Bebas Neue, left-aligned, massive */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 1, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           className="mb-10"
@@ -84,7 +84,7 @@ function Hero() {
 
         {/* Subtitle + CTAs — side by side */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 1, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex flex-col md:flex-row items-start md:items-center gap-8 mb-8 max-w-4xl"
