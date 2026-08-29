@@ -1,6 +1,7 @@
 import createMiddleware from "next-intl/middleware"
 import { routing } from "./i18n/routing"
 
+// See i18n/routing.ts for why localeDetection is disabled.
 export default createMiddleware(routing)
 
 // Only the 5 bilingual pages (and their /en/... counterparts) go through
