@@ -24,6 +24,12 @@
 - [x] Fixed the flagged color-contrast failures (verified with actual WCAG contrast-ratio math, not guessed): the sitewide "eyebrow label" pattern (10 files, was 4.46:1 against white, now 6.29:1 via a scoped darker shade — brand `--primary` itself untouched), and the footer's muted-text tier (was 4.07:1 against the dark footer background, now 5.53:1).
 - [x] **Bonus, found during this pass:** `/privacy-policy` and `/terms` had the same title double-suffix bug fixed elsewhere in Phase 2 but missed on these two — fixed.
 
+## Post-audit sweep (2026-08-29) — commit `db87323`
+
+Went back through everything looking for anything missed. Found and fixed two:
+- [x] `app/demo/travel/[id]/page.tsx` (~25 package detail URLs) had the identical duplicate-canonical bug fixed on the other demo pages in Phase 1, just missed since it's a dynamic route out of that pass's original 7-URL scope. Fixed the same way.
+- [x] The 7 demo pages (fixed in Phase 1) were never added to `app/sitemap.ts`. Added.
+
 ## Phase 4: Monitoring & Iteration (Ongoing)
 
 - [ ] **After this deploys**, re-run PageSpeed Insights to confirm the LCP fix actually moved the needle (was 5.1s/71 mobile).

@@ -10,6 +10,14 @@ The canonical tag is actively telling Google "this page is a duplicate of the ho
 
 **Fix:** convert each `app/demo/*/page.tsx` to a server component wrapper that exports its own `metadata` (title, description, `alternates.canonical`) and renders the interactive UI from a child client component — the pattern already used correctly on `/projects`, `/education`, `/contact`, `/blog`.
 
+## RESOLVED (2026-08-29, commit `db87323`): Same duplicate-canonical pattern on ~25 dynamic travel package pages, missed in the first pass
+
+Found in a post-audit sweep: `app/demo/travel/[id]/page.tsx` (e.g. `/demo/travel/bali-3d`, one per package in `app/demo/travel/data.ts` — about 25 URLs) is also a client component with no metadata, so every package page inherited the parent `/demo/travel` layout's title and canonical verbatim — identical title text and a canonical pointing at `/demo/travel` itself, regardless of which package. Same root cause as the finding above, just missed at the time since it's a dynamic route. Added `app/demo/travel/[id]/layout.tsx` with `generateMetadata` building a unique title/description/canonical per package from existing `data.ts` fields (`name`, `tagline`, `dest`, `priceLabel`).
+
+## RESOLVED (2026-08-29, commit `db87323`): Demo pages were never listed in the sitemap
+
+The 7 demo pages above got real, correct metadata in the first pass, but were never added to `app/sitemap.ts` — a missed follow-through, not a separate bug. Added.
+
 ## RESOLVED (2026-08-29, commit `3bd6042`): Duplicated "| NehanDev" suffix in title tags on 4 pages
 
 Root layout (`app/layout.tsx:47-49`) sets:
