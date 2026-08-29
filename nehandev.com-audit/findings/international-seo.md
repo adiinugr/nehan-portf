@@ -16,12 +16,18 @@ Root layout hardcoded `<html lang="en">`, but `LanguageProvider` (`lib/i18n/lang
 
 **Fix applied:** changed the hardcoded attribute to `<html lang="id">`, matching the actual default. The client-side `useEffect` in `LanguageProvider` still correctly updates this when a user toggles to English.
 
-## Open / not fixed: English content is not indexable by search engines at all
+## RESOLVED (2026-08-29, commit `5a7dcf3`): English content is now indexable by search engines
 
-**This is the core structural issue and was explicitly left unaddressed per user decision (quick, low-risk fixes only for now).**
+**This was the core structural issue, fixed the same day after further discussion with the user.**
 
-The EN/ID toggle (`useLanguage()`) is entirely client-side — React state seeded from `localStorage`, with no distinct URL per language (no `/en/` path prefix, no query param, no subdomain, no `Accept-Language`-based content negotiation). Since every page has exactly one URL, and the default language state is `"id"`, **Google and every other crawler can only ever discover and index the Indonesian version of every page.** The English strings in `lib/i18n/translations.ts` currently provide zero organic-search value — they're only reachable by a visitor who has already landed on the site and manually clicks the language toggle.
+Implemented real, crawlable `/en/...` URLs for the 5 pages with translatable content (`/`, `/layanan`, `/projects`, `/education`, `/contact`) using `next-intl`, with Indonesian staying unprefixed (`localePrefix: "as-needed"` — no URL disruption to existing indexed Indonesian pages) and English under `/en/...`. Each page now has a `generateMetadata` producing a self-referencing canonical and a **valid** hreflang pair pointing at two real, distinct URLs (unlike the earlier sitewide-broken hreflang, which pointed everything at one URL regardless of language).
 
-Blog posts (`content/blog/*.mdx`) don't have this problem — each post is its own URL with a fixed `lang` (from frontmatter), not toggled — that part of the site's i18n is implemented correctly.
+`/blog`, `/blog/[slug]`, `/demo/*`, `/privacy-policy`, `/terms` were deliberately left out of this restructuring (confirmed with the user) — they stay single-language (Indonesian) at their existing URLs. `middleware.ts`'s matcher is scoped narrowly to only the 5 in-scope paths and their `/en/...` counterparts so these routes are never touched by locale negotiation.
 
-**If English-language search visibility matters** (e.g. targeting clients outside Indonesia, or Indonesian users searching in English), the real fix requires a genuine per-locale URL structure — e.g. Next.js's built-in i18n routing, or a library like `next-intl`, giving each language its own crawlable path (`/en/...` vs default) with real hreflang tags pointing between them. This is a meaningfully larger change (touches routing across every page) and should be scoped as its own project, not folded into the SEO audit's quick-fix passes.
+**`/layanan` had zero English content before this** (100% hardcoded Indonesian, not wired to the translation system). English copy for its demos/features/process sections was drafted as part of this work (`messages/en.json`, `layanan` namespace) — **this is first-pass copy and should get a human review pass before being considered final**, since it's real business marketing copy.
+
+**Known trade-off accepted:** making `/blog`, `/privacy-policy`, `/terms` render correctly still required wrapping them (via a new `app/(shared-chrome)/` route group — a URL-invisible layout-scoping mechanism, not a URL change) in a `NextIntlClientProvider` so the shared Header/Footer could call `useTranslations()`. This causes those 3 routes (not `/blog/[slug]`, which is still statically generated) to render dynamically instead of statically — a minor performance trade-off, not a content or URL change. `/demo/*` remains fully static and unaffected (it uses its own separate header/footer, untouched).
+
+## Info: found (not fixed) — same double-title-suffix bug exists on `/privacy-policy` and `/terms`
+
+While regression-testing the pages above, both `/privacy-policy` and `/terms` were found to render `<title>X | NehanDev | NehanDev</title>` — the identical bug fixed on `/projects`/`/education`/`/contact`/`/blog` earlier the same day (2026-08-29, commit `3bd6042`), just never applied to these two pages. Left unfixed since it's outside this task's scope, but the fix is the same one-line pattern (drop the trailing `"| NehanDev"` from the page's `metadata.title`).
