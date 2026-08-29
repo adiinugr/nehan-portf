@@ -39,7 +39,7 @@ export function ServicesSection() {
           className="mb-16 flex flex-col md:flex-row md:items-end gap-6 justify-between"
         >
           <div>
-            <span className="text-sm font-semibold tracking-widest uppercase text-primary">
+            <span className="text-sm font-semibold tracking-widest uppercase text-[#4f46e5]">
               {t("label")}
             </span>
             <h2

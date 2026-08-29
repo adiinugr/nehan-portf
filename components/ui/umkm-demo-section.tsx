@@ -95,7 +95,7 @@ export function UmkmDemoSection() {
           className="mb-14 flex flex-col md:flex-row md:items-end justify-between gap-6"
         >
           <div>
-            <span className="text-sm font-semibold tracking-widest uppercase text-primary">
+            <span className="text-sm font-semibold tracking-widest uppercase text-[#4f46e5]">
               Demo Website UMKM
             </span>
             <h2

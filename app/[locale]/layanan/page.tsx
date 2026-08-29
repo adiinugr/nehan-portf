@@ -62,7 +62,7 @@ export default function LayananPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-sm font-semibold tracking-widest uppercase text-primary">
+              <span className="text-sm font-semibold tracking-widest uppercase text-[#4f46e5]">
                 {t("hero.label")}
               </span>
               <h1
@@ -87,7 +87,7 @@ export default function LayananPage() {
               variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
               className="mb-12"
             >
-              <span className="text-sm font-semibold tracking-widest uppercase text-primary">{t("demosSection.label")}</span>
+              <span className="text-sm font-semibold tracking-widest uppercase text-[#4f46e5]">{t("demosSection.label")}</span>
               <h2
                 className="mt-3 uppercase leading-[0.9] text-foreground"
                 style={{ fontFamily: "var(--font-bebas)", fontSize: "clamp(40px, 6vw, 80px)" }}
@@ -186,7 +186,7 @@ export default function LayananPage() {
               className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6"
             >
               <div>
-                <span className="text-sm font-semibold tracking-widest uppercase text-primary">{t("deliverablesSection.label")}</span>
+                <span className="text-sm font-semibold tracking-widest uppercase text-[#4f46e5]">{t("deliverablesSection.label")}</span>
                 <h2
                   className="mt-3 uppercase leading-[0.9] text-foreground"
                   style={{ fontFamily: "var(--font-bebas)", fontSize: "clamp(40px, 6vw, 80px)" }}
@@ -224,7 +224,7 @@ export default function LayananPage() {
               variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
               className="mb-14"
             >
-              <span className="text-sm font-semibold tracking-widest uppercase text-primary">{t("processSection.label")}</span>
+              <span className="text-sm font-semibold tracking-widest uppercase text-[#4f46e5]">{t("processSection.label")}</span>
               <h2
                 className="mt-3 uppercase leading-[0.9] text-foreground"
                 style={{ fontFamily: "var(--font-bebas)", fontSize: "clamp(40px, 6vw, 80px)" }}

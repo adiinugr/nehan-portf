@@ -4,7 +4,7 @@ import { Footer } from "@/components/ui/footer"
 import { BUSINESS_NAME, BUSINESS_ADDRESS, BUSINESS_EMAIL } from "@/lib/business-info"
 
 export const metadata: Metadata = {
-  title: "Syarat & Ketentuan | NehanDev",
+  title: "Syarat & Ketentuan",
   description: "Syarat dan ketentuan penggunaan layanan NehanDev.",
   alternates: { canonical: "https://www.nehandev.com/terms" }
 }
@@ -97,7 +97,7 @@ export default function TermsPage() {
           <div className="container mx-auto px-4 max-w-3xl">
             {/* Header */}
             <div className="mb-16">
-              <span className="text-sm font-semibold tracking-widest uppercase text-primary">Legal</span>
+              <span className="text-sm font-semibold tracking-widest uppercase text-[#4f46e5]">Legal</span>
               <h1
                 className="mt-3 uppercase leading-[0.9] text-foreground"
                 style={{

@@ -34,7 +34,7 @@ export function EducationSection() {
           transition={{ duration: 0.4 }}
           className="mb-12"
         >
-          <span className="text-sm font-semibold tracking-widest uppercase text-primary">
+          <span className="text-sm font-semibold tracking-widest uppercase text-[#4f46e5]">
             {t("label")}
           </span>
         </motion.div>

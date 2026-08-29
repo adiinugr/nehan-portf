@@ -4,7 +4,7 @@ import { Footer } from "@/components/ui/footer"
 import { BUSINESS_NAME, BUSINESS_ADDRESS, BUSINESS_EMAIL } from "@/lib/business-info"
 
 export const metadata: Metadata = {
-  title: "Kebijakan Privasi | NehanDev",
+  title: "Kebijakan Privasi",
   description: "Kebijakan privasi NehanDev — bagaimana kami mengumpulkan, menggunakan, dan melindungi data Anda.",
   alternates: { canonical: "https://www.nehandev.com/privacy-policy" }
 }
@@ -76,7 +76,7 @@ export default function PrivacyPolicyPage() {
           <div className="container mx-auto px-4 max-w-3xl">
             {/* Header */}
             <div className="mb-16">
-              <span className="text-sm font-semibold tracking-widest uppercase text-primary">Legal</span>
+              <span className="text-sm font-semibold tracking-widest uppercase text-[#4f46e5]">Legal</span>
               <h1
                 className="mt-3 uppercase leading-[0.9] text-foreground"
                 style={{

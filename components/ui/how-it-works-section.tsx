@@ -20,7 +20,7 @@ export function HowItWorksSection() {
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
-          <span className="text-sm font-semibold tracking-widest uppercase text-primary">
+          <span className="text-sm font-semibold tracking-widest uppercase text-[#4f46e5]">
             {t("label")}
           </span>
           <h2

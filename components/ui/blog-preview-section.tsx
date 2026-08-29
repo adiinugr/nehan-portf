@@ -35,7 +35,7 @@ export function BlogPreviewSection({ posts }: BlogPreviewSectionProps) {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div>
-            <span className="text-sm font-semibold tracking-widest uppercase text-primary">
+            <span className="text-sm font-semibold tracking-widest uppercase text-[#4f46e5]">
               {t("label")}
             </span>
             <h2

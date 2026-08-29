@@ -82,7 +82,7 @@ export function ContactSection() {
     <section id="contact" className="py-24 bg-muted/40">
       <div className="container mx-auto px-4">
         <div className="mb-14">
-          <span className="text-sm font-semibold tracking-widest uppercase text-primary">
+          <span className="text-sm font-semibold tracking-widest uppercase text-[#4f46e5]">
             {t("label")}
           </span>
           <h2

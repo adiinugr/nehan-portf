@@ -31,7 +31,7 @@ export function Footer() {
             <p className="text-base leading-relaxed" style={{ color: "#94a3b8" }}>
               {t("tagline")}
             </p>
-            <div className="mt-3 flex flex-col gap-1 text-sm" style={{ color: "#64748b" }}>
+            <div className="mt-3 flex flex-col gap-1 text-sm" style={{ color: "#7c8aa0" }}>
               <p className="font-medium" style={{ color: "#94a3b8" }}>{BUSINESS_NAME}</p>
               <p>{BUSINESS_ADDRESS}</p>
               <a href={`mailto:${BUSINESS_EMAIL}`} className="w-fit transition-colors hover:text-[#818cf8]">
@@ -95,12 +95,12 @@ export function Footer() {
           className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3"
           style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
         >
-          <p className="text-base" style={{ color: "#64748b" }}>
+          <p className="text-base" style={{ color: "#7c8aa0" }}>
             © {new Date().getFullYear()} {BUSINESS_NAME}. {t("copyright")}
           </p>
           <div className="flex items-center gap-6">
-            <Link href="/privacy-policy" className={linkClass} style={{ color: "#64748b" }}>{t("links.privacy")}</Link>
-            <Link href="/terms" className={linkClass} style={{ color: "#64748b" }}>{t("links.terms")}</Link>
+            <Link href="/privacy-policy" className={linkClass} style={{ color: "#7c8aa0" }}>{t("links.privacy")}</Link>
+            <Link href="/terms" className={linkClass} style={{ color: "#7c8aa0" }}>{t("links.terms")}</Link>
           </div>
         </div>
       </div>
