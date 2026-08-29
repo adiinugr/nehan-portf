@@ -182,5 +182,40 @@
       "whatsappPrefill": "Halo NehanDev, saya ingin konsultasi website untuk bisnis saya",
       "messageCta": "Kirim Pesan"
     }
+  },
+  "educationDetail": {
+    "process": {
+      "label": "Cara Kerja",
+      "title": "Dari Bank Soal ke Nilai Keluar",
+      "subtitle": "Empat langkah dari guru menyiapkan soal sampai hasil ujian siap dibagikan.",
+      "steps": [
+        { "title": "Buat Bank Soal", "desc": "Tulis soal manual atau generate dengan AI — puluhan soal pilihan ganda dan esai siap dalam hitungan detik." },
+        { "title": "Jadwalkan Ujian", "desc": "Atur waktu mulai, durasi, dan kelas peserta. Siswa mendapat akses tepat saat ujian dibuka." },
+        { "title": "Siswa Mengerjakan", "desc": "Mode kiosk mengunci perangkat Android siswa — tidak bisa membuka aplikasi lain atau keluar dari layar ujian." },
+        { "title": "Nilai Langsung Keluar", "desc": "Jawaban pilihan ganda dikoreksi otomatis begitu ujian selesai. Guru langsung lihat hasil per siswa dan per kelas." }
+      ]
+    },
+    "dashboard": {
+      "eyebrow": "Monitoring Real-Time",
+      "title": "Pantau Ujian, Detik demi Detik",
+      "subtitle": "Setiap perangkat siswa terhubung live lewat WebSocket — guru melihat siapa yang online, siapa yang sudah selesai, dan mendapat notifikasi instan jika ada aktivitas mencurigakan.",
+      "legendActive": "Sedang Mengerjakan",
+      "legendFlagged": "Ditandai Mencurigakan"
+    },
+    "trust": {
+      "label": "Dibangun untuk Sekolah Indonesia",
+      "title": "Realistis untuk Kondisi Sekolah Sehari-hari",
+      "subtitle": "CBT Pro dirancang berdasarkan kendala nyata yang dihadapi sekolah di Indonesia, bukan asumsi kondisi ideal.",
+      "points": [
+        { "title": "Hemat Kuota", "desc": "Dioptimalkan untuk koneksi sekolah yang terbatas — ujian tetap lancar tanpa internet berkecepatan tinggi." },
+        { "title": "Perangkat Bergiliran Pun Bisa", "desc": "Mendukung sesi ujian bergantian untuk sekolah yang belum punya satu perangkat per siswa." },
+        { "title": "Sepenuhnya Berbahasa Indonesia", "desc": "Antarmuka, notifikasi, dan dukungan pelanggan sepenuhnya dalam Bahasa Indonesia — tanpa istilah teknis yang membingungkan." }
+      ]
+    },
+    "closingCta": {
+      "title": "Coba CBT Pro Gratis",
+      "subtitle": "Daftarkan sekolah Anda dan jalankan ujian online anti-curang pertama dalam hitungan menit.",
+      "cta": "Mulai di cbtpro.id"
+    }
   }
 }

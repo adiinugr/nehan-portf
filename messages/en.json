@@ -182,5 +182,40 @@
       "whatsappPrefill": "Hi NehanDev, I'd like a consultation about a website for my business",
       "messageCta": "Send a Message"
     }
+  },
+  "educationDetail": {
+    "process": {
+      "label": "How It Works",
+      "title": "From Question Bank to Results",
+      "subtitle": "Four steps from a teacher writing questions to results ready to share.",
+      "steps": [
+        { "title": "Build a Question Bank", "desc": "Write questions manually or generate them with AI — dozens of multiple-choice and essay questions ready in seconds." },
+        { "title": "Schedule the Exam", "desc": "Set the start time, duration, and which classes take part. Students get access the moment the exam opens." },
+        { "title": "Students Take the Exam", "desc": "Kiosk mode locks each student's Android device — no other apps, no leaving the exam screen." },
+        { "title": "Results, Instantly", "desc": "Multiple-choice answers are graded automatically the moment the exam ends. Teachers see results per student and per class right away." }
+      ]
+    },
+    "dashboard": {
+      "eyebrow": "Real-Time Monitoring",
+      "title": "Watch the Exam, Second by Second",
+      "subtitle": "Every student device stays connected live over WebSocket — teachers see who's online, who's finished, and get an instant alert if anything looks suspicious.",
+      "legendActive": "In Progress",
+      "legendFlagged": "Flagged Suspicious"
+    },
+    "trust": {
+      "label": "Built for Indonesian Schools",
+      "title": "Realistic for Everyday School Conditions",
+      "subtitle": "CBT Pro is designed around the real constraints Indonesian schools face, not idealized assumptions.",
+      "points": [
+        { "title": "Works on Limited Bandwidth", "desc": "Optimized for constrained school connections — exams run smoothly without high-speed internet." },
+        { "title": "Works with Shared Devices", "desc": "Supports staggered exam sessions for schools that don't yet have one device per student." },
+        { "title": "Fully Indonesian-Language Support", "desc": "Interface, notifications, and customer support are entirely in Indonesian — no confusing technical jargon." }
+      ]
+    },
+    "closingCta": {
+      "title": "Try CBT Pro Free",
+      "subtitle": "Sign up your school and run your first anti-cheat online exam in minutes.",
+      "cta": "Get Started at cbtpro.id"
+    }
   }
 }

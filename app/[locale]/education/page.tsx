@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Header } from "@/components/ui/header"
 import { Footer } from "@/components/ui/footer"
 import { EducationSection } from "@/components/ui/education-section"
+import { EducationDetailSection } from "@/components/ui/education-detail-section"
 import { getPathname } from "@/i18n/navigation"
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.nehandev.com"
@@ -50,6 +51,7 @@ export default async function EducationPage({ params }: Props) {
           {locale === "en" ? "Education Technology — CBT Pro by NehanDev" : "Teknologi Pendidikan — CBT Pro oleh NehanDev"}
         </h1>
         <EducationSection />
+        <EducationDetailSection />
       </main>
       <Footer />
     </>
