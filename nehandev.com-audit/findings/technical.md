@@ -1,6 +1,6 @@
 # Technical SEO Findings — nehandev.com
 
-## Critical: Two competing sitemap systems, static one wins, serves stale/wrong data
+## RESOLVED (2026-08-29, commit `cad44e6`): Two competing sitemap systems, static one wins, serves stale/wrong data
 
 The project has **both**:
 1. `app/sitemap.ts` — Next.js native sitemap route, well-configured (differentiated `priority`/`changeFrequency` per page, e.g. home=1.0, /layanan=0.9, /projects=0.8; excludes `/demo/*`).

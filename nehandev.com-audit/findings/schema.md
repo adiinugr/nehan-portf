@@ -1,12 +1,14 @@
 # Schema / Structured Data Findings — nehandev.com
 
-## High: Homepage's business schema (ProfessionalService) is invisible to non-JS crawlers
+## RESOLVED (2026-08-29): Homepage's business schema (ProfessionalService) was invisible to non-JS crawlers
 
-`app/layout.tsx:154` injects the site's main JSON-LD block via `<Script id="schema-structured-data" strategy="afterInteractive">`. `afterInteractive` scripts run only after the page hydrates client-side — verified live: the raw HTML response (`curl`) contains **no** `<script type="application/ld+json">` tag at all; it only appears after full JS execution (confirmed with a headless-Chromium render, where the block correctly resolves with valid `ProfessionalService`/`Offer`/`PostalAddress` data).
+`app/layout.tsx:154` injected the site's main JSON-LD block via `<Script id="schema-structured-data" strategy="afterInteractive">`. Verified live: the raw HTML response (`curl`) contained **no** literal `<script type="application/ld+json">` tag; it only appeared after full JS execution.
 
-This matters because many crawlers relevant to "AI search readiness" (GPTBot, ClaudeBot, PerplexityBot, and most non-Google SEO/social tools) **do not execute JavaScript** and will never see this schema — the site's core business identity (name, address, services, contact) is effectively absent from GEO/AI-crawler visibility, even though Googlebot (which does render JS) picks it up fine.
+This mattered because many crawlers relevant to "AI search readiness" (GPTBot, ClaudeBot, PerplexityBot, and most non-Google SEO/social tools) **do not execute JavaScript**.
 
-Contrast with `app/blog/[slug]/page.tsx:93-98`, which does this correctly: `strategy="beforeInteractive"` + `dangerouslySetInnerHTML`, confirmed present in the raw (non-JS) HTML response. The fix is to apply the same pattern to the homepage schema — or better, drop `next/script` entirely for JSON-LD and render a plain `<script type="application/ld+json" dangerouslySetInnerHTML={...}>` directly in the server component.
+**Correction to the original diagnosis:** the fix is not simply switching to `strategy="beforeInteractive"`. Testing showed `next/script`'s `<Script>` component renders via a JS bootstrap array (`self.__next_s.push(...)`) **regardless of strategy** — `beforeInteractive` included — never as a literal `<script type="application/ld+json">` tag. This was also true of `app/blog/[slug]/page.tsx`'s Article schema, which this doc originally (incorrectly) cited as "already correct" — it had the identical latent issue.
+
+**Actual fix applied:** replaced `next/script`'s `<Script>` with a plain native `<script type="application/ld+json" dangerouslySetInnerHTML={...} />` in both `app/layout.tsx` and `app/blog/[slug]/page.tsx`. Verified: both now render as literal, parseable JSON-LD in the raw (no-JS) server response.
 
 ## Medium: `PostalAddress` is not fully structured
 
