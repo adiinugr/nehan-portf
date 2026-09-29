@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next"
 import { getAllPosts } from "@/lib/blog"
 import { getPathname } from "@/i18n/navigation"
+import { jasaWebsiteNicheList } from "@/lib/data/jasa-website-niches"
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.nehandev.com"
 
@@ -32,6 +33,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ]
   })
 
+  const jasaWebsiteRoutes: MetadataRoute.Sitemap = jasaWebsiteNicheList.map((niche) => ({
+    url: `${siteUrl}/layanan/${niche.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.85
+  }))
+
   const otherStaticPages: MetadataRoute.Sitemap = [
     { url: `${siteUrl}/blog`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${siteUrl}/demo/travel`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
@@ -53,5 +61,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7
   }))
 
-  return [...bilingualRoutes, ...otherStaticPages, ...blogRoutes]
+  return [...bilingualRoutes, ...jasaWebsiteRoutes, ...otherStaticPages, ...blogRoutes]
 }
