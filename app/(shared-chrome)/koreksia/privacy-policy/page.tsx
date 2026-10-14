@@ -22,6 +22,7 @@ Kebijakan ini khusus menjelaskan data yang diproses oleh aplikasi Koreksia, terp
 • Data yang Anda masukkan tentang siswa untuk keperluan penilaian: nama siswa, NISN, nomor absen, dan nama kelas.
 • Data ujian: judul ujian, soal, kunci jawaban, dan hasil koreksi tiap siswa.
 • Catatan pemakaian kuota harian pembuatan soal dengan AI (jumlah pemakaian, bukan isi soal).
+• Laporan kerusakan aplikasi: jika aplikasi berhenti tiba-tiba, kami menerima laporan teknis (jenis kesalahan dan lokasinya di kode, model perangkat, versi Android, versi aplikasi, dan pengenal instalasi) lewat Firebase Crashlytics. Kami tidak menambahkan isi soal, nama siswa, atau data pribadi lain ke laporan ini.
 
 Kami tidak mengumpulkan data lokasi, kontak, mikrofon, atau SMS, dan aplikasi Koreksia tidak menampilkan iklan apa pun.`
   },
@@ -35,7 +36,7 @@ Kami tidak mengumpulkan data lokasi, kontak, mikrofon, atau SMS, dan aplikasi Ko
   },
   {
     title: "Penggunaan Fitur AI (Google Gemini)",
-    content: `Saat Anda memakai fitur "Buat Soal dengan AI", hanya informasi topik/materi, jenjang kelas, tingkat kesulitan, kurikulum acuan, dan jumlah soal yang diminta yang dikirim ke Google Gemini untuk menghasilkan draf soal.
+    content: `Saat Anda memakai fitur "Buat Soal dengan AI", hanya informasi topik/materi, mata pelajaran, jenjang kelas, tingkat kesulitan, kurikulum acuan, bahasa soal, dan jumlah soal yang diminta yang dikirim ke Google Gemini untuk menghasilkan draf soal.
 
 Tidak ada nama siswa, NISN, atau data pribadi siswa lain yang pernah dikirim ke Gemini atau pihak ketiga mana pun. Setiap soal hasil AI selalu ditinjau oleh Anda sebelum disimpan ke bank soal.`
   },
@@ -43,7 +44,7 @@ Tidak ada nama siswa, NISN, atau data pribadi siswa lain yang pernah dikirim ke 
     title: "Berbagi dengan Pihak Ketiga",
     content: `Kami hanya membagikan data ke penyedia layanan yang menjalankan aplikasi ini:
 
-• Google Firebase — penyimpanan cadangan data dan autentikasi akun.
+• Google Firebase — penyimpanan cadangan data, autentikasi akun, dan laporan kerusakan aplikasi (Crashlytics).
 • Google Gemini — pembuatan draf soal AI (lihat bagian di atas soal data apa yang dikirim).
 
 Kami tidak menjual atau menyewakan data Anda kepada pihak ketiga, dan tidak ada broker data atau jaringan iklan yang terhubung ke aplikasi ini.`
@@ -104,7 +105,7 @@ export default function KoreksiaPrivacyPolicyPage() {
                 Kebijakan Privasi
               </h1>
               <p className="mt-4 text-base text-muted-foreground">
-                Terakhir diperbarui: 15 September 2026
+                Terakhir diperbarui: 14 Oktober 2026
               </p>
               <p className="mt-4 text-base text-muted-foreground leading-relaxed">
                 Kebijakan ini berlaku untuk aplikasi Android <strong>Koreksia</strong>, dikembangkan oleh {BUSINESS_NAME} (&ldquo;kami&rdquo;, &ldquo;kita&rdquo;). Kebijakan ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi data Anda saat menggunakan aplikasi Koreksia.
