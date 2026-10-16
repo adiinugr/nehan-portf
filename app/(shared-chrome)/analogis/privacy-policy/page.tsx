@@ -18,7 +18,8 @@ Kebijakan ini khusus menjelaskan data yang diproses oleh aplikasi Analogis, terp
   },
   {
     title: "Informasi yang Kami Kumpulkan",
-    content: `• Data akun: nama dan alamat email yang Anda isi saat mendaftar. Kata sandi disimpan terenkripsi oleh Firebase Authentication dan tidak bisa kami lihat.
+    content: `• Data akun: nama dan alamat email. Anda bisa mendaftar dengan email dan kata sandi (kata sandi disimpan terenkripsi oleh Firebase Authentication dan tidak bisa kami lihat), atau masuk dengan akun Google (kami menerima nama dan alamat email dari Google, tanpa kata sandi Google Anda).
+• Akun tamu: Anda bisa mencoba aplikasi tanpa mendaftar. Akun tamu tidak meminta nama atau email; aplikasi memberi nama acak seorang ilmuwan matematika dan membuat ID pengguna anonim.
 • Data belajar: kelas yang dipilih, pelajaran yang sudah selesai, skor, XP, streak, target harian, dan lencana. Data ini dipakai supaya progres tersimpan dan bisa dilanjutkan di perangkat lain.
 
 Kami tidak mengumpulkan lokasi, kontak, foto, mikrofon, nomor telepon, atau ID iklan. Aplikasi Analogis tidak menampilkan iklan dan tidak memakai alat analitik maupun pelacakan.`
@@ -29,7 +30,7 @@ Kami tidak mengumpulkan lokasi, kontak, foto, mikrofon, nomor telepon, atau ID i
   },
   {
     title: "Berbagi dengan Pihak Ketiga",
-    content: `Kami hanya memakai Google Firebase sebagai penyedia layanan untuk autentikasi akun dan penyimpanan data belajar.
+    content: `Kami hanya memakai Google Firebase sebagai penyedia layanan untuk autentikasi akun (termasuk Masuk dengan Google) dan penyimpanan data belajar.
 
 Kami tidak menjual, menyewakan, atau membagikan data Anda kepada pihak lain, dan tidak ada broker data atau jaringan iklan yang terhubung ke aplikasi ini.`
   },
@@ -47,7 +48,9 @@ Kami tidak menjual, menyewakan, atau membagikan data Anda kepada pihak lain, dan
   },
   {
     title: "Cara Menghapus Akun & Data",
-    content: `Lewat aplikasi (disarankan): buka Analogis → Profil → Hapus akun, ketik kata sandi, lalu ketuk "Hapus akun permanen". Akun dan seluruh data belajar (nama, email, kelas, progres, skor, XP, streak, dan lencana) langsung dihapus permanen.
+    content: `Lewat aplikasi (disarankan): buka Analogis → Profil → Hapus akun, lalu konfirmasi (akun email mengetik kata sandi, akun Google memilih ulang akun Google-nya). Akun dan seluruh data belajar (nama, email, kelas, progres, skor, XP, streak, dan lencana) langsung dihapus permanen.
+
+Akun tamu: data akun tamu dihapus otomatis saat Anda keluar dari akun tamu, atau lewat menu Hapus akun yang sama.
 
 Tanpa menginstal aplikasi: kirim email ke ${BUSINESS_EMAIL} dari alamat email akun Analogis Anda, dengan subjek "Hapus Akun Analogis". Kami akan menghapus akun dan seluruh data terkait paling lambat 7 hari setelah memverifikasi identitas pengirim. Tidak ada data yang kami simpan setelah akun dihapus.`
   },
