@@ -6,6 +6,7 @@ import { UmkmDemoSection } from "@/components/ui/umkm-demo-section"
 import { HowItWorksSection } from "@/components/ui/how-it-works-section"
 import { ProjectsSection } from "@/components/ui/projects-section"
 import { EducationSection } from "@/components/ui/education-section"
+import { KoreksiaSection } from "@/components/ui/koreksia-section"
 import { TestimonialsSection } from "@/components/ui/testimonials-section"
 import { BlogPreviewSection } from "@/components/ui/blog-preview-section"
 import { ContactSection } from "@/components/ui/contact-section"
@@ -57,6 +58,7 @@ export default function Home() {
       <HowItWorksSection />
       <ProjectsSection />
       <EducationSection />
+      <KoreksiaSection />
       <TestimonialsSection />
       <BlogPreviewSection posts={recentPosts} />
       <ContactSection />

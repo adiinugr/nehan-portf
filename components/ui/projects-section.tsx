@@ -6,6 +6,14 @@ import { ProjectCard } from "@/components/ui/project-card"
 
 const projects = [
   {
+    title: "Koreksia",
+    description:
+      "Android app for K-12 teachers: AI-assisted exam papers with an integrated answer sheet, graded in seconds by scanning with the phone camera, offline-first.",
+    image: "/images/koreksia.png",
+    technologies: ["Flutter", "Firebase", "Isar"],
+    liveUrl: "https://play.google.com/store/apps/details?id=com.koreksia.app"
+  },
+  {
     title: "Habit Flare",
     description:
       "A full-stack habit tracker built with Next.js, TypeScript, and Tailwind CSS. Features user authentication, habit tracking, and progress analytics.",

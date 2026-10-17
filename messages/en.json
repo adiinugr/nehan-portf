@@ -76,6 +76,21 @@
       "activeExam": "Active Exam"
     }
   },
+  "koreksia": {
+    "label": "Android App",
+    "badge": "Live on Google Play",
+    "title": "Koreksia",
+    "titleHighlight": "Grade Exams With Your Phone Camera",
+    "subtitle": "An app for K-12 teachers in Indonesia. Draft questions with AI, print the exam and answer sheet on a single page, then photograph each student's paper. Scores appear in seconds, with no student devices and no internet needed.",
+    "features": {
+      "scan": { "title": "Camera Scanning", "desc": "Detects the answer sheet automatically" },
+      "offline": { "title": "Works Offline", "desc": "Students need no phone" },
+      "paket": { "title": "Versions A–D", "desc": "Shuffled questions and answers, one shared sheet" },
+      "ai": { "title": "AI Questions", "desc": "Teachers review before saving" }
+    },
+    "cta": "Get it on Google Play",
+    "imageAlt": "Koreksia: AI-written questions, camera-scanned grading"
+  },
   "blog": {
     "label": "Insights",
     "title": "Latest from the Blog",

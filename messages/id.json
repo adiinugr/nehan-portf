@@ -76,6 +76,21 @@
       "activeExam": "Ujian Aktif"
     }
   },
+  "koreksia": {
+    "label": "Aplikasi Android",
+    "badge": "Sudah di Play Store",
+    "title": "Koreksia",
+    "titleHighlight": "Koreksi Ujian Cukup Lewat Kamera HP",
+    "subtitle": "Aplikasi untuk guru K-12 di Indonesia. Susun soal dengan bantuan AI, cetak soal dan lembar jawaban dalam satu kertas, lalu foto kertas siswa. Nilai keluar dalam hitungan detik, tanpa perangkat siswa dan tanpa koneksi internet.",
+    "features": {
+      "scan": { "title": "Pindai dengan Kamera", "desc": "Deteksi lembar jawaban otomatis" },
+      "offline": { "title": "Bisa Offline", "desc": "Siswa tidak perlu HP" },
+      "paket": { "title": "Paket A–D", "desc": "Soal dan jawaban diacak, tetap satu lembar" },
+      "ai": { "title": "Soal dari AI", "desc": "Guru meninjau sebelum disimpan" }
+    },
+    "cta": "Unduh di Google Play",
+    "imageAlt": "Koreksia: soal dibuat AI, koreksi dipindai kamera"
+  },
   "blog": {
     "label": "Wawasan",
     "title": "Artikel Terbaru",
