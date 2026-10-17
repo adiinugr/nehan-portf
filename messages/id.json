@@ -55,7 +55,15 @@
     "subtitle": "Proyek nyata yang dibangun untuk bisnis nyata.",
     "liveDemo": "Demo Langsung",
     "descriptions": {
-      "analogis": "Aplikasi belajar matematika interaktif untuk siswa SMP dan SMA: materi langkah demi langkah, latihan yang langsung dikoreksi, dan soal numerasi gaya AKM sesuai Kurikulum Merdeka."
+      "koreksia": "Aplikasi Android untuk guru K-12: soal ujian dibantu AI dengan lembar jawaban terpadu, dikoreksi dalam hitungan detik lewat kamera HP, bisa offline.",
+      "analogis": "Aplikasi belajar matematika interaktif untuk siswa SMP dan SMA: materi langkah demi langkah, latihan yang langsung dikoreksi, dan soal numerasi gaya AKM sesuai Kurikulum Merdeka.",
+      "habitflare": "Pelacak kebiasaan full-stack dengan Next.js, TypeScript, dan Tailwind CSS. Dilengkapi autentikasi pengguna, pencatatan kebiasaan, dan analitik progres.",
+      "hijriguide": "Aplikasi kalender hijriah dengan autentikasi pengguna, pemantauan fase bulan, dan konversi tanggal Islam untuk keperluan sehari-hari.",
+      "kalendermuslim": "Aplikasi kalender Islam modern dengan kalender hijriah, pemantauan fase bulan, dan jadwal salat untuk pengguna Muslim.",
+      "multigentool": "Alat pembuat konten serba ada untuk teks, gambar, video, dan audio, didukung API AI modern.",
+      "pintarmtk": "Blog belajar matematika berbasis WordPress, berisi kumpulan soal, pembahasan langkah demi langkah, dan materi PDF yang bisa diunduh.",
+      "wetonjawa": "Aplikasi perhitungan weton Jawa lengkap dengan kalender Jawa, tafsir weton, dan informasi hari baik berbasis tradisi Jawa.",
+      "ilmmodels": "Platform talent management agency untuk model profesional, dilengkapi dengan portofolio model, booking, dan manajemen agensi."
     }
   },
   "education": {

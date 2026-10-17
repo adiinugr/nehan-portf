@@ -55,7 +55,15 @@
     "subtitle": "Real projects built for real businesses.",
     "liveDemo": "Live Demo",
     "descriptions": {
-      "analogis": "Interactive math learning app for Indonesian middle and high school students: step-by-step lessons, auto-checked exercises, and AKM-style numeracy practice aligned with Kurikulum Merdeka."
+      "koreksia": "Android app for K-12 teachers: AI-assisted exam papers with an integrated answer sheet, graded in seconds by scanning with the phone camera, offline-first.",
+      "analogis": "Interactive math learning app for Indonesian middle and high school students: step-by-step lessons, auto-checked exercises, and AKM-style numeracy practice aligned with Kurikulum Merdeka.",
+      "habitflare": "A full-stack habit tracker built with Next.js, TypeScript, and Tailwind CSS. Features user authentication, habit tracking, and progress analytics.",
+      "hijriguide": "A hijri calendar application with user authentication, lunar phase tracking, and Islamic date conversions for everyday use.",
+      "kalendermuslim": "A modern Islamic calendar application featuring hijri calendar, lunar phase tracking, and prayer times for Muslim users.",
+      "multigentool": "An all-in-one content generation tool supporting text, image, video, and audio generation powered by modern AI APIs.",
+      "pintarmtk": "A mathematics learning blog built on WordPress, providing problem sets, step-by-step solutions, and downloadable PDF materials.",
+      "wetonjawa": "A Javanese weton calculator with a Javanese calendar, weton interpretations, and auspicious-day information rooted in Javanese tradition.",
+      "ilmmodels": "A talent management agency platform for professional models, with model portfolios, booking, and agency management."
     }
   },
   "education": {
