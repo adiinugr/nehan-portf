@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const sections = [
   {
     title: "Tentang Kebijakan Ini",
-    content: `Analogis adalah aplikasi Android untuk belajar matematika SMP secara interaktif: materi langkah demi langkah, soal latihan, AKM, dan berpikir kritis. Analogis dikembangkan dan dioperasikan oleh ${BUSINESS_NAME} ("kami").
+    content: `Analogis adalah aplikasi Android untuk belajar matematika SMP dan SMA secara interaktif: materi langkah demi langkah, soal latihan, AKM, dan berpikir kritis. Analogis dikembangkan dan dioperasikan oleh ${BUSINESS_NAME} ("kami").
 
 Kebijakan ini khusus menjelaskan data yang diproses oleh aplikasi Analogis, terpisah dari kebijakan privasi umum situs nehandev.com.`
   },
@@ -36,7 +36,7 @@ Kami tidak menjual, menyewakan, atau membagikan data Anda kepada pihak lain, dan
   },
   {
     title: "Pengguna Anak dan Remaja",
-    content: `Analogis ditujukan untuk siswa SMP, sehingga sebagian penggunanya berusia di bawah 18 tahun. Kami hanya mengumpulkan data yang dibutuhkan agar aplikasi berfungsi, tanpa iklan dan tanpa pelacakan. Orang tua atau wali dapat meminta kami menghapus akun anaknya melalui email di bawah.`
+    content: `Analogis ditujukan untuk siswa SMP dan SMA, sehingga sebagian penggunanya berusia di bawah 18 tahun. Kami hanya mengumpulkan data yang dibutuhkan agar aplikasi berfungsi, tanpa iklan dan tanpa pelacakan. Orang tua atau wali dapat meminta kami menghapus akun anaknya melalui email di bawah.`
   },
   {
     title: "Hak Anda",
