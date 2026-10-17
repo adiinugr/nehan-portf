@@ -41,7 +41,7 @@ export function KoreksiaSection() {
             />
             <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/30">
               <Image
-                src="/images/koreksia.png"
+                src="/images/koreksia-v2.png"
                 alt={t("imageAlt")}
                 width={1024}
                 height={500}

@@ -8,7 +8,7 @@ const projects = [
   {
     title: "Koreksia",
     descriptionKey: "koreksia",
-    image: "/images/koreksia.png",
+    image: "/images/koreksia-v2.png",
     technologies: ["Flutter", "Firebase", "Isar"],
     liveUrl: "https://play.google.com/store/apps/details?id=com.koreksia.app"
   },
