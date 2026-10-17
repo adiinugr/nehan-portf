@@ -53,7 +53,10 @@
     "label": "Portfolio",
     "title": "Our Work",
     "subtitle": "Real projects built for real businesses.",
-    "liveDemo": "Live Demo"
+    "liveDemo": "Live Demo",
+    "descriptions": {
+      "analogis": "Interactive math learning app for Indonesian middle and high school students: step-by-step lessons, auto-checked exercises, and AKM-style numeracy practice aligned with Kurikulum Merdeka."
+    }
   },
   "education": {
     "label": "Education Technology",

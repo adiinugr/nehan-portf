@@ -14,6 +14,13 @@ const projects = [
     liveUrl: "https://play.google.com/store/apps/details?id=com.koreksia.app"
   },
   {
+    title: "Analogis",
+    descriptionKey: "analogis",
+    image: "/images/analogis.png",
+    technologies: ["React Native", "Firebase", "MathJax"],
+    liveUrl: "https://play.google.com/store/apps/details?id=com.analogissmp"
+  },
+  {
     title: "Habit Flare",
     description:
       "A full-stack habit tracker built with Next.js, TypeScript, and Tailwind CSS. Features user authentication, habit tracking, and progress analytics.",
@@ -131,6 +138,7 @@ export function ProjectsSection() {
             <ProjectCard
               key={index}
               {...project}
+              description={project.description ?? t(`descriptions.${project.descriptionKey}`)}
               index={index}
             />
           ))}

@@ -53,7 +53,10 @@
     "label": "Portofolio",
     "title": "Hasil Kerja Kami",
     "subtitle": "Proyek nyata yang dibangun untuk bisnis nyata.",
-    "liveDemo": "Demo Langsung"
+    "liveDemo": "Demo Langsung",
+    "descriptions": {
+      "analogis": "Aplikasi belajar matematika interaktif untuk siswa SMP dan SMA: materi langkah demi langkah, latihan yang langsung dikoreksi, dan soal numerasi gaya AKM sesuai Kurikulum Merdeka."
+    }
   },
   "education": {
     "label": "Teknologi Pendidikan",
