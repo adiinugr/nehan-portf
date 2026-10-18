@@ -5,25 +5,28 @@ import { BUSINESS_NAME, BUSINESS_EMAIL } from "@/lib/business-info"
 
 export const metadata: Metadata = {
   title: "Kebijakan Privasi KetikNota",
-  description: "Kebijakan privasi aplikasi KetikNota — data apa yang kami simpan untuk membuat invoice, penawaran, dan catatan pembayaran, serta cara menghapus akun.",
+  description: "Kebijakan privasi aplikasi KetikNota — data apa yang kami simpan untuk membuat invoice, penawaran, catatan pembayaran, dan laporan arus kas, serta cara menghapus akun.",
   alternates: { canonical: "https://www.nehandev.com/ketiknota/privacy-policy" }
 }
 
 const sections = [
   {
     title: "Tentang Kebijakan Ini",
-    content: `KetikNota adalah aplikasi Android untuk pelaku usaha dan penyedia jasa di Indonesia — membuat invoice dan penawaran, mencatat pembayaran, mengirim tagihan lewat WhatsApp, dan melihat laporan sederhana. KetikNota dikembangkan dan dioperasikan oleh ${BUSINESS_NAME} ("kami").
+    content: `KetikNota adalah aplikasi Android untuk pelaku usaha dan penyedia jasa di Indonesia — membuat invoice dan penawaran, mencatat pembayaran dan pengeluaran, mengirim tagihan lewat WhatsApp, dan melihat laporan arus kas. KetikNota dikembangkan dan dioperasikan oleh ${BUSINESS_NAME} ("kami").
 
 Kebijakan ini khusus menjelaskan data yang diproses oleh aplikasi KetikNota, terpisah dari kebijakan privasi umum situs nehandev.com.`
   },
   {
     title: "Informasi yang Kami Kumpulkan",
     content: `• Data akun: alamat email (jika mendaftar dengan email/kata sandi atau Google Sign-In). Jika Anda memakai mode Tamu, akun dibuat tanpa email atau nama.
-• Profil usaha: nama usaha, informasi rekening bank yang Anda tulis, prefiks nomor invoice, dan tarif pajak.
+• Profil usaha: nama usaha, rekening bank/e-wallet yang Anda tulis, prefiks nomor invoice, dan tarif pajak.
+• Gambar yang Anda pilih sendiri dari galeri: logo usaha dan gambar QRIS, untuk ditampilkan di PDF invoice. Aplikasi hanya membaca gambar yang Anda pilih, bukan seluruh galeri.
 • Data klien yang Anda masukkan: nama, nomor WhatsApp, alamat, dan email klien.
 • Data produk/jasa: nama, harga, dan satuan.
-• Dokumen: invoice dan penawaran (item, nominal, diskon, pajak, tanggal jatuh tempo, nomor dokumen) serta catatan pembayaran (nominal, metode, tanggal).
-• Catatan pemakaian kuota bulanan paket Gratis (jumlah invoice terkirim, bukan isinya).
+• Dokumen: invoice dan penawaran (item, nominal, diskon, pajak, DP, tanggal jatuh tempo, nomor dokumen) serta catatan pembayaran (nominal, metode, tanggal).
+• Pengeluaran usaha yang Anda catat (nominal, kategori, tanggal, catatan) untuk laporan arus kas.
+• Rekap otomatis: jumlah invoice terkirim per bulan (kuota paket Gratis) dan total uang masuk per bulan untuk laporan — angka ringkasan, bukan isi dokumen.
+• Token notifikasi perangkat (paket Pro, bila pengingat tagihan aktif): pengenal yang dibuat Firebase Cloud Messaging agar pengingat bisa dikirim ke HP Anda.
 • Laporan kerusakan & statistik pemakaian: jika aplikasi berhenti tiba-tiba, kami menerima laporan teknis (jenis kesalahan, model perangkat, versi Android, versi aplikasi, dan pengenal instalasi) lewat Firebase Crashlytics. Kami juga mencatat peristiwa pemakaian umum lewat Firebase Analytics (misalnya "invoice dikirim" atau "pembayaran dicatat") untuk memahami fitur mana yang berguna. Isi invoice, nama klien, nominal, dan nomor WhatsApp tidak pernah dimasukkan ke laporan ini.
 
 Kami tidak mengakses kontak HP, lokasi, kamera, mikrofon, atau SMS Anda, dan aplikasi KetikNota tidak menampilkan iklan.`
@@ -33,10 +36,14 @@ Kami tidak mengakses kontak HP, lokasi, kamera, mikrofon, atau SMS Anda, dan apl
     content: `Tombol "Tagih" dan "Kirim ke WhatsApp" hanya membuka aplikasi WhatsApp di perangkat Anda dengan pesan yang sudah terisi. Pesan dikirim oleh Anda sendiri dari akun WhatsApp Anda. KetikNota tidak mengirim pesan atas nama Anda, tidak membaca percakapan, dan tidak terhubung ke akun WhatsApp Anda.`
   },
   {
+    title: "Pengingat Tagihan (Paket Pro)",
+    content: `Jika Anda memakai paket Pro dan menyalakan "Pengingat tagihan", server kami setiap pagi memeriksa invoice yang jatuh tempo atau terlambat, lalu mengirim notifikasi ke HP Anda lewat Firebase Cloud Messaging. Isi notifikasi dapat memuat nomor invoice, nama klien, dan nominal tagihan, dan hanya dikirim ke perangkat yang masuk ke akun Anda. Notifikasi tidak pernah dikirim ke klien Anda. Anda bisa mematikannya kapan saja di Akun → Pengingat tagihan atau di pengaturan notifikasi HP; token perangkat dihapus saat Anda keluar dari akun.`
+  },
+  {
     title: "Penyimpanan Data",
-    content: `Data Anda disimpan di Google Firebase (Cloud Firestore) di pusat data Jakarta, supaya bisa dibuka kembali saat Anda berganti HP. Salinan sementara juga disimpan di perangkat Anda agar aplikasi tetap bisa dipakai saat offline; salinan ini tersinkron otomatis saat kembali online.
+    content: `Data Anda disimpan di Google Firebase (Cloud Firestore) di pusat data Jakarta, supaya bisa dibuka kembali saat Anda berganti HP. Logo dan gambar QRIS disimpan di Firebase Storage, juga di pusat data Jakarta, dengan salinan di perangkat agar PDF tetap bisa dibuat saat offline. Salinan sementara juga disimpan di perangkat Anda agar aplikasi tetap bisa dipakai saat offline; salinan ini tersinkron otomatis saat kembali online.
 
-PDF invoice dan kwitansi dibuat di perangkat Anda dan hanya dibagikan ke pihak yang Anda pilih sendiri.`
+PDF invoice dan kwitansi, serta file ekspor laporan (CSV), dibuat di perangkat Anda dan hanya dibagikan ke pihak yang Anda pilih sendiri.`
   },
   {
     title: "Mode Tamu",
@@ -46,7 +53,7 @@ PDF invoice dan kwitansi dibuat di perangkat Anda dan hanya dibagikan ke pihak y
     title: "Berbagi dengan Pihak Ketiga",
     content: `Kami hanya membagikan data ke penyedia layanan yang menjalankan aplikasi ini:
 
-• Google Firebase — autentikasi akun, penyimpanan data (Cloud Firestore), fungsi server untuk penomoran dokumen dan rekap pembayaran (Cloud Functions), laporan kerusakan (Crashlytics), dan statistik pemakaian (Analytics).
+• Google Firebase — autentikasi akun, penyimpanan data (Cloud Firestore) dan gambar (Cloud Storage), fungsi server untuk penomoran dokumen, rekap pembayaran, dan pengingat tagihan (Cloud Functions), pengiriman notifikasi (Cloud Messaging), laporan kerusakan (Crashlytics), dan statistik pemakaian (Analytics).
 • Google Play — distribusi aplikasi dan, bila tersedia, pembayaran langganan. Kami tidak menerima maupun menyimpan nomor kartu atau detail pembayaran Anda.
 
 Kami tidak menjual atau menyewakan data Anda kepada pihak ketiga, dan tidak ada broker data atau jaringan iklan yang terhubung ke aplikasi ini.`
@@ -61,7 +68,7 @@ Kami tidak menjual atau menyewakan data Anda kepada pihak ketiga, dan tidak ada 
   },
   {
     title: "Penyimpanan & Penghapusan",
-    content: `Data disimpan selama akun Anda aktif. Saat akun dihapus, profil usaha, klien, produk, invoice, penawaran, catatan pembayaran, dan akun login Anda dihapus permanen dari server kami dan tidak dapat dipulihkan.`
+    content: `Data disimpan selama akun Anda aktif. Saat akun dihapus, profil usaha, klien, produk, invoice, penawaran, catatan pembayaran, pengeluaran, gambar logo/QRIS, token notifikasi, dan akun login Anda dihapus permanen dari server kami dan tidak dapat dipulihkan.`
   },
   {
     title: "Hak Anda",
