@@ -20,7 +20,7 @@ Kebijakan ini khusus menjelaskan data yang diproses oleh aplikasi KetikNota, ter
     title: "Informasi yang Kami Kumpulkan",
     content: `• Data akun: alamat email (jika mendaftar dengan email/kata sandi atau Google Sign-In). Jika Anda memakai mode Tamu, akun dibuat tanpa email atau nama.
 • Profil usaha: nama usaha, rekening bank/e-wallet yang Anda tulis, prefiks nomor invoice, dan tarif pajak.
-• Gambar yang Anda pilih sendiri dari galeri: logo usaha dan gambar QRIS, untuk ditampilkan di PDF invoice. Aplikasi hanya membaca gambar yang Anda pilih, bukan seluruh galeri.
+• Gambar yang Anda pilih sendiri dari galeri: logo usaha dan gambar QRIS, untuk ditampilkan di PDF invoice, serta (paket Pro) foto bukti transfer yang Anda lampirkan pada catatan pembayaran. Aplikasi hanya membaca gambar yang Anda pilih, bukan seluruh galeri.
 • Data klien yang Anda masukkan: nama, nomor WhatsApp, alamat, dan email klien.
 • Data produk/jasa: nama, harga, dan satuan.
 • Dokumen: invoice dan penawaran (item, nominal, diskon, pajak, DP, tanggal jatuh tempo, nomor dokumen) serta catatan pembayaran (nominal, metode, tanggal).
@@ -41,7 +41,7 @@ Kami tidak mengakses kontak HP, lokasi, kamera, mikrofon, atau SMS Anda, dan apl
   },
   {
     title: "Penyimpanan Data",
-    content: `Data Anda disimpan di Google Firebase (Cloud Firestore) di pusat data Jakarta, supaya bisa dibuka kembali saat Anda berganti HP. Logo dan gambar QRIS disimpan di Firebase Storage, juga di pusat data Jakarta, dengan salinan di perangkat agar PDF tetap bisa dibuat saat offline. Salinan sementara juga disimpan di perangkat Anda agar aplikasi tetap bisa dipakai saat offline; salinan ini tersinkron otomatis saat kembali online.
+    content: `Data Anda disimpan di Google Firebase (Cloud Firestore) di pusat data Jakarta, supaya bisa dibuka kembali saat Anda berganti HP. Logo, gambar QRIS, dan foto bukti transfer disimpan di Firebase Storage, juga di pusat data Jakarta, dengan salinan di perangkat agar PDF tetap bisa dibuat saat offline. Salinan sementara juga disimpan di perangkat Anda agar aplikasi tetap bisa dipakai saat offline; salinan ini tersinkron otomatis saat kembali online.
 
 PDF invoice dan kwitansi, serta file ekspor laporan (CSV), dibuat di perangkat Anda dan hanya dibagikan ke pihak yang Anda pilih sendiri.`
   },
@@ -68,7 +68,7 @@ Kami tidak menjual atau menyewakan data Anda kepada pihak ketiga, dan tidak ada 
   },
   {
     title: "Penyimpanan & Penghapusan",
-    content: `Data disimpan selama akun Anda aktif. Saat akun dihapus, profil usaha, klien, produk, invoice, penawaran, catatan pembayaran, pengeluaran, gambar logo/QRIS, token notifikasi, dan akun login Anda dihapus permanen dari server kami dan tidak dapat dipulihkan.`
+    content: `Data disimpan selama akun Anda aktif. Saat akun dihapus, profil usaha, klien, produk, invoice, penawaran, catatan pembayaran, pengeluaran, gambar logo/QRIS, foto bukti transfer, token notifikasi, dan akun login Anda dihapus permanen dari server kami dan tidak dapat dipulihkan.`
   },
   {
     title: "Hak Anda",
@@ -122,7 +122,7 @@ export default function KetikNotaPrivacyPolicyPage() {
                 Kebijakan Privasi
               </h1>
               <p className="mt-4 text-base text-muted-foreground">
-                Terakhir diperbarui: 18 Oktober 2026
+                Terakhir diperbarui: 19 Oktober 2026
               </p>
               <p className="mt-4 text-base text-muted-foreground leading-relaxed">
                 Kebijakan ini berlaku untuk aplikasi Android <strong>KetikNota</strong>, dikembangkan oleh {BUSINESS_NAME} (&ldquo;kami&rdquo;, &ldquo;kita&rdquo;). Kebijakan ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi data Anda saat menggunakan aplikasi KetikNota.
