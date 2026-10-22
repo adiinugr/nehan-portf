@@ -23,6 +23,7 @@ Kebijakan ini khusus menjelaskan data yang diproses oleh aplikasi Koreksia, terp
 • Data ujian: judul ujian, soal, kunci jawaban, dan hasil koreksi tiap siswa.
 • Catatan pemakaian kuota harian pembuatan soal dengan AI (jumlah pemakaian, bukan isi soal).
 • Laporan kerusakan aplikasi: jika aplikasi berhenti tiba-tiba, kami menerima laporan teknis (jenis kesalahan dan lokasinya di kode, model perangkat, versi Android, versi aplikasi, dan pengenal instalasi) lewat Firebase Crashlytics. Kami tidak menambahkan isi soal, nama siswa, atau data pribadi lain ke laporan ini.
+• Statistik pemakaian: lewat Google Analytics untuk Firebase kami menerima data ringkas tentang pemakaian aplikasi, yaitu kejadian seperti mendaftar, masuk, membuat ujian, menyimpan soal AI, dan menyimpan hasil pindai (tanpa isi soal, nama, atau nilai siswa), serta model perangkat, versi Android, versi aplikasi, dan pengenal instalasi. Kami memakainya hanya untuk memahami dan memperbaiki aplikasi. Pengenal iklan tidak dikumpulkan.
 
 Kami tidak mengumpulkan data lokasi, kontak, mikrofon, atau SMS, dan aplikasi Koreksia tidak menampilkan iklan apa pun.`
   },
@@ -44,7 +45,7 @@ Tidak ada nama siswa, NISN, atau data pribadi siswa lain yang pernah dikirim ke 
     title: "Berbagi dengan Pihak Ketiga",
     content: `Kami hanya membagikan data ke penyedia layanan yang menjalankan aplikasi ini:
 
-• Google Firebase — penyimpanan cadangan data, autentikasi akun, dan laporan kerusakan aplikasi (Crashlytics).
+• Google Firebase — penyimpanan cadangan data, autentikasi akun, dan laporan kerusakan aplikasi (Crashlytics), dan statistik pemakaian (Google Analytics untuk Firebase).
 • Google Gemini — pembuatan draf soal AI (lihat bagian di atas soal data apa yang dikirim).
 
 Kami tidak menjual atau menyewakan data Anda kepada pihak ketiga, dan tidak ada broker data atau jaringan iklan yang terhubung ke aplikasi ini.`
@@ -105,7 +106,7 @@ export default function KoreksiaPrivacyPolicyPage() {
                 Kebijakan Privasi
               </h1>
               <p className="mt-4 text-base text-muted-foreground">
-                Terakhir diperbarui: 14 Oktober 2026
+                Terakhir diperbarui: 22 Oktober 2026
               </p>
               <p className="mt-4 text-base text-muted-foreground leading-relaxed">
                 Kebijakan ini berlaku untuk aplikasi Android <strong>Koreksia</strong>, dikembangkan oleh {BUSINESS_NAME} (&ldquo;kami&rdquo;, &ldquo;kita&rdquo;). Kebijakan ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi data Anda saat menggunakan aplikasi Koreksia.
