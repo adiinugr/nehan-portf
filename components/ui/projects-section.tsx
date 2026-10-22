@@ -20,6 +20,13 @@ const projects = [
     liveUrl: "https://play.google.com/store/apps/details?id=com.analogissmp"
   },
   {
+    title: "KetikNota",
+    descriptionKey: "ketiknota",
+    image: "/images/ketiknota.png",
+    technologies: ["Flutter", "Firebase"],
+    liveUrl: "https://play.google.com/store/apps/details?id=com.ketiknota.app"
+  },
+  {
     title: "Habit Flare",
     descriptionKey: "habitflare",
     image: "/images/habitflare.png",
