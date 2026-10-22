@@ -1,0 +1,122 @@
+---
+title: "Analisis Butir Soal Pilihan Ganda: Tingkat Kesulitan dan Daya Pembeda (Tanpa Excel)"
+date: "2026-10-22"
+category: "EdTech"
+lang: "id"
+excerpt: "Soal yang semua siswa jawab benar atau semua salah sama-sama tidak memberi informasi. Begini cara menghitung tingkat kesulitan dan daya pembeda, membaca sebaran jawaban, dan memutuskan soal mana yang diperbaiki, tanpa rumus Excel."
+readTime: "7"
+author: "NehanDev"
+---
+
+Setelah ujian selesai dan nilai keluar, biasanya guru berhenti di situ. Padahal ada satu pertanyaan yang jawabannya tersimpan di lembar jawaban: **apakah soal-soalnya sendiri sudah baik?**
+
+Soal yang dijawab benar oleh semua siswa tidak membedakan siapa yang paham. Soal yang dijawab salah oleh semua siswa mungkin terlalu sulit, atau kuncinya keliru. Untuk mengetahuinya ada teknik yang disebut **analisis butir soal**. Artikel ini menjelaskan dua ukuran utamanya, cara membaca hasilnya, dan cara melakukannya tanpa menyusun rumus di spreadsheet. Ditulis untuk guru yang mengoreksi soal pilihan ganda.
+
+## Dua Ukuran Utama
+
+### 1. Tingkat kesulitan
+
+Ukuran paling sederhana: **berapa persen siswa yang menjawab benar**.
+
+> Tingkat kesulitan = jumlah siswa yang benar ÷ jumlah siswa yang menjawab
+
+Kalau 18 dari 30 siswa menjawab benar, hasilnya 0,60 atau 60%. Semakin besar angkanya, semakin mudah soalnya. Pedoman yang umum dipakai:
+
+- **Di bawah 30%**: sulit
+- **30% sampai 70%**: sedang
+- **Di atas 70%**: mudah
+
+Ujian yang baik biasanya berisi campuran: sebagian besar sedang, sebagian kecil mudah dan sulit. Kalau hampir semua soal berada di satu kategori, ujiannya tidak seimbang.
+
+### 2. Daya pembeda
+
+Tingkat kesulitan tidak menjawab satu hal penting: **apakah soal ini membedakan siswa yang paham dari yang belum?** Itu tugas daya pembeda.
+
+Caranya dengan metode kelompok atas dan bawah:
+
+1. Urutkan siswa dari nilai total tertinggi ke terendah.
+2. Ambil kelompok atas dan kelompok bawah, masing-masing sekitar 27% dari jumlah siswa.
+3. Untuk tiap soal, hitung berapa siswa di kelompok atas dan di kelompok bawah yang menjawab benar.
+
+> Daya pembeda = (benar di kelompok atas − benar di kelompok bawah) ÷ jumlah siswa per kelompok
+
+Hasilnya berkisar dari −1 sampai +1. Pedoman umum untuk membacanya:
+
+- **0,40 atau lebih**: baik
+- **0,20 sampai 0,39**: cukup
+- **Di bawah 0,20**: kurang
+- **Negatif**: siswa yang nilainya rendah malah lebih banyak benar daripada yang nilainya tinggi. Hampir pasti ada masalah pada soal atau kuncinya.
+
+Contoh: ada 30 siswa, jadi tiap kelompok berisi sekitar 8 siswa. Pada soal nomor 12, 7 dari 8 siswa kelompok atas menjawab benar, sedangkan di kelompok bawah hanya 3 dari 8. Daya pembedanya (7 − 3) ÷ 8 = 0,50. Soal itu bagus: siswa yang kuat memang lebih banyak benar.
+
+Pada soal nomor 20, 4 dari 8 kelompok atas dan 5 dari 8 kelompok bawah menjawab benar. Daya pembedanya −0,13. Periksa soal itu.
+
+## Membaca Sebaran Jawaban
+
+Untuk soal pilihan ganda, ada satu data lagi yang berguna: **berapa siswa yang memilih tiap opsi**.
+
+- **Kunci dipilih sedikit, satu pengecoh dipilih banyak.** Bisa jadi pengecoh itu menjebak karena miskonsepsi umum, atau kunci yang Anda tetapkan keliru. Periksa kembali kuncinya.
+- **Ada pengecoh yang hampir tidak dipilih siapa pun.** Pengecoh itu tidak berfungsi dan bisa diganti dengan yang lebih masuk akal.
+- **Jawaban tersebar rata ke semua opsi.** Siswa kemungkinan menebak. Soalnya mungkin ambigu atau materinya belum diajarkan.
+
+## Keputusan Setelah Analisis
+
+Angka hanya berguna kalau mengarah pada tindakan. Pola yang bisa dipakai:
+
+| Kondisi | Tindakan |
+|---|---|
+| Sedang, daya pembeda baik | Pertahankan, simpan di bank soal |
+| Terlalu mudah (>70%), daya pembeda rendah | Naikkan tingkat kesulitan atau gunakan sebagai soal pembuka |
+| Sulit (<30%), daya pembeda baik | Wajar untuk soal penalaran; pertahankan dalam jumlah terbatas |
+| Sulit, daya pembeda rendah atau negatif | Periksa kunci dan redaksi soal; perbaiki atau buang |
+| Pengecoh tak pernah dipilih | Ganti pengecoh |
+
+Satu catatan penting: **jumlah siswa memengaruhi keandalan angka**. Di kelas kecil, satu siswa saja bisa menggeser persentase jauh. Anggap hasilnya sebagai petunjuk untuk diperiksa, bukan vonis. Kalau memungkinkan, gabungkan data dari beberapa kelas yang mengerjakan soal yang sama.
+
+## Kenapa Jarang Dilakukan
+
+Secara teori mudah, tetapi secara praktik memakan waktu. Guru harus memasukkan jawaban setiap siswa untuk tiap soal ke spreadsheet, mengurutkan, memisahkan kelompok atas dan bawah, lalu menyusun rumus per soal. Untuk 36 siswa dan 40 soal itu lebih dari seribu data, dan kebanyakan guru sudah kelelahan setelah mengoreksi.
+
+## Dengan Koreksia, Analisisnya Muncul Otomatis
+
+Koreksia adalah aplikasi Android untuk guru: soal dicetak bersama lembar jawabannya, lalu lembar jawaban siswa dipindai dengan kamera HP. Karena jawaban setiap siswa sudah tersimpan per soal saat pemindaian, **analisis butir soal dihitung otomatis dari data itu**:
+
+- **Tingkat kesulitan per soal**, ditampilkan sebagai persentase benar dan label Sulit, Sedang, atau Mudah.
+- **Daya pembeda per soal** dengan metode kelompok atas dan bawah, juga berlabel.
+- **Sebaran jawaban**: berapa siswa yang memilih tiap opsi.
+- **Urutan dari soal tersulit**, jadi soal yang perlu diperiksa langsung terlihat di atas.
+- **Ekspor ke PDF** (Analisis Butir Soal), siap dilampirkan untuk laporan atau diskusi di MGMP.
+
+Untuk kelas yang kecil, kelompok atas dan bawah otomatis disesuaikan agar tidak saling tumpang tindih. Kalau baru ada satu siswa yang terpindai, daya pembeda belum bisa dihitung, dan hasilnya ditampilkan kosong, bukan angka yang menyesatkan.
+
+Dua hal yang perlu diketahui. Pertama, analisis hanya sebaik datanya: periksa hasil pindai sebelum mengandalkan angkanya, terutama untuk lembar yang lecek atau terisi kurang tebal. Kedua, angka tetap petunjuk; keputusan akhir soal tetap di tangan guru.
+
+Koreksia juga membantu bagian sebelum dan sesudahnya: menyusun soal dengan AI (draf yang Anda periksa dulu), mengacak urutan soal ke Paket A sampai D, dan rekap nilai per kelas.
+
+## Coba Analisis Butir Soal di Koreksia
+
+Pada ujian berikutnya, pindai lembar jawaban dengan Koreksia, lalu buka bagian Analisis Butir Soal di rekap nilai. Soal yang perlu diperbaiki akan terlihat tanpa perlu menyusun rumus.
+
+**[Unduh Koreksia di Google Play](https://play.google.com/store/apps/details?id=com.koreksia.app)**
+
+Lihat juga [halaman Koreksia](/koreksia) untuk fitur lengkapnya. Punya saran atau kendala? [Hubungi saya](/#contact).
+
+## Pertanyaan yang Sering Diajukan
+
+**Berapa jumlah siswa minimal untuk analisis butir soal?**
+Tidak ada angka mutlak, tetapi makin banyak makin andal. Di bawah 30 siswa, perlakukan hasilnya sebagai petunjuk, dan gabungkan beberapa kelas bila bisa.
+
+**Apakah daya pembeda negatif selalu berarti soal salah?**
+Tidak selalu, tetapi hampir selalu perlu diperiksa. Penyebab umumnya kunci jawaban keliru, redaksi ambigu, atau materi yang diajarkan tidak sejalan dengan soal.
+
+**Apakah soal mudah harus dibuang?**
+Tidak. Soal mudah berguna untuk membangun kepercayaan diri dan memastikan kompetensi dasar. Yang bermasalah adalah ujian yang seluruhnya mudah atau seluruhnya sulit.
+
+**Apakah bisa dipakai untuk soal selain pilihan ganda?**
+Analisis butir di Koreksia dihitung dari baris jawaban yang bisa dinilai otomatis, yaitu pilihan ganda tunggal dan kompleks, serta tiap sub-butir pada soal menjodohkan.
+
+**Apakah Koreksia gratis?**
+Saat ini gratis dipakai. Rencana paket berbayar belum dirilis.
+
+**Apakah tersedia untuk iPhone?**
+Saat ini Koreksia tersedia untuk Android.
