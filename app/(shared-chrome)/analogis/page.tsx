@@ -8,16 +8,16 @@ import { BUSINESS_EMAIL } from "@/lib/business-info"
 const ANALOGIS_PLAY_URL = "https://play.google.com/store/apps/details?id=com.analogissmp"
 
 export const metadata: Metadata = {
-  title: "Analogis — Belajar Matematika SMP & SMA Kurikulum Merdeka",
+  title: "Analogis — Matematika SMP & SMA dan Persiapan TKA Kelas 12",
   description:
-    "Materi matematika SMP dan SMA dalam pelajaran pendek: penjelasan, contoh, lalu soal yang langsung dikoreksi dan dibahas. Ada latihan AKM. Gratis dan tanpa iklan.",
+    "Materi matematika SMP dan SMA dalam pelajaran pendek, soal yang langsung dikoreksi dan dibahas, latihan AKM, serta latihan dan simulasi TKA matematika kelas 12. Gratis dan tanpa iklan.",
   alternates: { canonical: "https://www.nehandev.com/analogis" }
 }
 
 const features = [
-  { title: "Pelajaran pendek, bisa dicicil", desc: "Setiap bab dipecah jadi pelajaran singkat: penjelasan, contoh, lalu soal. Cukup beberapa menit sehari." },
-  { title: "Langsung dikoreksi dan dibahas", desc: "Salah di mana langsung kelihatan, lengkap dengan pembahasan langkah demi langkah." },
-  { title: "Sesuai Kurikulum Merdeka", desc: "Materi SMP kelas 7, 8, 9 dan SMA kelas 10. Tingkat kesulitan naik perlahan, dari konsep dasar sampai soal cerita." },
+  { title: "Pelajaran pendek, langsung dibahas", desc: "Setiap bab dipecah jadi pelajaran singkat: penjelasan, contoh, lalu soal. Salah di mana langsung kelihatan, lengkap dengan pembahasan langkah demi langkah." },
+  { title: "Sesuai Kurikulum Merdeka", desc: "Materi SMP kelas 7, 8, 9 dan SMA kelas 10 serta 11 (komposisi fungsi, lingkaran, statistika). Tingkat kesulitan naik perlahan, dari konsep dasar sampai soal cerita." },
+  { title: "Persiapan TKA matematika kelas 12", desc: "Soal latihan orisinal yang mengacu pada kisi-kisi resmi TKA, per topik: bilangan, aljabar, geometri, trigonometri, serta data dan peluang. Coba simulasi 25 soal dalam 75 menit." },
   { title: "Latihan campuran dan AKM", desc: "Ulangi satu bab sekaligus sebelum ulangan, atau coba soal numerasi gaya AKM dengan tabel dan diagram." },
   { title: "Rumus dan gambar yang jelas", desc: "Pecahan, pangkat, akar, dan grafik tampil rapi, dibantu ilustrasi garis bilangan, bangun ruang, dan diagram." },
   { title: "XP, streak, dan lencana", desc: "Kumpulkan poin dan jaga belajar harian. Coba dulu sebagai tamu, simpan progres dengan akun Google kapan saja." }
