@@ -22,7 +22,7 @@ const projects = [
   {
     title: "KetikNota",
     descriptionKey: "ketiknota",
-    image: "/images/ketiknota.png",
+    image: "/images/ketiknota-v2.png",
     technologies: ["Flutter", "Firebase"],
     liveUrl: "https://play.google.com/store/apps/details?id=com.ketiknota.app"
   },
